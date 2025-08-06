@@ -1,0 +1,821 @@
+[
+    {
+        "id": "ad4d73283809aebb",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98780ac83404d0e2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c91c4ad5ecdcc750",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a82ec79543784b32",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b44359cb7998df83",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c9b3481cedb95de5",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6b6d83028e95a392",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 9,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "bae374a6f67d64c0",
+        "type": "ui_spacer",
+        "z": "ad4d73283809aebb",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "996e7b49ced5c291",
+        "type": "ui_gauge",
+        "z": "ad4d73283809aebb",
+        "name": "",
+        "group": "176a6dcb963246d5",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": "PM2.5",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "504",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "90bbc1f95bb07929",
+        "type": "ui_gauge",
+        "z": "ad4d73283809aebb",
+        "name": "",
+        "group": "176a6dcb963246d5",
+        "order": 2,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": "PM10",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500.4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9aab2472181a49ba",
+        "type": "mqtt in",
+        "z": "ad4d73283809aebb",
+        "name": "humid",
+        "topic": "/23127354-23127388-23127435/humid",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e4f2654eb37bf1b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "6eed941b380c7bd5",
+                "76caec9401ec9516"
+            ]
+        ]
+    },
+    {
+        "id": "80b88fa73560973b",
+        "type": "mqtt in",
+        "z": "ad4d73283809aebb",
+        "name": "temp",
+        "topic": "/23127354-23127388-23127435/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e4f2654eb37bf1b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "6eed941b380c7bd5",
+                "e1976476d256867a"
+            ]
+        ]
+    },
+    {
+        "id": "83575a6561d6122f",
+        "type": "mqtt in",
+        "z": "ad4d73283809aebb",
+        "name": "pm25",
+        "topic": "/23127354-23127388-23127435/pm25",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e4f2654eb37bf1b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "6eed941b380c7bd5",
+                "1c18c944e949c2fd"
+            ]
+        ]
+    },
+    {
+        "id": "6eed941b380c7bd5",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "Combine sensors",
+        "func": "let type;\nif (msg.topic.includes(\"humid\")) type = \"Humidity\";\nelse if (msg.topic.includes(\"temp\")) type = \"Temperature\";\nelse if (msg.topic.includes(\"pm25\")) type = \"PM2_5\";   // đổi dust → pm25\nelse if (msg.topic.includes(\"pm10\")) type = \"PM10\";    \n\n// Lưu giá trị vào flow context\nflow.set(type, parseFloat(msg.payload));\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Gửi 4 output khác nhau\n    return [\n        { payload: { PM2_5: pm25, created_at: new Date().toISOString() } },  // Output 1: PM2.5\n        { payload: { PM10: pm10, created_at: new Date().toISOString() } },   // Output 2: PM10\n        { payload: { Temperature: temp, created_at: new Date().toISOString() } }, // Output 3: Temperature\n        { payload: { Humidity: humidity, created_at: new Date().toISOString() } } // Output 4: Humidity\n    ];\n} else {\n    return null;\n}\n",
+        "outputs": 6,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "996e7b49ced5c291"
+            ],
+            [
+                "90bbc1f95bb07929"
+            ],
+            [
+                "cdb294fad5a5c205"
+            ],
+            [
+                "5ff674c3475fabcf"
+            ],
+            [
+                "66582960ed404cf2"
+            ],
+            [
+                "96c69facd7274727"
+            ]
+        ]
+    },
+    {
+        "id": "cdb294fad5a5c205",
+        "type": "ui_text",
+        "z": "ad4d73283809aebb",
+        "group": "176a6dcb963246d5",
+        "order": 5,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Nhiệt độ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 640,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5ff674c3475fabcf",
+        "type": "ui_text",
+        "z": "ad4d73283809aebb",
+        "group": "176a6dcb963246d5",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Độ ẩm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ab9438d335cc7c0c",
+        "type": "ui_chart",
+        "z": "ad4d73283809aebb",
+        "name": "",
+        "group": "176a6dcb963246d5",
+        "order": 10,
+        "width": 16,
+        "height": 8,
+        "label": "PM chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66582960ed404cf2",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "linear chart",
+        "func": "msg.payload = [\n  { series: [\"PM2.5\", \"PM10\"],\n    data: [\n      [{ x: msg.payload.created_at, y: msg.payload.PM2_5 }],\n      [{ x: msg.payload.created_at, y: msg.payload.PM10 }]\n    ],\n    labels: []\n  }\n];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "ab9438d335cc7c0c"
+            ]
+        ]
+    },
+    {
+        "id": "96c69facd7274727",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "avg",
+        "func": "let data = flow.get(\"data\") || [];\ndata.push(msg.payload);\nif (data.length > 50) data.shift();\n\nlet avgPM25 = data.reduce((a,b) => a+b.PM2_5, 0) / data.length;\nlet avgPM10 = data.reduce((a,b) => a+b.PM10, 0) / data.length;\n\nflow.set(\"data\", data);\n\nmsg.payload = {\n    pm25: avgPM25.toFixed(1),\n    pm10: avgPM10.toFixed(1)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 380,
+        "wires": [
+            [
+                "ce6b93875eac283d"
+            ]
+        ]
+    },
+    {
+        "id": "ce6b93875eac283d",
+        "type": "template",
+        "z": "ad4d73283809aebb",
+        "name": "Avg box",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<div style=\"background-color: #E6F7FF; border-radius: 8px; padding: 15px;\">\n  <h3>Average</h3>\n  <div>PM2.5: <span style=\"font-weight: bold;\">{{msg.payload.pm25}}</span></div>\n  <div>PM10: <span style=\"font-weight: bold;\">{{msg.payload.pm10}}</span></div>\n</div>\n",
+        "output": "str",
+        "x": 720,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "548e0bbbf2c5d85a",
+        "type": "mqtt out",
+        "z": "ad4d73283809aebb",
+        "name": "",
+        "topic": "/23127354-23127388-23127435/led-buzzer",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e4f2654eb37bf1b3",
+        "x": 650,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "760df34d45d2327c",
+        "type": "ui_table",
+        "z": "ad4d73283809aebb",
+        "group": "9dff1546fd297e8c",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 270,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "452636f5244df220",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "Table Logs",
+        "func": "// Lấy dữ liệu log từ flow\nlet data = flow.get(\"logData\") || [];\n\n// Định dạng lại cho ui_table\n// Mỗi phần tử là 1 dòng trong bảng\nlet tableData = data.map(d => {\n    return {\n        Time: d.Time,                // dạng HH:mm hoặc full datetime\n        PM2_5: d.PM2_5,\n        PM10: d.PM10,\n        Temperature: d.Temperature,\n        Humidity: d.Humidity\n    };\n});\n\n// Gửi sang ui_table\nmsg.payload = tableData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "760df34d45d2327c"
+            ]
+        ]
+    },
+    {
+        "id": "e3610509e7ae6a34",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "Avg & Status",
+        "func": "let data = flow.get(\"logData\") || [];\nif (data.length === 0) return null;\n\nlet avg = {\n    PM2_5: 0,\n    PM10: 0,\n    Temp: 0,\n    Humidity: 0\n};\n\n// Cộng dồn\ndata.forEach(d => {\n    avg.PM2_5 += d.PM2_5;\n    avg.PM10 += d.PM10;\n    avg.Temp += d.Temperature;\n    avg.Humidity += d.Humidity;\n});\n\n// Tính trung bình\navg.PM2_5 = (avg.PM2_5 / data.length).toFixed(1);\navg.PM10 = (avg.PM10 / data.length).toFixed(1);\navg.Temp = (avg.Temp / data.length).toFixed(1);\navg.Humidity = (avg.Humidity / data.length).toFixed(0);\n\n// Hàm xác định trạng thái\nfunction statusPM(v) {\n    if (v <= 12) return \"Good\";\n    if (v <= 35) return \"Moderate\";\n    return \"Unhealthy\";\n}\n\nmsg.payload = {\n    PM2_5: { value: avg.PM2_5, status: statusPM(avg.PM2_5) },\n    PM10: { value: avg.PM10, status: statusPM(avg.PM10) },\n    Temp: { value: avg.Temp, status: \"Moderate\" },     // Bạn có thể thêm logic riêng\n    Humidity: { value: avg.Humidity, status: \"Moderate\" }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 720,
+        "wires": [
+            [
+                "bc8392cceed0d31c"
+            ]
+        ]
+    },
+    {
+        "id": "bc8392cceed0d31c",
+        "type": "ui_template",
+        "z": "ad4d73283809aebb",
+        "group": "9dff1546fd297e8c",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"background-color: #E6F7FF; padding: 15px; border-radius: 8px;\">\n    <h3>Average</h3>\n    <div ng-repeat=\"(key, item) in msg.payload\"\n        style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;\">\n        <div style=\"width: 80px; font-weight: bold;\">{{key}}</div>\n        <div style=\"background-color: #6ED6E1; padding: 5px 10px; border-radius: 5px; font-weight: bold;\">{{item.value}}\n        </div>\n        <div style=\"background-color: #FFF3C4; padding: 5px 10px; border-radius: 5px;\">{{item.status}}</div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 280,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "415f3616abc9d693",
+        "type": "ui_template",
+        "z": "ad4d73283809aebb",
+        "group": "176a6dcb963246d5",
+        "name": "Display",
+        "order": 12,
+        "width": 5,
+        "height": 7,
+        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Display</h3>\n    <div style=\"display:flex; flex-direction:column; gap:10px;\">\n        <button ng-click=\"send({payload:'dust'})\"\n            style=\"background-color:#1AA6B7; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Dust\n    </button>\n        <button ng-click=\"send({payload:'temp'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Temp\n    </button>\n        <button ng-click=\"send({payload:'humid'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Humidity\n    </button>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "2d2ef4ad96d1cc68"
+            ]
+        ]
+    },
+    {
+        "id": "0bd5eb16afa179e3",
+        "type": "ui_template",
+        "z": "ad4d73283809aebb",
+        "group": "176a6dcb963246d5",
+        "name": "Sound & Light",
+        "order": 13,
+        "width": 5,
+        "height": 7,
+        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Sounds & Light</h3>\n    <div style=\"display:grid; grid-template-columns: 1fr auto; gap:10px; align-items:center;\">\n        <span>LED</span>\n        <button ng-click=\"send({payload:'led_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button ng-click=\"send({payload:'buzzer_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "dc9272d3faf348db"
+            ]
+        ]
+    },
+    {
+        "id": "2d2ef4ad96d1cc68",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "handleDisplayClick",
+        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "faa2e4fcde079f64"
+            ]
+        ]
+    },
+    {
+        "id": "dc9272d3faf348db",
+        "type": "function",
+        "z": "ad4d73283809aebb",
+        "name": "handleControlToggle",
+        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "548e0bbbf2c5d85a"
+            ]
+        ]
+    },
+    {
+        "id": "faa2e4fcde079f64",
+        "type": "mqtt out",
+        "z": "ad4d73283809aebb",
+        "name": "",
+        "topic": "/23127354-23127388-23127435/screen",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e4f2654eb37bf1b3",
+        "x": 640,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c5f9a0ac80de0728",
+        "type": "mqtt in",
+        "z": "ad4d73283809aebb",
+        "name": "pm10",
+        "topic": "/23127354-23127388-23127435/pm10",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e4f2654eb37bf1b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "6eed941b380c7bd5",
+                "914c088a178f02a0"
+            ]
+        ]
+    },
+    {
+        "id": "76caec9401ec9516",
+        "type": "debug",
+        "z": "ad4d73283809aebb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e1976476d256867a",
+        "type": "debug",
+        "z": "ad4d73283809aebb",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1c18c944e949c2fd",
+        "type": "debug",
+        "z": "ad4d73283809aebb",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "914c088a178f02a0",
+        "type": "debug",
+        "z": "ad4d73283809aebb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 300,
+        "wires": []
+    }
+]
