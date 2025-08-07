@@ -234,6 +234,36 @@
         "height": 1
     },
     {
+        "id": "2585c7ddb8b3d858",
+        "type": "ui_tab",
+        "name": "23127388 - Nguyễn Văn Khánh",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "886bca3027cc3dde",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "2585c7ddb8b3d858",
+        "order": 1,
+        "disp": true,
+        "width": 18,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b801bafa80684b5c",
+        "type": "ui_group",
+        "name": "Statistics",
+        "tab": "2585c7ddb8b3d858",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "996e7b49ced5c291",
         "type": "ui_gauge",
         "z": "ad4d73283809aebb",
@@ -360,15 +390,15 @@
         "type": "function",
         "z": "ad4d73283809aebb",
         "name": "Combine sensors",
-        "func": "let type;\nif (msg.topic.includes(\"humid\")) type = \"Humidity\";\nelse if (msg.topic.includes(\"temp\")) type = \"Temperature\";\nelse if (msg.topic.includes(\"pm25\")) type = \"PM2_5\";   // đổi dust → pm25\nelse if (msg.topic.includes(\"pm10\")) type = \"PM10\";    \n\n// Lưu giá trị vào flow context\nflow.set(type, parseFloat(msg.payload));\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Gửi 4 output khác nhau\n    return [\n        { payload: { PM2_5: pm25, created_at: new Date().toISOString() } },  // Output 1: PM2.5\n        { payload: { PM10: pm10, created_at: new Date().toISOString() } },   // Output 2: PM10\n        { payload: { Temperature: temp, created_at: new Date().toISOString() } }, // Output 3: Temperature\n        { payload: { Humidity: humidity, created_at: new Date().toISOString() } } // Output 4: Humidity\n    ];\n} else {\n    return null;\n}\n",
+        "func": "let type;\nlet value = parseFloat(msg.payload);\n\n// Xác định loại dữ liệu từ topic\nif (msg.topic.includes(\"humid\")) {\n    type = \"Humidity\";\n} else if (msg.topic.includes(\"temp\")) {\n    type = \"Temperature\";\n} else if (msg.topic.includes(\"pm25\")) {\n    type = \"PM2_5\";  // Sửa lại PM2.5\n} else if (msg.topic.includes(\"pm10\")) {\n    type = \"PM10\";\n} else {\n    type = \"Unknown\"; // Kiểm tra nếu topic không xác định\n}\n\n// Lưu giá trị vào flow context theo từng loại\nflow.set(type, value);\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi dữ liệu khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Định dạng dữ liệu cho chart\n    let pmData = [\n        { x: new Date().toISOString(), y: pm25 },\n        { x: new Date().toISOString(), y: pm10 }\n    ];\n\n    let chartData = {\n        series: [\"PM2.5\", \"PM10\"],\n        data: [pmData[0], pmData[1]],\n        labels: [new Date().toISOString()]\n    };\n\n    // Dữ liệu cho các gauge\n    let gaugesData = {\n        PM2_5: pm25,\n        PM10: pm10,\n        Temperature: temp,\n        Humidity: humidity\n    };\n\n    // Trả lại dữ liệu dưới định dạng cho từng output\n    return [\n        { payload: pm25 },  // Output 1: PM2.5 (chỉ gửi giá trị)\n        { payload: pm10 },  // Output 2: PM10 (chỉ gửi giá trị)\n        { payload: temp },  // Output 3: Temperature (chỉ gửi giá trị)\n        { payload: humidity },  // Output 4: Humidity (chỉ gửi giá trị)\n        { payload: chartData },  // Output 5: Dữ liệu cho chart (PM2.5, PM10)\n        { payload: gaugesData }  // Output 6: Gauges data\n    ];\n} else {\n    return null;  // Trả về null nếu thiếu một trong các giá trị cần thiết\n}\n",
         "outputs": 6,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 180,
+        "x": 350,
+        "y": 200,
         "wires": [
             [
                 "996e7b49ced5c291"
@@ -819,38 +849,6 @@
         "wires": []
     },
     {
-        "id": "840789ef47143bc7",
-        "type": "debug",
-        "z": "ad4d73283809aebb",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 260,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "760df34d45d2327c",
-        "type": "ui_table",
-        "z": "ad4d73283809aebb",
-        "group": "9dff1546fd297e8c",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 390,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "8090b33604aba8c3",
         "type": "debug",
         "z": "ad4d73283809aebb",
@@ -947,22 +945,6 @@
         "wires": []
     },
     {
-        "id": "23278344615c764e",
-        "type": "debug",
-        "z": "ad4d73283809aebb",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "b0810bc04cc892ac",
         "type": "debug",
         "z": "ad4d73283809aebb",
@@ -994,134 +976,5 @@
         "x": 960,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "c91c4ad5ecdcc750",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "a82ec79543784b32",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "b44359cb7998df83",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "c9b3481cedb95de5",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6b6d83028e95a392",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 9,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "bae374a6f67d64c0",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     }
 ]
