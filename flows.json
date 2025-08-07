@@ -1,6 +1,6 @@
 [
     {
-        "id": "ad4d73283809aebb",
+        "id": "44f9ec8549dd6cd0",
         "type": "tab",
         "label": "Flow 2",
         "disabled": false,
@@ -8,265 +8,9 @@
         "env": []
     },
     {
-        "id": "98780ac83404d0e2",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c91c4ad5ecdcc750",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "a82ec79543784b32",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "b44359cb7998df83",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "c9b3481cedb95de5",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6b6d83028e95a392",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 9,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "bae374a6f67d64c0",
-        "type": "ui_spacer",
-        "z": "ad4d73283809aebb",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "2585c7ddb8b3d858",
-        "type": "ui_tab",
-        "name": "23127388 - Nguyễn Văn Khánh",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "886bca3027cc3dde",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "2585c7ddb8b3d858",
-        "order": 1,
-        "disp": true,
-        "width": 18,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "b801bafa80684b5c",
-        "type": "ui_group",
-        "name": "Statistics",
-        "tab": "2585c7ddb8b3d858",
-        "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "996e7b49ced5c291",
+        "id": "ead562f7e78cfd4a",
         "type": "ui_gauge",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "",
         "group": "176a6dcb963246d5",
         "order": 1,
@@ -292,9 +36,9 @@
         "wires": []
     },
     {
-        "id": "90bbc1f95bb07929",
+        "id": "128b233e760ecc24",
         "type": "ui_gauge",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "",
         "group": "176a6dcb963246d5",
         "order": 2,
@@ -320,9 +64,9 @@
         "wires": []
     },
     {
-        "id": "9aab2472181a49ba",
+        "id": "3c9ac084f74ed2e0",
         "type": "mqtt in",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "humid",
         "topic": "/23127354-23127388-23127435/humid",
         "qos": "2",
@@ -336,15 +80,15 @@
         "y": 100,
         "wires": [
             [
-                "6eed941b380c7bd5",
-                "76caec9401ec9516"
+                "6ef572be12b90f31",
+                "6c3df6288f4d1cc3"
             ]
         ]
     },
     {
-        "id": "80b88fa73560973b",
+        "id": "cdce23d8cfd92eef",
         "type": "mqtt in",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "temp",
         "topic": "/23127354-23127388-23127435/temp",
         "qos": "2",
@@ -358,15 +102,15 @@
         "y": 180,
         "wires": [
             [
-                "6eed941b380c7bd5",
-                "e1976476d256867a"
+                "6ef572be12b90f31",
+                "b4b759bf43ef4fbc"
             ]
         ]
     },
     {
-        "id": "83575a6561d6122f",
+        "id": "4f62ebb09931dcf6",
         "type": "mqtt in",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "pm25",
         "topic": "/23127354-23127388-23127435/pm25",
         "qos": "2",
@@ -380,15 +124,15 @@
         "y": 240,
         "wires": [
             [
-                "6eed941b380c7bd5",
-                "1c18c944e949c2fd"
+                "6ef572be12b90f31",
+                "9f818caafc037d6d"
             ]
         ]
     },
     {
-        "id": "6eed941b380c7bd5",
+        "id": "6ef572be12b90f31",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "Combine sensors",
         "func": "let type;\nlet value = parseFloat(msg.payload);\n\n// Xác định loại dữ liệu từ topic\nif (msg.topic.includes(\"humid\")) {\n    type = \"Humidity\";\n} else if (msg.topic.includes(\"temp\")) {\n    type = \"Temperature\";\n} else if (msg.topic.includes(\"pm25\")) {\n    type = \"PM2_5\";  // Sửa lại PM2.5\n} else if (msg.topic.includes(\"pm10\")) {\n    type = \"PM10\";\n} else {\n    type = \"Unknown\"; // Kiểm tra nếu topic không xác định\n}\n\n// Lưu giá trị vào flow context theo từng loại\nflow.set(type, value);\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi dữ liệu khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Định dạng dữ liệu cho chart\n    let pmData = [\n        { x: new Date().toISOString(), y: pm25 },\n        { x: new Date().toISOString(), y: pm10 }\n    ];\n\n    let chartData = {\n        series: [\"PM2.5\", \"PM10\"],\n        data: [pmData[0], pmData[1]],\n        labels: [new Date().toISOString()]\n    };\n\n    // Dữ liệu cho các gauge\n    let gaugesData = {\n        PM2_5: pm25,\n        PM10: pm10,\n        Temperature: temp,\n        Humidity: humidity\n    };\n\n    // Trả lại dữ liệu dưới định dạng cho từng output\n    return [\n        { payload: pm25 },  // Output 1: PM2.5 (chỉ gửi giá trị)\n        { payload: pm10 },  // Output 2: PM10 (chỉ gửi giá trị)\n        { payload: temp },  // Output 3: Temperature (chỉ gửi giá trị)\n        { payload: humidity },  // Output 4: Humidity (chỉ gửi giá trị)\n        { payload: chartData },  // Output 5: Dữ liệu cho chart (PM2.5, PM10)\n        { payload: gaugesData }  // Output 6: Gauges data\n    ];\n} else {\n    return null;  // Trả về null nếu thiếu một trong các giá trị cần thiết\n}\n",
         "outputs": 6,
@@ -401,29 +145,32 @@
         "y": 200,
         "wires": [
             [
-                "996e7b49ced5c291"
+                "ead562f7e78cfd4a",
+                "0bcea6bc537f889f",
+                "161e259ed606b31d"
             ],
             [
-                "90bbc1f95bb07929"
+                "128b233e760ecc24",
+                "20951328f4aaf99e"
             ],
             [
-                "cdb294fad5a5c205"
+                "3b0fc91ea32222da"
             ],
             [
-                "5ff674c3475fabcf"
+                "aa715177ac04340b"
             ],
             [
-                "66582960ed404cf2"
+                "02b781758b6756e4"
             ],
             [
-                "96c69facd7274727"
+                "cc7f0ab95e70bd55"
             ]
         ]
     },
     {
-        "id": "cdb294fad5a5c205",
+        "id": "3b0fc91ea32222da",
         "type": "ui_text",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "order": 5,
         "width": 4,
@@ -442,9 +189,9 @@
         "wires": []
     },
     {
-        "id": "5ff674c3475fabcf",
+        "id": "aa715177ac04340b",
         "type": "ui_text",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "order": 4,
         "width": 4,
@@ -463,9 +210,9 @@
         "wires": []
     },
     {
-        "id": "ab9438d335cc7c0c",
+        "id": "83aab99b8e08506d",
         "type": "ui_chart",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "",
         "group": "176a6dcb963246d5",
         "order": 10,
@@ -507,9 +254,9 @@
         ]
     },
     {
-        "id": "66582960ed404cf2",
+        "id": "02b781758b6756e4",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "linear chart",
         "func": "msg.payload = [\n  { series: [\"PM2.5\", \"PM10\"],\n    data: [\n      [{ x: msg.payload.created_at, y: msg.payload.PM2_5 }],\n      [{ x: msg.payload.created_at, y: msg.payload.PM10 }]\n    ],\n    labels: []\n  }\n];\nreturn msg;\n",
         "outputs": 1,
@@ -522,14 +269,14 @@
         "y": 320,
         "wires": [
             [
-                "ab9438d335cc7c0c"
+                "83aab99b8e08506d"
             ]
         ]
     },
     {
-        "id": "96c69facd7274727",
+        "id": "cc7f0ab95e70bd55",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "avg",
         "func": "let data = flow.get(\"data\") || [];\ndata.push(msg.payload);\nif (data.length > 50) data.shift();\n\nlet avgPM25 = data.reduce((a,b) => a+b.PM2_5, 0) / data.length;\nlet avgPM10 = data.reduce((a,b) => a+b.PM10, 0) / data.length;\n\nflow.set(\"data\", data);\n\nmsg.payload = {\n    pm25: avgPM25.toFixed(1),\n    pm10: avgPM10.toFixed(1)\n};\nreturn msg;\n",
         "outputs": 1,
@@ -542,14 +289,14 @@
         "y": 380,
         "wires": [
             [
-                "ce6b93875eac283d"
+                "e5383995eed14390"
             ]
         ]
     },
     {
-        "id": "ce6b93875eac283d",
+        "id": "e5383995eed14390",
         "type": "template",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "Avg box",
         "field": "payload",
         "fieldType": "msg",
@@ -564,9 +311,9 @@
         ]
     },
     {
-        "id": "548e0bbbf2c5d85a",
+        "id": "735782d262f247c0",
         "type": "mqtt out",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "",
         "topic": "/23127354-23127388-23127435/led-buzzer",
         "qos": "",
@@ -582,9 +329,9 @@
         "wires": []
     },
     {
-        "id": "760df34d45d2327c",
+        "id": "b45547cb7567bc40",
         "type": "ui_table",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "9dff1546fd297e8c",
         "name": "",
         "order": 0,
@@ -598,9 +345,9 @@
         "wires": []
     },
     {
-        "id": "452636f5244df220",
+        "id": "25176735d677fbf6",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "Table Logs",
         "func": "// Lấy dữ liệu log từ flow\nlet data = flow.get(\"logData\") || [];\n\n// Định dạng lại cho ui_table\n// Mỗi phần tử là 1 dòng trong bảng\nlet tableData = data.map(d => {\n    return {\n        Time: d.Time,                // dạng HH:mm hoặc full datetime\n        PM2_5: d.PM2_5,\n        PM10: d.PM10,\n        Temperature: d.Temperature,\n        Humidity: d.Humidity\n    };\n});\n\n// Gửi sang ui_table\nmsg.payload = tableData;\nreturn msg;\n",
         "outputs": 1,
@@ -613,14 +360,14 @@
         "y": 660,
         "wires": [
             [
-                "760df34d45d2327c"
+                "b45547cb7567bc40"
             ]
         ]
     },
     {
-        "id": "e3610509e7ae6a34",
+        "id": "d5ac11d27f9002cd",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "Avg & Status",
         "func": "let data = flow.get(\"logData\") || [];\nif (data.length === 0) return null;\n\nlet avg = {\n    PM2_5: 0,\n    PM10: 0,\n    Temp: 0,\n    Humidity: 0\n};\n\n// Cộng dồn\ndata.forEach(d => {\n    avg.PM2_5 += d.PM2_5;\n    avg.PM10 += d.PM10;\n    avg.Temp += d.Temperature;\n    avg.Humidity += d.Humidity;\n});\n\n// Tính trung bình\navg.PM2_5 = (avg.PM2_5 / data.length).toFixed(1);\navg.PM10 = (avg.PM10 / data.length).toFixed(1);\navg.Temp = (avg.Temp / data.length).toFixed(1);\navg.Humidity = (avg.Humidity / data.length).toFixed(0);\n\n// Hàm xác định trạng thái\nfunction statusPM(v) {\n    if (v <= 12) return \"Good\";\n    if (v <= 35) return \"Moderate\";\n    return \"Unhealthy\";\n}\n\nmsg.payload = {\n    PM2_5: { value: avg.PM2_5, status: statusPM(avg.PM2_5) },\n    PM10: { value: avg.PM10, status: statusPM(avg.PM10) },\n    Temp: { value: avg.Temp, status: \"Moderate\" },     // Bạn có thể thêm logic riêng\n    Humidity: { value: avg.Humidity, status: \"Moderate\" }\n};\n\nreturn msg;\n",
         "outputs": 1,
@@ -633,14 +380,14 @@
         "y": 720,
         "wires": [
             [
-                "bc8392cceed0d31c"
+                "647bd5e4ef48427d"
             ]
         ]
     },
     {
-        "id": "bc8392cceed0d31c",
+        "id": "647bd5e4ef48427d",
         "type": "ui_template",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "9dff1546fd297e8c",
         "name": "",
         "order": 1,
@@ -659,9 +406,9 @@
         ]
     },
     {
-        "id": "415f3616abc9d693",
+        "id": "900c33bd8785df2f",
         "type": "ui_template",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Display",
         "order": 12,
@@ -677,14 +424,14 @@
         "y": 500,
         "wires": [
             [
-                "2d2ef4ad96d1cc68"
+                "95c87862e5f44601"
             ]
         ]
     },
     {
-        "id": "0bd5eb16afa179e3",
+        "id": "1bd9979aecfb2758",
         "type": "ui_template",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Sound & Light",
         "order": 13,
@@ -700,14 +447,14 @@
         "y": 560,
         "wires": [
             [
-                "dc9272d3faf348db"
+                "37e81acb91ec53b2"
             ]
         ]
     },
     {
-        "id": "2d2ef4ad96d1cc68",
+        "id": "95c87862e5f44601",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "handleDisplayClick",
         "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
         "outputs": 1,
@@ -720,14 +467,14 @@
         "y": 500,
         "wires": [
             [
-                "faa2e4fcde079f64"
+                "1d8a4357c4e55e0f"
             ]
         ]
     },
     {
-        "id": "dc9272d3faf348db",
+        "id": "37e81acb91ec53b2",
         "type": "function",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "handleControlToggle",
         "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
         "outputs": 1,
@@ -740,14 +487,14 @@
         "y": 560,
         "wires": [
             [
-                "548e0bbbf2c5d85a"
+                "735782d262f247c0"
             ]
         ]
     },
     {
-        "id": "faa2e4fcde079f64",
+        "id": "1d8a4357c4e55e0f",
         "type": "mqtt out",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "",
         "topic": "/23127354-23127388-23127435/screen",
         "qos": "0",
@@ -763,9 +510,9 @@
         "wires": []
     },
     {
-        "id": "c5f9a0ac80de0728",
+        "id": "ecf1817639760998",
         "type": "mqtt in",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "pm10",
         "topic": "/23127354-23127388-23127435/pm10",
         "qos": "2",
@@ -779,17 +526,17 @@
         "y": 300,
         "wires": [
             [
-                "6eed941b380c7bd5",
-                "914c088a178f02a0"
+                "6ef572be12b90f31",
+                "d3e0883518791ff7"
             ]
         ]
     },
     {
-        "id": "76caec9401ec9516",
+        "id": "6c3df6288f4d1cc3",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -801,11 +548,11 @@
         "wires": []
     },
     {
-        "id": "e1976476d256867a",
+        "id": "b4b759bf43ef4fbc",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -817,11 +564,11 @@
         "wires": []
     },
     {
-        "id": "1c18c944e949c2fd",
+        "id": "9f818caafc037d6d",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -833,11 +580,11 @@
         "wires": []
     },
     {
-        "id": "914c088a178f02a0",
+        "id": "d3e0883518791ff7",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -849,9 +596,9 @@
         "wires": []
     },
     {
-        "id": "8090b33604aba8c3",
+        "id": "53eae1a3e881dc0c",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 6",
         "active": true,
         "tosidebar": true,
@@ -865,75 +612,11 @@
         "wires": []
     },
     {
-        "id": "41db3c88587863ae",
-        "type": "function",
-        "z": "ad4d73283809aebb",
-        "name": "function 1",
-        "func": "let pm25 = msg.payload.PM2_5;\nlet pm10 = msg.payload.PM10;\n\n// Trạng thái hiện tại: có phải đang nguy hiểm?\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\n\n// Trạng thái trước đó (lưu trong bộ nhớ flow)\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    // Lần đầu chuyển sang nguy hiểm → gửi ALERT\n    flow.set(\"alert_state\", true);  // ghi nhớ trạng thái\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    // Nếu từ nguy hiểm quay lại an toàn → reset trạng thái\n    flow.set(\"alert_state\", false);\n}\n\n// Không có thay đổi → không gửi gì\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 760,
-        "y": 80,
-        "wires": [
-            [
-                "b0810bc04cc892ac",
-                "d00d6c2f8550652c"
-            ]
-        ]
-    },
-    {
-        "id": "6e1deb89e9b0b977",
-        "type": "switch",
-        "z": "ad4d73283809aebb",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "\"ALERT\"",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 810,
-        "y": 200,
-        "wires": [
-            [
-                "abb0aa876869b6c8"
-            ]
-        ]
-    },
-    {
-        "id": "d00d6c2f8550652c",
-        "type": "mqtt out",
-        "z": "ad4d73283809aebb",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/alert",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 1070,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "fd7d5e8fd320cace",
+        "id": "0bcea6bc537f889f",
         "type": "debug",
-        "z": "ad4d73283809aebb",
+        "z": "44f9ec8549dd6cd0",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -945,10 +628,49 @@
         "wires": []
     },
     {
-        "id": "b0810bc04cc892ac",
+        "id": "a7e8a6f754323184",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "alert_noti",
+        "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 80,
+        "wires": [
+            [
+                "463c2a4805e8558a",
+                "e019e163822b0e2f"
+            ]
+        ]
+    },
+    {
+        "id": "bc2ba3b6d9e04c4d",
+        "type": "mqtt out",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "topic": "/23127354-23127388-23127435/alert",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e4f2654eb37bf1b3",
+        "x": 1410,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "463c2a4805e8558a",
         "type": "debug",
-        "z": "ad4d73283809aebb",
-        "name": "debug 9",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 12",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -957,15 +679,189 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
+        "x": 1260,
         "y": 60,
         "wires": []
     },
     {
-        "id": "abb0aa876869b6c8",
+        "id": "161e259ed606b31d",
+        "type": "delay",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 820,
+        "y": 80,
+        "wires": [
+            [
+                "a4c63d27551f2d07"
+            ]
+        ]
+    },
+    {
+        "id": "20951328f4aaf99e",
+        "type": "delay",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "a7480709ef7daefa"
+            ]
+        ]
+    },
+    {
+        "id": "e019e163822b0e2f",
+        "type": "switch",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ALERT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 160,
+        "wires": [
+            [
+                "bc2ba3b6d9e04c4d",
+                "e256282f093959a6"
+            ]
+        ]
+    },
+    {
+        "id": "a4c63d27551f2d07",
+        "type": "change",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "\"PM2_5\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 40,
+        "wires": [
+            [
+                "a7e8a6f754323184"
+            ]
+        ]
+    },
+    {
+        "id": "a7480709ef7daefa",
+        "type": "change",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "\"PM10\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "a7e8a6f754323184"
+            ]
+        ]
+    },
+    {
+        "id": "4417533a5fbc673b",
+        "type": "http request",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=hIFTbiwdL2VJfWmVBa0C&m={{payload}}&t=CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ NGUY HIỂM&s=1&v=1&p=2",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1470,
+        "y": 240,
+        "wires": [
+            [
+                "57d078ea5821554b"
+            ]
+        ]
+    },
+    {
+        "id": "e256282f093959a6",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "function 2",
+        "func": "// Lấy giá trị PM2_5 và PM10 từ flow context\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n\n// Chuẩn bị payload chỉ chứa dữ liệu\nmsg.payload = `PM2.5: ${pm25 || 0} µgm, PM10: ${pm10 || 0} µgm`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 260,
+        "wires": [
+            [
+                "4417533a5fbc673b"
+            ]
+        ]
+    },
+    {
+        "id": "57d078ea5821554b",
         "type": "debug",
-        "z": "ad4d73283809aebb",
-        "name": "debug 10",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 13",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -973,8 +869,137 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 220,
+        "x": 1620,
+        "y": 320,
         "wires": []
+    },
+    {
+        "id": "1690073546694338",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2fe44acf92d9ad9a",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9d8fcce682b307ea",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0c72f37b8c7e7f80",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6e0d514f61db1bda",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 9,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "3aaac727686d697a",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     }
 ]
