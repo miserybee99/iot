@@ -8,6 +8,231 @@
         "env": []
     },
     {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1690073546694338",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2fe44acf92d9ad9a",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9d8fcce682b307ea",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0c72f37b8c7e7f80",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6e0d514f61db1bda",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 9,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "3aaac727686d697a",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "660f53445c36d215",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
         "id": "ead562f7e78cfd4a",
         "type": "ui_gauge",
         "z": "44f9ec8549dd6cd0",
@@ -324,8 +549,8 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 650,
-        "y": 560,
+        "x": 850,
+        "y": 540,
         "wires": []
     },
     {
@@ -340,8 +565,8 @@
         "columns": [],
         "outputs": 0,
         "cts": false,
-        "x": 270,
-        "y": 660,
+        "x": 290,
+        "y": 620,
         "wires": []
     },
     {
@@ -356,8 +581,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 660,
+        "x": 130,
+        "y": 620,
         "wires": [
             [
                 "b45547cb7567bc40"
@@ -376,8 +601,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 720,
+        "x": 130,
+        "y": 680,
         "wires": [
             [
                 "647bd5e4ef48427d"
@@ -399,8 +624,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 280,
-        "y": 720,
+        "x": 300,
+        "y": 680,
         "wires": [
             []
         ]
@@ -414,7 +639,7 @@
         "order": 12,
         "width": 5,
         "height": 7,
-        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Display</h3>\n    <div style=\"display:flex; flex-direction:column; gap:10px;\">\n        <button ng-click=\"send({payload:'dust'})\"\n            style=\"background-color:#1AA6B7; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Dust\n    </button>\n        <button ng-click=\"send({payload:'temp'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Temp\n    </button>\n        <button ng-click=\"send({payload:'humid'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Humidity\n    </button>\n    </div>\n</div>",
+        "format": "<!-- Display Template -->\n<style>\n  .display-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 300px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .display-panel h3 {\n    text-align: center;\n    margin-top: 0;\n    margin-bottom: 15px;\n    background: none;\n  }\n\n  .display-buttons {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    flex: 1;\n    justify-content: center;\n  }\n\n  .display-btn {\n    color: white;\n    padding: 12px;\n    border: none;\n    border-radius: 5px;\n    font-weight: bold;\n    width: 100%;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .display-btn.dust {\n    background-color: #1AA6B7;\n  }\n\n  .display-btn.temp,\n  .display-btn.humidity {\n    background-color: #63C7B2;\n  }\n\n  .display-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n  }\n\n  .display-btn:active {\n    transform: translateY(0);\n  }\n\n  .display-btn.selected {\n    background-color: #4D94FF !important;\n    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n  }\n\n  /* Ripple effect */\n  .display-btn::after {\n    content: '';\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 0;\n    height: 0;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, 0.3);\n    transform: translate(-50%, -50%);\n    transition: width 0.6s, height 0.6s;\n  }\n\n  .display-btn.ripple::after {\n    width: 300px;\n    height: 300px;\n  }\n</style>\n\n<div class=\"display-panel\">\n  <h3>Display</h3>\n  <div class=\"display-buttons\">\n    <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n    <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n    <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n  </div>\n</div>\n\n<script>\n  // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -424,7 +649,8 @@
         "y": 500,
         "wires": [
             [
-                "95c87862e5f44601"
+                "95c87862e5f44601",
+                "6e743f7fcc581ef7"
             ]
         ]
     },
@@ -437,17 +663,18 @@
         "order": 13,
         "width": 5,
         "height": 7,
-        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Sounds & Light</h3>\n    <div style=\"display:grid; grid-template-columns: 1fr auto; gap:10px; align-items:center;\">\n        <span>LED</span>\n        <button ng-click=\"send({payload:'led_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button ng-click=\"send({payload:'buzzer_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>",
+        "format": "<!-- Sound & Light Template -->\n<style>\n  .sound-light-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 300px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .sound-light-panel h3 {\n    text-align: center;\n    margin-top: 0;\n    margin-bottom: 15px;\n    background: none;\n  }\n\n  .sound-light-content {\n    display: grid;\n    grid-template-columns: 1fr auto;\n    gap: 15px;\n    align-items: center;\n    flex: 1;\n    align-content: center;\n  }\n\n  .sound-light-content span {\n    font-weight: bold;\n    font-size: 16px;\n  }\n\n  .toggle-btn {\n    background-color: #6ED6E1;\n    border: none;\n    padding: 8px 15px;\n    border-radius: 5px;\n    font-weight: bold;\n    width: 70px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .toggle-btn:hover {\n    transform: scale(1.05);\n  }\n\n  .toggle-btn.on {\n    background-color: #4CAF50 !important;\n    color: white;\n    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n  }\n\n  .toggle-btn.off {\n    background-color: #f44336 !important;\n    color: white;\n  }\n\n  /* Animation cho toggle */\n  .toggle-btn::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: -100%;\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n    transition: left 0.5s;\n  }\n\n  .toggle-btn.animate::before {\n    left: 100%;\n  }\n</style>\n\n<div class=\"sound-light-panel\">\n  <h3>Sounds & Light</h3>\n  <div class=\"sound-light-content\">\n    <span>LED</span>\n    <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n    <span>BUZZER</span>\n    <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n  </div>\n</div>\n\n<script>\n  // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 120,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
-                "37e81acb91ec53b2"
+                "37e81acb91ec53b2",
+                "127ed560d1fab321"
             ]
         ]
     },
@@ -456,7 +683,7 @@
         "type": "function",
         "z": "44f9ec8549dd6cd0",
         "name": "handleDisplayClick",
-        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
+        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -467,6 +694,7 @@
         "y": 500,
         "wires": [
             [
+                "4da9d7434574452c",
                 "1d8a4357c4e55e0f"
             ]
         ]
@@ -476,7 +704,7 @@
         "type": "function",
         "z": "44f9ec8549dd6cd0",
         "name": "handleControlToggle",
-        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
+        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n    return msg;  // Gửi lại trạng thái LED\n\n} else if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n    return msg;  // Gửi lại trạng thái BUZZER\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -484,9 +712,10 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
+                "fb54f2ba26ec81aa",
                 "735782d262f247c0"
             ]
         ]
@@ -505,7 +734,7 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 640,
+        "x": 860,
         "y": 500,
         "wires": []
     },
@@ -593,22 +822,6 @@
         "statusType": "auto",
         "x": 280,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "53eae1a3e881dc0c",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 440,
         "wires": []
     },
     {
@@ -874,132 +1087,67 @@
         "wires": []
     },
     {
-        "id": "1690073546694338",
-        "type": "ui_spacer",
+        "id": "4da9d7434574452c",
+        "type": "debug",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 2,
-        "height": 1
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 640,
+        "wires": []
     },
     {
-        "id": "2fe44acf92d9ad9a",
-        "type": "ui_spacer",
+        "id": "fb54f2ba26ec81aa",
+        "type": "debug",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 2,
-        "height": 1
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 600,
+        "wires": []
     },
     {
-        "id": "9d8fcce682b307ea",
-        "type": "ui_spacer",
+        "id": "6e743f7fcc581ef7",
+        "type": "debug",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 2,
-        "height": 1
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 420,
+        "wires": []
     },
     {
-        "id": "0c72f37b8c7e7f80",
-        "type": "ui_spacer",
+        "id": "127ed560d1fab321",
+        "type": "debug",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6e0d514f61db1bda",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 9,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "3aaac727686d697a",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 460,
+        "wires": []
     }
 ]
