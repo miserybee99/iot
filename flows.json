@@ -137,7 +137,7 @@
         "height": 1
     },
     {
-        "id": "660f53445c36d215",
+        "id": "42215fe7b2ebde73",
         "type": "ui_base",
         "theme": {
             "name": "theme-light",
@@ -372,17 +372,21 @@
             [
                 "ead562f7e78cfd4a",
                 "0bcea6bc537f889f",
-                "161e259ed606b31d"
+                "161e259ed606b31d",
+                "2732a42cd4fb391f"
             ],
             [
                 "128b233e760ecc24",
-                "20951328f4aaf99e"
+                "20951328f4aaf99e",
+                "9ee948c4df90fa38"
             ],
             [
-                "3b0fc91ea32222da"
+                "3b0fc91ea32222da",
+                "114fabc7adadf360"
             ],
             [
-                "aa715177ac04340b"
+                "aa715177ac04340b",
+                "cf61fc4ad1801a2f"
             ],
             [
                 "02b781758b6756e4"
@@ -549,8 +553,8 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 850,
-        "y": 540,
+        "x": 650,
+        "y": 560,
         "wires": []
     },
     {
@@ -565,8 +569,8 @@
         "columns": [],
         "outputs": 0,
         "cts": false,
-        "x": 290,
-        "y": 620,
+        "x": 270,
+        "y": 660,
         "wires": []
     },
     {
@@ -581,8 +585,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 620,
+        "x": 110,
+        "y": 660,
         "wires": [
             [
                 "b45547cb7567bc40"
@@ -601,8 +605,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 680,
+        "x": 110,
+        "y": 720,
         "wires": [
             [
                 "647bd5e4ef48427d"
@@ -624,8 +628,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 300,
-        "y": 680,
+        "x": 280,
+        "y": 720,
         "wires": [
             []
         ]
@@ -639,7 +643,7 @@
         "order": 12,
         "width": 5,
         "height": 7,
-        "format": "<!-- Display Template -->\n<style>\n  .display-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 300px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .display-panel h3 {\n    text-align: center;\n    margin-top: 0;\n    margin-bottom: 15px;\n    background: none;\n  }\n\n  .display-buttons {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    flex: 1;\n    justify-content: center;\n  }\n\n  .display-btn {\n    color: white;\n    padding: 12px;\n    border: none;\n    border-radius: 5px;\n    font-weight: bold;\n    width: 100%;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .display-btn.dust {\n    background-color: #1AA6B7;\n  }\n\n  .display-btn.temp,\n  .display-btn.humidity {\n    background-color: #63C7B2;\n  }\n\n  .display-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n  }\n\n  .display-btn:active {\n    transform: translateY(0);\n  }\n\n  .display-btn.selected {\n    background-color: #4D94FF !important;\n    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n  }\n\n  /* Ripple effect */\n  .display-btn::after {\n    content: '';\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 0;\n    height: 0;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, 0.3);\n    transform: translate(-50%, -50%);\n    transition: width 0.6s, height 0.6s;\n  }\n\n  .display-btn.ripple::after {\n    width: 300px;\n    height: 300px;\n  }\n</style>\n\n<div class=\"display-panel\">\n  <h3>Display</h3>\n  <div class=\"display-buttons\">\n    <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n    <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n    <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n  </div>\n</div>\n\n<script>\n  // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
+        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Display</h3>\n    <div style=\"display:flex; flex-direction:column; gap:10px;\">\n        <button ng-click=\"send({payload:'dust'})\"\n            style=\"background-color:#1AA6B7; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Dust\n    </button>\n        <button ng-click=\"send({payload:'temp'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Temp\n    </button>\n        <button ng-click=\"send({payload:'humid'})\"\n            style=\"background-color:#63C7B2; color:white; padding:10px; border:none; border-radius:5px; font-weight:bold; width:100%;\">\n      Humidity\n    </button>\n    </div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -649,8 +653,7 @@
         "y": 500,
         "wires": [
             [
-                "95c87862e5f44601",
-                "6e743f7fcc581ef7"
+                "95c87862e5f44601"
             ]
         ]
     },
@@ -663,39 +666,17 @@
         "order": 13,
         "width": 5,
         "height": 7,
-        "format": "<!-- Sound & Light Template -->\n<style>\n  .sound-light-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 300px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .sound-light-panel h3 {\n    text-align: center;\n    margin-top: 0;\n    margin-bottom: 15px;\n    background: none;\n  }\n\n  .sound-light-content {\n    display: grid;\n    grid-template-columns: 1fr auto;\n    gap: 15px;\n    align-items: center;\n    flex: 1;\n    align-content: center;\n  }\n\n  .sound-light-content span {\n    font-weight: bold;\n    font-size: 16px;\n  }\n\n  .toggle-btn {\n    background-color: #6ED6E1;\n    border: none;\n    padding: 8px 15px;\n    border-radius: 5px;\n    font-weight: bold;\n    width: 70px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .toggle-btn:hover {\n    transform: scale(1.05);\n  }\n\n  .toggle-btn.on {\n    background-color: #4CAF50 !important;\n    color: white;\n    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n  }\n\n  .toggle-btn.off {\n    background-color: #f44336 !important;\n    color: white;\n  }\n\n  /* Animation cho toggle */\n  .toggle-btn::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: -100%;\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n    transition: left 0.5s;\n  }\n\n  .toggle-btn.animate::before {\n    left: 100%;\n  }\n</style>\n\n<div class=\"sound-light-panel\">\n  <h3>Sounds & Light</h3>\n  <div class=\"sound-light-content\">\n    <span>LED</span>\n    <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n    <span>BUZZER</span>\n    <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n  </div>\n</div>\n\n<script>\n  // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
+        "format": "<div\n    style=\"background-color:#E6F7FF; padding:15px; border-radius:8px; width:100%; box-sizing:border-box; overflow-x:hidden;\">\n    <h3 style=\"text-align:center; margin-top:0; background:none;\">Sounds & Light</h3>\n    <div style=\"display:grid; grid-template-columns: 1fr auto; gap:10px; align-items:center;\">\n        <span>LED</span>\n        <button ng-click=\"send({payload:'led_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button ng-click=\"send({payload:'buzzer_toggle'})\"\n            style=\"background-color:#6ED6E1; border:none; padding:5px 15px; border-radius:5px; font-weight:bold; width:60px;\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 120,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
-                "37e81acb91ec53b2",
-                "127ed560d1fab321"
-            ]
-        ]
-    },
-    {
-        "id": "95c87862e5f44601",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "handleDisplayClick",
-        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 500,
-        "wires": [
-            [
-                "4da9d7434574452c",
-                "1d8a4357c4e55e0f"
+                "37e81acb91ec53b2"
             ]
         ]
     },
@@ -704,7 +685,7 @@
         "type": "function",
         "z": "44f9ec8549dd6cd0",
         "name": "handleControlToggle",
-        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n    return msg;  // Gửi lại trạng thái LED\n\n} else if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n    return msg;  // Gửi lại trạng thái BUZZER\n}\n",
+        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -712,10 +693,9 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
-                "fb54f2ba26ec81aa",
                 "735782d262f247c0"
             ]
         ]
@@ -734,7 +714,7 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 860,
+        "x": 640,
         "y": 500,
         "wires": []
     },
@@ -1087,39 +1067,27 @@
         "wires": []
     },
     {
-        "id": "4da9d7434574452c",
-        "type": "debug",
+        "id": "95c87862e5f44601",
+        "type": "function",
         "z": "44f9ec8549dd6cd0",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 640,
-        "wires": []
+        "name": "handleDisplayClick",
+        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "1d8a4357c4e55e0f"
+            ]
+        ]
     },
     {
-        "id": "fb54f2ba26ec81aa",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "6e743f7fcc581ef7",
+        "id": "53eae1a3e881dc0c",
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 6",
@@ -1130,24 +1098,218 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 420,
+        "x": 840,
+        "y": 880,
         "wires": []
     },
     {
-        "id": "127ed560d1fab321",
-        "type": "debug",
+        "id": "2732a42cd4fb391f",
+        "type": "change",
         "z": "44f9ec8549dd6cd0",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 460,
-        "wires": []
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "flow",
+                "to": "{\"field1\": payload}",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "775501084a4add1a"
+            ]
+        ]
+    },
+    {
+        "id": "9ee948c4df90fa38",
+        "type": "change",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "flow",
+                "to": "{\"field2\": payload}",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 700,
+        "wires": [
+            [
+                "775501084a4add1a"
+            ]
+        ]
+    },
+    {
+        "id": "114fabc7adadf360",
+        "type": "change",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "flow",
+                "to": "{\"field3\": payload}",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 740,
+        "wires": [
+            [
+                "775501084a4add1a"
+            ]
+        ]
+    },
+    {
+        "id": "cf61fc4ad1801a2f",
+        "type": "change",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "flow",
+                "to": "{\"field4\": payload}",
+                "tot": "jsonata",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 780,
+        "wires": [
+            [
+                "775501084a4add1a"
+            ]
+        ]
+    },
+    {
+        "id": "775501084a4add1a",
+        "type": "join",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "5",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "53eae1a3e881dc0c"
+            ]
+        ]
+    },
+    {
+        "id": "83123354d96fad22",
+        "type": "http request",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/update?api_key=9B1388YOIQ8571HR&field1={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1030,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3252bd16c9258e72",
+        "type": "inject",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 840,
+        "wires": [
+            [
+                "0434c3f23a1d37b6"
+            ]
+        ]
+    },
+    {
+        "id": "0434c3f23a1d37b6",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 820,
+        "wires": [
+            []
+        ]
     }
 ]
