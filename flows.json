@@ -74,7 +74,7 @@
         "tab": "9f2637ddf31cbc5c",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -94,7 +94,7 @@
         "name": "Authen",
         "icon": "dashboard",
         "order": 1,
-        "disabled": false,
+        "disabled": true,
         "hidden": false
     },
     {
@@ -181,8 +181,7 @@
         "y": 100,
         "wires": [
             [
-                "6ef572be12b90f31",
-                "6c3df6288f4d1cc3"
+                "6ef572be12b90f31"
             ]
         ]
     },
@@ -203,8 +202,7 @@
         "y": 180,
         "wires": [
             [
-                "6ef572be12b90f31",
-                "b4b759bf43ef4fbc"
+                "6ef572be12b90f31"
             ]
         ]
     },
@@ -225,8 +223,7 @@
         "y": 240,
         "wires": [
             [
-                "6ef572be12b90f31",
-                "9f818caafc037d6d"
+                "6ef572be12b90f31"
             ]
         ]
     },
@@ -247,7 +244,6 @@
         "wires": [
             [
                 "ead562f7e78cfd4a",
-                "0bcea6bc537f889f",
                 "161e259ed606b31d",
                 "2732a42cd4fb391f"
             ],
@@ -257,58 +253,16 @@
                 "9ee948c4df90fa38"
             ],
             [
-                "3b0fc91ea32222da",
                 "114fabc7adadf360"
             ],
             [
-                "aa715177ac04340b",
                 "cf61fc4ad1801a2f"
             ],
             [],
-            []
+            [
+                "99fedf9f5f3bfe87"
+            ]
         ]
-    },
-    {
-        "id": "3b0fc91ea32222da",
-        "type": "ui_text",
-        "z": "44f9ec8549dd6cd0",
-        "group": "176a6dcb963246d5",
-        "order": 4,
-        "width": 5,
-        "height": 1,
-        "name": "",
-        "label": "Nhiệt độ",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 640,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "aa715177ac04340b",
-        "type": "ui_text",
-        "z": "44f9ec8549dd6cd0",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 5,
-        "height": 1,
-        "name": "",
-        "label": "Độ ẩm",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 630,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "83aab99b8e08506d",
@@ -328,7 +282,7 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "1000",
+        "removeOlder": "24",
         "removeOlderPoints": "1000",
         "removeOlderUnit": "3600",
         "cutout": 0,
@@ -348,8 +302,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 780,
-        "y": 920,
+        "x": 760,
+        "y": 640,
         "wires": [
             []
         ]
@@ -373,38 +327,22 @@
         "wires": []
     },
     {
-        "id": "b45547cb7567bc40",
-        "type": "ui_table",
-        "z": "44f9ec8549dd6cd0",
-        "group": "9dff1546fd297e8c",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 270,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "25176735d677fbf6",
         "type": "function",
         "z": "44f9ec8549dd6cd0",
-        "name": "Table Logs",
-        "func": "// Lấy dữ liệu log từ flow\nlet data = flow.get(\"logData\") || [];\n\n// Định dạng lại cho ui_table\n// Mỗi phần tử là 1 dòng trong bảng\nlet tableData = data.map(d => {\n    return {\n        Time: d.Time,                // dạng HH:mm hoặc full datetime\n        PM2_5: d.PM2_5,\n        PM10: d.PM10,\n        Temperature: d.Temperature,\n        Humidity: d.Humidity\n    };\n});\n\n// Gửi sang ui_table\nmsg.payload = tableData;\nreturn msg;\n",
+        "name": "Pull Data",
+        "func": "// Function 1: Tạo API URL\nconst channelID = \"3030128\";\nconst readAPI = \"A2AAQJ1EF8O43YAP\";\nconst results = 20; // Số records muốn lấy (có thể thay đổi)\n\nmsg.url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=${results}`;\nmsg.method = \"GET\";\n\nreturn msg;\n\n// ===================================\n\n// Function 2: Format dữ liệu cho table\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    // Format thời gian theo múi giờ Việt Nam\n    const timeString = timestamp.toLocaleTimeString('vi-VN', {\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n    \n    // Kiểm tra và format từng field\n    const pm25 = feed.field1 ? parseFloat(feed.field1).toFixed(1) : \"-\";\n    const pm10 = feed.field2 ? parseFloat(feed.field2).toFixed(1) : \"-\";  \n    const humidity = feed.field3 ? parseFloat(feed.field3).toFixed(1) : \"-\";\n    const temperature = feed.field4 ? parseFloat(feed.field4).toFixed(1) : \"-\";\n    \n    tableData.push({\n        \"Time\": timeString,\n        \"PM2.5\": pm25,\n        \"PM10\": pm10,\n        \"Temperature\": temperature,\n        \"Humidity\": humidity\n    });\n});\n\n// Sắp xếp theo thời gian mới nhất trước (reverse)\ntableData.reverse();\n\nmsg.payload = tableData;\nreturn msg;\n\n// ===================================\n\n// Function 3: Auto refresh (cho inject node)\n// Trigger này để tự động lấy dữ liệu mỗi 5 phút\n// Chỉ cần set inject node với interval: 5 minutes\n// Hoặc dùng function này nếu muốn logic phức tạp hơn\n\nconst now = new Date();\nnode.warn(`Refreshing data at: ${now.toLocaleString('vi-VN')}`);\n\n// Gửi trigger để lấy dữ liệu mới\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 660,
+        "x": 320,
+        "y": 820,
         "wires": [
             [
-                "b45547cb7567bc40"
+                "6a9e6d1ffcdaab47"
             ]
         ]
     },
@@ -413,15 +351,15 @@
         "type": "function",
         "z": "44f9ec8549dd6cd0",
         "name": "Avg & Status",
-        "func": "let data = flow.get(\"logData\") || [];\nif (data.length === 0) return null;\n\nlet avg = {\n    PM2_5: 0,\n    PM10: 0,\n    Temp: 0,\n    Humidity: 0\n};\n\n// Cộng dồn\ndata.forEach(d => {\n    avg.PM2_5 += d.PM2_5;\n    avg.PM10 += d.PM10;\n    avg.Temp += d.Temperature;\n    avg.Humidity += d.Humidity;\n});\n\n// Tính trung bình\navg.PM2_5 = (avg.PM2_5 / data.length).toFixed(1);\navg.PM10 = (avg.PM10 / data.length).toFixed(1);\navg.Temp = (avg.Temp / data.length).toFixed(1);\navg.Humidity = (avg.Humidity / data.length).toFixed(0);\n\n// Hàm xác định trạng thái\nfunction statusPM(v) {\n    if (v <= 12) return \"Good\";\n    if (v <= 35) return \"Moderate\";\n    return \"Unhealthy\";\n}\n\nmsg.payload = {\n    PM2_5: { value: avg.PM2_5, status: statusPM(avg.PM2_5) },\n    PM10: { value: avg.PM10, status: statusPM(avg.PM10) },\n    Temp: { value: avg.Temp, status: \"Moderate\" },     // Bạn có thể thêm logic riêng\n    Humidity: { value: avg.Humidity, status: \"Moderate\" }\n};\n\nreturn msg;\n",
+        "func": "// Tính trung bình và đánh giá status\nif (!msg.payload || msg.payload.length === 0) {\n    msg.averages = {};\n    return msg;\n}\n\nconst data = msg.payload;\nlet pm25Sum = 0, pm10Sum = 0, tempSum = 0, humidSum = 0;\nlet count = data.length;\n\ndata.forEach(item => {\n    pm25Sum += parseFloat(item.PM25) || 0;\n    pm10Sum += parseFloat(item.PM10) || 0;\n    tempSum += parseFloat(item.Temperature) || 0;\n    humidSum += parseFloat(item.Humidity) || 0;\n});\n\nconst avgPM25 = (pm25Sum / count).toFixed(1);\nconst avgPM10 = (pm10Sum / count).toFixed(1);\nconst avgTemp = (tempSum / count).toFixed(1);\nconst avgHumid = (humidSum / count).toFixed(0);\n\n// Đánh giá status theo tiêu chuẩn WHO/EPA\nfunction getPM25Status(value) {\n    if (value <= 12) return \"Good\";\n    if (value <= 35.4) return \"Moderate\";\n    if (value <= 55.4) return \"Unhealthy for Sensitive\";\n    if (value <= 150.4) return \"Unhealthy\";\n    if (value <= 250.4) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getPM10Status(value) {\n    if (value <= 54) return \"Good\";\n    if (value <= 154) return \"Moderate\";\n    if (value <= 254) return \"Unhealthy for Sensitive\";\n    if (value <= 354) return \"Unhealthy\";\n    if (value <= 424) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getTempStatus(value) {\n    if (value >= 18 && value <= 27) return \"Comfortable\";\n    if ((value >= 15 && value < 18) || (value > 27 && value <= 32)) return \"Moderate\";\n    if ((value >= 10 && value < 15) || (value > 32 && value <= 38)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nfunction getHumidityStatus(value) {\n    if (value >= 40 && value <= 60) return \"Comfortable\";\n    if ((value >= 30 && value < 40) || (value > 60 && value <= 70)) return \"Moderate\";\n    if ((value >= 20 && value < 30) || (value > 70 && value <= 80)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nmsg.averages = {\n    pm25: { value: avgPM25, status: getPM25Status(parseFloat(avgPM25)) },\n    pm10: { value: avgPM10, status: getPM10Status(parseFloat(avgPM10)) },\n    temp: { value: avgTemp, status: getTempStatus(parseFloat(avgTemp)) },\n    humidity: { value: avgHumid, status: getHumidityStatus(parseInt(avgHumid)) }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 720,
+        "x": 730,
+        "y": 1000,
         "wires": [
             [
                 "647bd5e4ef48427d"
@@ -433,18 +371,18 @@
         "type": "ui_template",
         "z": "44f9ec8549dd6cd0",
         "group": "9dff1546fd297e8c",
-        "name": "",
-        "order": 1,
+        "name": "Avg4Field",
+        "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<div style=\"background-color: #E6F7FF; padding: 15px; border-radius: 8px;\">\n    <h3>Average</h3>\n    <div ng-repeat=\"(key, item) in msg.payload\"\n        style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;\">\n        <div style=\"width: 80px; font-weight: bold;\">{{key}}</div>\n        <div style=\"background-color: #6ED6E1; padding: 5px 10px; border-radius: 5px; font-weight: bold;\">{{item.value}}\n        </div>\n        <div style=\"background-color: #FFF3C4; padding: 5px 10px; border-radius: 5px;\">{{item.status}}</div>\n    </div>\n</div>",
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            border-radius: 15px;\n            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);\n            color: white;\n            max-width: 400px;\n            margin: 0 auto;\n        }\n\n        .title {\n            text-align: center;\n            font-size: 24px;\n            font-weight: bold;\n            margin-bottom: 25px;\n            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(255, 255, 255, 0.2);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: white;\n            min-width: 80px;\n        }\n\n        .metric-value {\n            background: rgba(255, 255, 255, 0.9);\n            color: #2c3e50;\n            padding: 10px 15px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 60px;\n            text-align: center;\n            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-status {\n            padding: 8px 12px;\n            border-radius: 20px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 100px;\n            text-align: center;\n            text-shadow: none;\n        }\n\n        .status-good {\n            background: #2ecc71;\n            color: white;\n        }\n\n        .status-moderate {\n            background: #f39c12;\n            color: white;\n        }\n\n        .status-unhealthy {\n            background: #e74c3c;\n            color: white;\n        }\n\n        .status-comfortable {\n            background: #2ecc71;\n            color: white;\n        }\n\n        .status-uncomfortable {\n            background: #e67e22;\n            color: white;\n        }\n\n        .status-extreme {\n            background: #8e44ad;\n            color: white;\n        }\n\n        .header-row {\n            display: flex;\n            justify-content: space-between;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(255, 255, 255, 0.3);\n        }\n\n        .header-item {\n            font-size: 16px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title\">Environmental Status</div>\n\n        <div class=\"header-row\">\n            <div class=\"header-item\">Parameter</div>\n            <div class=\"header-item\">Average</div>\n            <div class=\"header-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">411.3</div>\n            <div class=\"metric-status status-unhealthy\" id=\"pm25-status\">Hazardous</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">244.3</div>\n            <div class=\"metric-status status-unhealthy\" id=\"pm10-status\">Unhealthy</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status status-comfortable\" id=\"temp-status\">Comfortable</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status status-uncomfortable\" id=\"humid-status\">Uncomfortable</div>\n        </div>\n    </div>\n\n    <script>\n        function getStatusClass(status) {\n            switch(status.toLowerCase()) {\n                case 'good': return 'status-good';\n                case 'moderate': return 'status-moderate';\n                case 'unhealthy for sensitive':\n                case 'unhealthy': \n                case 'very unhealthy':\n                case 'hazardous': return 'status-unhealthy';\n                case 'comfortable': return 'status-comfortable';\n                case 'uncomfortable': return 'status-uncomfortable';\n                case 'extreme': return 'status-extreme';\n                default: return 'status-moderate';\n            }\n        }\n\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value + '°C';\n                document.getElementById('humid-value').textContent = avg.humidity.value + '%';\n                \n                // Update statuses\n                const pm25Status = document.getElementById('pm25-status');\n                pm25Status.textContent = avg.pm25.status;\n                pm25Status.className = 'metric-status ' + getStatusClass(avg.pm25.status);\n                \n                const pm10Status = document.getElementById('pm10-status');\n                pm10Status.textContent = avg.pm10.status;\n                pm10Status.className = 'metric-status ' + getStatusClass(avg.pm10.status);\n                \n                const tempStatus = document.getElementById('temp-status');\n                tempStatus.textContent = avg.temp.status;\n                tempStatus.className = 'metric-status ' + getStatusClass(avg.temp.status);\n                \n                const humidStatus = document.getElementById('humid-status');\n                humidStatus.textContent = avg.humidity.status;\n                humidStatus.className = 'metric-status ' + getStatusClass(avg.humidity.status);\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"411.3\", status: \"Hazardous\" },\n                pm10: { value: \"244.3\", status: \"Unhealthy\" },\n                temp: { value: \"26.8\", status: \"Comfortable\" },\n                humidity: { value: \"82\", status: \"Uncomfortable\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 280,
-        "y": 720,
+        "x": 900,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -550,90 +488,9 @@
         "y": 300,
         "wires": [
             [
-                "6ef572be12b90f31",
-                "d3e0883518791ff7"
+                "6ef572be12b90f31"
             ]
         ]
-    },
-    {
-        "id": "6c3df6288f4d1cc3",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "b4b759bf43ef4fbc",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "9f818caafc037d6d",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "d3e0883518791ff7",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "0bcea6bc537f889f",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 20,
-        "wires": []
     },
     {
         "id": "a7e8a6f754323184",
@@ -913,8 +770,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 880,
+        "x": 860,
+        "y": 440,
         "wires": []
     },
     {
@@ -937,8 +794,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 660,
+        "x": 620,
+        "y": 300,
         "wires": [
             [
                 "775501084a4add1a",
@@ -966,8 +823,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 700,
+        "x": 620,
+        "y": 340,
         "wires": [
             [
                 "775501084a4add1a"
@@ -994,8 +851,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 740,
+        "x": 620,
+        "y": 380,
         "wires": [
             [
                 "775501084a4add1a"
@@ -1022,8 +879,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 780,
+        "x": 620,
+        "y": 420,
         "wires": [
             [
                 "775501084a4add1a"
@@ -1051,8 +908,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 750,
-        "y": 700,
+        "x": 830,
+        "y": 340,
         "wires": [
             [
                 "53eae1a3e881dc0c",
@@ -1076,8 +933,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1030,
-        "y": 700,
+        "x": 1110,
+        "y": 340,
         "wires": [
             []
         ]
@@ -1103,8 +960,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 650,
-        "y": 840,
+        "x": 970,
+        "y": 400,
         "wires": [
             [
                 "0434c3f23a1d37b6"
@@ -1123,8 +980,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 820,
+        "x": 1140,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1141,8 +998,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 640,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -1166,8 +1023,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 920,
+        "x": 110,
+        "y": 640,
         "wires": [
             [
                 "9c4b3d65b377de05"
@@ -1182,8 +1039,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 450,
-        "y": 920,
+        "x": 430,
+        "y": 640,
         "wires": [
             [
                 "0813cd42da4b673f",
@@ -1208,8 +1065,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 310,
-        "y": 920,
+        "x": 290,
+        "y": 640,
         "wires": [
             [
                 "a6d2e7f44cb2ec20"
@@ -1221,15 +1078,15 @@
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 960,
+        "x": 600,
+        "y": 680,
         "wires": []
     },
     {
@@ -1237,15 +1094,15 @@
         "type": "function",
         "z": "44f9ec8549dd6cd0",
         "name": "line chart",
-        "func": "// Alternative format - thử cái này nếu format trên không hoạt động\nconst feeds = msg.payload.feeds;\n\nlet chartData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at).getTime();\n    \n    // Format mỗi data point riêng biệt\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        chartData.push({\n            series: \"PM2.5\",\n            x: timestamp,\n            y: parseFloat(feed.field1)\n        });\n    }\n    \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        chartData.push({\n            series: \"PM10\", \n            x: timestamp,\n            y: parseFloat(feed.field2)\n        });\n    }\n});\n\n// Sắp xếp theo thời gian\nchartData.sort((a, b) => a.x - b.x);\n\nmsg.payload = chartData;\nmsg.topic = \"PM Data\";\n\nreturn msg;",
+        "func": "const feeds = msg.payload.feeds;\n\nlet messages = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at).getTime();\n\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field1),\n            topic: \"PM2.5\",\n            timestamp: timestamp\n        });\n    }\n\n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field2),\n            topic: \"PM10\",\n            timestamp: timestamp\n        });\n    }\n});\n\nreturn [messages];",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 920,
+        "x": 600,
+        "y": 640,
         "wires": [
             [
                 "83aab99b8e08506d"
@@ -1264,8 +1121,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 1000,
+        "x": 590,
+        "y": 720,
         "wires": [
             [
                 "626729eb8731508b"
@@ -1287,8 +1144,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 780,
-        "y": 1000,
+        "x": 760,
+        "y": 720,
         "wires": [
             []
         ]
@@ -1302,14 +1159,14 @@
         "order": 5,
         "width": 10,
         "height": 4,
-        "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">Temperature</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.temp}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">Humidity</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.humid}}\n            </div>\n        </div>\n    </div>\n</div>",
+        "format": "<!-- Template cho Node-RED Template node -->\n<style>\n    .sensor-container {\n        display: flex;\n        flex-direction: column;\n        gap: 15px;\n        font-family: Arial, sans-serif;\n        padding: 10px;\n    }\n\n    .sensor-card {\n        background-color: #e3f2fd;\n        border-radius: 12px;\n        padding: 20px;\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        min-width: 200px;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    }\n\n    .sensor-value {\n        font-size: 32px;\n        font-weight: bold;\n        color: #1a1a1a;\n    }\n\n    .sensor-icon {\n        font-size: 28px;\n        color: #333;\n    }\n\n    /* Icon styles sử dụng Unicode symbols */\n    .humidity-icon::before {\n        content: \"💧\";\n    }\n\n    .temperature-icon::before {\n        content: \"🌡️\";\n    }\n</style>\n\n<div class=\"sensor-container\">\n    <!-- Độ ẩm -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Humidity}}%</span>\n        <span class=\"sensor-icon humidity-icon\"></span>\n    </div>\n\n    <!-- Nhiệt độ -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Temperature}}°C</span>\n        <span class=\"sensor-icon temperature-icon\"></span>\n    </div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 610,
-        "y": 320,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1447,8 +1304,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
-        "y": 1020,
+        "x": 820,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1509,8 +1366,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 270,
-        "y": 1220,
+        "x": 360,
+        "y": 1140,
         "wires": []
     },
     {
@@ -1531,8 +1388,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1230,
-        "y": 1320,
+        "x": 910,
+        "y": 1220,
         "wires": [
             [
                 "c2e704a485b72fca"
@@ -1548,8 +1405,8 @@
         "z": "44f9ec8549dd6cd0",
         "name": "",
         "events": "all",
-        "x": 1480,
-        "y": 1200,
+        "x": 1280,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -1566,8 +1423,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
-        "y": 1300,
+        "x": 1140,
+        "y": 1160,
         "wires": [
             [
                 "c99a8c838a1ab2c1"
@@ -1594,5 +1451,150 @@
         "x": 1030,
         "y": 940,
         "wires": []
+    },
+    {
+        "id": "98359d013a157c96",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "formatTable",
+        "func": "if (!msg.payload || !msg.payload.feeds) {\n    msg.payload = [];\n    return msg;\n}\n\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    const timeString = timestamp.toLocaleString('vi-VN', {\n        day: '2-digit',\n        month: '2-digit', \n        year: 'numeric',\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n\n    tableData.push({\n        \"Time\": timeString,\n        \"PM25\": feed.field1,  // Thay đổi key thành \"PM25\"\n        \"PM10\": feed.field2,\n        \"Temperature\": feed.field3,\n        \"Humidity\": feed.field4\n    });\n});\n\ntableData.reverse();\nmsg.payload = tableData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 820,
+        "wires": [
+            [
+                "b45547cb7567bc40",
+                "a65049a9c8577979",
+                "d5ac11d27f9002cd"
+            ]
+        ]
+    },
+    {
+        "id": "6481e8cc2b861030",
+        "type": "inject",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "25176735d677fbf6"
+            ]
+        ]
+    },
+    {
+        "id": "8a976667e154bea1",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "6a9e6d1ffcdaab47",
+        "type": "http request",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{url}}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 820,
+        "wires": [
+            [
+                "98359d013a157c96",
+                "8a976667e154bea1"
+            ]
+        ]
+    },
+    {
+        "id": "b45547cb7567bc40",
+        "type": "ui_table",
+        "z": "44f9ec8549dd6cd0",
+        "group": "9dff1546fd297e8c",
+        "name": "",
+        "order": 1,
+        "width": 13,
+        "height": 7,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a65049a9c8577979",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "10dab6a4929169d3",
+        "type": "ui_template",
+        "z": "44f9ec8549dd6cd0",
+        "group": "9dff1546fd297e8c",
+        "name": "tableData",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        .air-quality-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);\n            min-height: 100vh;\n        }\n        \n        .table-title {\n            text-align: center;\n            color: #2c3e50;\n            font-size: 24px;\n            margin-bottom: 20px;\n            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);\n        }\n        \n        .data-table {\n            width: 100%;\n            border-collapse: collapse;\n            background: white;\n            border-radius: 12px;\n            overflow: hidden;\n            box-shadow: 0 10px 30px rgba(0,0,0,0.1);\n            margin: 0 auto;\n        }\n        \n        .data-table thead {\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            color: white;\n        }\n        \n        .data-table th {\n            padding: 15px 12px;\n            text-align: center;\n            font-weight: 600;\n            font-size: 14px;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n        \n        .data-table td {\n            padding: 12px;\n            text-align: center;\n            border-bottom: 1px solid #e9ecef;\n            font-size: 13px;\n            transition: background-color 0.2s ease;\n        }\n        \n        .data-table tr:nth-child(even) {\n            background-color: #f8f9fa;\n        }\n        \n        .data-table tr:hover {\n            background-color: #e3f2fd;\n            transform: scale(1.01);\n        }\n        \n        .pm25-value {\n            font-weight: bold;\n            color: #e74c3c;\n            padding: 6px 10px;\n            background: rgba(231, 76, 60, 0.1);\n            border-radius: 6px;\n        }\n        \n        .pm10-value {\n            font-weight: bold;\n            color: #e67e22;\n            padding: 6px 10px;\n            background: rgba(230, 126, 34, 0.1);\n            border-radius: 6px;\n        }\n        \n        .temp-value {\n            color: #3498db;\n            font-weight: 500;\n        }\n        \n        .humidity-value {\n            color: #27ae60;\n            font-weight: 500;\n        }\n        \n        .time-value {\n            color: #34495e;\n            font-weight: 500;\n            font-size: 12px;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"air-quality-container\">\n        <h2 class=\"table-title\">Air Quality Monitoring Data</h2>\n        <table class=\"data-table\">\n            <thead>\n                <tr>\n                    <th>Time</th>\n                    <th>PM2.5 (μg/m³)</th>\n                    <th>PM10 (μg/m³)</th>\n                    <th>Temperature (°C)</th>\n                    <th>Humidity (%)</th>\n                </tr>\n            </thead>\n            <tbody id=\"data-body\">\n                <!-- Data sẽ được thêm bằng JavaScript -->\n            </tbody>\n        </table>\n    </div>\n\n    <script>\n        // Sample data - trong Node-RED sẽ được thay thế bằng msg.payload\n        const sampleData = [\n            {\"Time\":\"21:01 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:55 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:55 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"54.6\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:54 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"54.6\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:54 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"19:35 08/08/2025\",\"PM25\":\"55.7\",\"PM10\":\"46.8\",\"Temperature\":\"23.6\",\"Humidity\":\"63\"},\n            {\"Time\":\"19:34 08/08/2025\",\"PM25\":\"55.7\",\"PM10\":\"46.8\",\"Temperature\":\"23.6\",\"Humidity\":\"63\"}\n        ];\n\n        function updateTable(data) {\n            const tbody = document.getElementById('data-body');\n            tbody.innerHTML = '';\n            \n            data.forEach(row => {\n                const tr = document.createElement('tr');\n                tr.innerHTML = `\n                    <td class=\"time-value\">${row.Time}</td>\n                    <td><span class=\"pm25-value\">${row.PM25}</span></td>\n                    <td><span class=\"pm10-value\">${row.PM10}</span></td>\n                    <td class=\"temp-value\">${row.Temperature}°C</td>\n                    <td class=\"humidity-value\">${row.Humidity}%</td>\n                `;\n                tbody.appendChild(tr);\n            });\n        }\n\n        // Load data\n        updateTable(sampleData);\n    </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 820,
+        "y": 940,
+        "wires": [
+            []
+        ]
     }
 ]
