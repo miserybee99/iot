@@ -43,16 +43,18 @@
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
+        "order": 3,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "9f2637ddf31cbc5c",
         "type": "ui_tab",
         "name": "Logs",
         "icon": "dashboard",
+        "order": 4,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "176a6dcb963246d5",
@@ -1291,5 +1293,306 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "fae3a0c2344394f0",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Save Original Password",
+        "func": "var username = msg.payload.username;\nmsg.original_password = msg.payload.password; // Lưu pass gốc để so sánh\nmsg.method = \"GET\";\nmsg.url = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/users/\" + username + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            [
+                "4909bf9a676b36a1",
+                "abef85674b4ffc62"
+            ]
+        ]
+    },
+    {
+        "id": "4909bf9a676b36a1",
+        "type": "http request",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Get User Data",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 600,
+        "y": 1080,
+        "wires": [
+            [
+                "121bf687b59f8444",
+                "d72901a5bc88a040"
+            ]
+        ]
+    },
+    {
+        "id": "121bf687b59f8444",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Check Password",
+        "func": "if (!msg.payload) {\n    msg.payload = { status: \"Log:   ❌ User not found\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}\n\nif (msg.payload.password === msg.original_password) {\n    msg.payload = { status: \"✅ Login successful\", loggedIn: true };\n    context.set(\"loggedIn\", true);\n    return [msg, null];\n} else {\n    msg.payload = { status: \"Log:   ❌ Wrong password\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1080,
+        "wires": [
+            [
+                "d8385aac97153200",
+                "097f807467e75b4d"
+            ],
+            [
+                "bedc50b76d12e681",
+                "56d262416d18aaae"
+            ]
+        ]
+    },
+    {
+        "id": "d8385aac97153200",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Login OK",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "bedc50b76d12e681",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Login Fail",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "abef85674b4ffc62",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "d72901a5bc88a040",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "4060ea9c5b87d1b9",
+        "type": "ui_form",
+        "z": "44f9ec8549dd6cd0",
+        "name": "Login Form",
+        "label": "",
+        "group": "b35559caedba2363",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Username",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "str",
+        "splitLayout": false,
+        "className": "",
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "fae3a0c2344394f0",
+                "b8b4e8dba278ef38"
+            ]
+        ]
+    },
+    {
+        "id": "b8b4e8dba278ef38",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "097f807467e75b4d",
+        "type": "switch",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "property": "msg.payload.loggedIn",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1230,
+        "y": 1320,
+        "wires": [
+            [
+                "c2e704a485b72fca"
+            ],
+            [
+                "4060ea9c5b87d1b9"
+            ]
+        ]
+    },
+    {
+        "id": "c99a8c838a1ab2c1",
+        "type": "ui_ui_control",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "events": "all",
+        "x": 1480,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2e704a485b72fca",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "function 5",
+        "func": "msg.payload = { tab: \"Home\", enabled: true }; // Thay \"Home\" bằng tab bạn muốn hiển thị\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 1300,
+        "wires": [
+            [
+                "c99a8c838a1ab2c1"
+            ]
+        ]
+    },
+    {
+        "id": "56d262416d18aaae",
+        "type": "ui_text",
+        "z": "44f9ec8549dd6cd0",
+        "group": "b35559caedba2363",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload.status}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "b35559caedba2363",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "da41e42544591d8d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da41e42544591d8d",
+        "type": "ui_tab",
+        "name": "Authen",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
