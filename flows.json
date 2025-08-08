@@ -8,6 +8,85 @@
         "env": []
     },
     {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d881abfa18477ebf",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 10,
+        "width": 16,
+        "height": 1
+    },
+    {
         "id": "ead562f7e78cfd4a",
         "type": "ui_gauge",
         "z": "44f9ec8549dd6cd0",
@@ -163,12 +242,8 @@
                 "aa715177ac04340b",
                 "cf61fc4ad1801a2f"
             ],
-            [
-                "02b781758b6756e4"
-            ],
-            [
-                "cc7f0ab95e70bd55"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -176,9 +251,9 @@
         "type": "ui_text",
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
-        "order": 5,
-        "width": 4,
-        "height": 4,
+        "order": 4,
+        "width": 5,
+        "height": 1,
         "name": "",
         "label": "Nhiệt độ",
         "format": "{{msg.payload}}",
@@ -197,9 +272,9 @@
         "type": "ui_text",
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
-        "order": 4,
-        "width": 4,
-        "height": 4,
+        "order": 3,
+        "width": 5,
+        "height": 1,
         "name": "",
         "label": "Độ ẩm",
         "format": "{{msg.payload}}",
@@ -219,27 +294,27 @@
         "z": "44f9ec8549dd6cd0",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 10,
+        "order": 6,
         "width": 16,
         "height": 8,
         "label": "PM chart",
         "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
+        "legend": "true",
+        "xformat": "auto",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
+        "removeOlder": "1000",
+        "removeOlderPoints": "1000",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
         "colors": [
             "#1f77b4",
-            "#aec7e8",
+            "#7f4606",
             "#ff7f0e",
             "#2ca02c",
             "#98df8a",
@@ -251,65 +326,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 720,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "02b781758b6756e4",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "linear chart",
-        "func": "msg.payload = [\n  { series: [\"PM2.5\", \"PM10\"],\n    data: [\n      [{ x: msg.payload.created_at, y: msg.payload.PM2_5 }],\n      [{ x: msg.payload.created_at, y: msg.payload.PM10 }]\n    ],\n    labels: []\n  }\n];\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 320,
-        "wires": [
-            [
-                "83aab99b8e08506d"
-            ]
-        ]
-    },
-    {
-        "id": "cc7f0ab95e70bd55",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "avg",
-        "func": "let data = flow.get(\"data\") || [];\ndata.push(msg.payload);\nif (data.length > 50) data.shift();\n\nlet avgPM25 = data.reduce((a,b) => a+b.PM2_5, 0) / data.length;\nlet avgPM10 = data.reduce((a,b) => a+b.PM10, 0) / data.length;\n\nflow.set(\"data\", data);\n\nmsg.payload = {\n    pm25: avgPM25.toFixed(1),\n    pm10: avgPM10.toFixed(1)\n};\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 380,
-        "wires": [
-            [
-                "e5383995eed14390"
-            ]
-        ]
-    },
-    {
-        "id": "e5383995eed14390",
-        "type": "template",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Avg box",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<div style=\"background-color: #E6F7FF; border-radius: 8px; padding: 15px;\">\n  <h3>Average</h3>\n  <div>PM2.5: <span style=\"font-weight: bold;\">{{msg.payload.pm25}}</span></div>\n  <div>PM10: <span style=\"font-weight: bold;\">{{msg.payload.pm10}}</span></div>\n</div>\n",
-        "output": "str",
-        "x": 720,
-        "y": 380,
+        "x": 780,
+        "y": 920,
         "wires": [
             []
         ]
@@ -415,9 +433,9 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Display",
-        "order": 12,
+        "order": 8,
         "width": 5,
-        "height": 7,
+        "height": 5,
         "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -438,9 +456,9 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Sound & Light",
-        "order": 13,
+        "order": 9,
         "width": 5,
-        "height": 7,
+        "height": 5,
         "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -584,7 +602,7 @@
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1106,132 +1124,172 @@
         "wires": []
     },
     {
-        "id": "1690073546694338",
-        "type": "ui_spacer",
+        "id": "5540029422774b19",
+        "type": "inject",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 2,
-        "height": 1
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 920,
+        "wires": [
+            [
+                "9c4b3d65b377de05"
+            ]
+        ]
     },
     {
-        "id": "2fe44acf92d9ad9a",
-        "type": "ui_spacer",
+        "id": "a6d2e7f44cb2ec20",
+        "type": "json",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 2,
-        "height": 1
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 920,
+        "wires": [
+            [
+                "0813cd42da4b673f",
+                "9b2f53fd8a4295d9",
+                "32ed8ffbd2c0c3e6"
+            ]
+        ]
     },
     {
-        "id": "9d8fcce682b307ea",
-        "type": "ui_spacer",
+        "id": "9c4b3d65b377de05",
+        "type": "http request",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/3030128/feeds.json?api_key=A2AAQJ1EF8O43YAP&results=1000",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "a6d2e7f44cb2ec20"
+            ]
+        ]
+    },
+    {
+        "id": "0813cd42da4b673f",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "9b2f53fd8a4295d9",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "line chart",
+        "func": "// Alternative format - thử cái này nếu format trên không hoạt động\nconst feeds = msg.payload.feeds;\n\nlet chartData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at).getTime();\n    \n    // Format mỗi data point riêng biệt\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        chartData.push({\n            series: \"PM2.5\",\n            x: timestamp,\n            y: parseFloat(feed.field1)\n        });\n    }\n    \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        chartData.push({\n            series: \"PM10\", \n            x: timestamp,\n            y: parseFloat(feed.field2)\n        });\n    }\n});\n\n// Sắp xếp theo thời gian\nchartData.sort((a, b) => a.x - b.x);\n\nmsg.payload = chartData;\nmsg.topic = \"PM Data\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 920,
+        "wires": [
+            [
+                "83aab99b8e08506d"
+            ]
+        ]
+    },
+    {
+        "id": "32ed8ffbd2c0c3e6",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "avg",
+        "func": "// Lấy dữ liệu feeds từ ThingSpeak\nconst feeds = msg.payload.feeds;\n\n// Kiểm tra dữ liệu đầu vào\nif (!feeds || !Array.isArray(feeds)) {\n    node.error(\"Không có dữ liệu feeds hợp lệ\");\n    return null;\n}\n\nlet pm25Values = [];\nlet pm10Values = [];\n\n// Thu thập tất cả giá trị hợp lệ\nfeeds.forEach(feed => {\n    // Thu thập PM2.5 values\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        const pm25 = parseFloat(feed.field1);\n        if (!isNaN(pm25)) {\n            pm25Values.push(pm25);\n        }\n    }\n    \n    // Thu thập PM10 values  \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        const pm10 = parseFloat(feed.field2);\n        if (!isNaN(pm10)) {\n            pm10Values.push(pm10);\n        }\n    }\n});\n\n// Tính trung bình\nlet pm25Avg = 0;\nlet pm10Avg = 0;\n\nif (pm25Values.length > 0) {\n    pm25Avg = pm25Values.reduce((sum, val) => sum + val, 0) / pm25Values.length;\n}\n\nif (pm10Values.length > 0) {\n    pm10Avg = pm10Values.reduce((sum, val) => sum + val, 0) / pm10Values.length;\n}\n\n// Làm tròn đến 1 chữ số thập phân\npm25Avg = Math.round(pm25Avg * 10) / 10;\npm10Avg = Math.round(pm10Avg * 10) / 10;\n\n// Log kết quả\nnode.warn(`PM2.5 Average: ${pm25Avg} μg/m³ (từ ${pm25Values.length} samples)`);\nnode.warn(`PM10 Average: ${pm10Avg} μg/m³ (từ ${pm10Values.length} samples)`);\n\n// Tạo payload cho Template node (chỉ 1 output)\nmsg.payload = {\n    pm25_avg: pm25Avg,\n    pm10_avg: pm10Avg,\n    pm25_count: pm25Values.length,\n    pm10_count: pm10Values.length\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1000,
+        "wires": [
+            [
+                "626729eb8731508b"
+            ]
+        ]
+    },
+    {
+        "id": "626729eb8731508b",
+        "type": "ui_template",
+        "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
+        "name": "PM Avg",
         "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "0c72f37b8c7e7f80",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6e0d514f61db1bda",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 9,
         "width": 10,
-        "height": 1
+        "height": 4,
+        "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM2.5</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm25_avg}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM10</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm10_avg}}\n            </div>\n        </div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 1000,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "3aaac727686d697a",
-        "type": "ui_spacer",
+        "id": "99fedf9f5f3bfe87",
+        "type": "ui_template",
         "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "order": 11,
+        "name": "temp/humid",
+        "order": 5,
         "width": 10,
-        "height": 1
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "height": 4,
+        "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">Temperature</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.temp}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">Humidity</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.humid}}\n            </div>\n        </div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 610,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
