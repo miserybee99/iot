@@ -382,7 +382,8 @@
         "y": 820,
         "wires": [
             [
-                "6a9e6d1ffcdaab47"
+                "6a9e6d1ffcdaab47",
+                "bed167935bba6a70"
             ]
         ]
     },
@@ -576,7 +577,7 @@
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 12",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -803,7 +804,7 @@
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 6",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1031,7 +1032,7 @@
         "type": "debug",
         "z": "44f9ec8549dd6cd0",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1521,10 +1522,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "300",
@@ -1580,6 +1577,152 @@
         "cts": false,
         "x": 870,
         "y": 820,
+        "wires": []
+    },
+    {
+        "id": "90b44035f631fc3d",
+        "type": "inject",
+        "z": "44f9ec8549dd6cd0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1380,
+        "wires": [
+            [
+                "8df20ea6b228a6f5"
+            ]
+        ]
+    },
+    {
+        "id": "8df20ea6b228a6f5",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "AlertChecker",
+        "func": "// Lấy dữ liệu từ flow context (được lưu bởi flow chính)\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Kiểm tra xem có đủ dữ liệu không\nif (humidity === undefined || temp === undefined || pm25 === undefined || pm10 === undefined) {\n    node.status({fill:\"yellow\", shape:\"ring\", text:\"Chưa có đủ dữ liệu sensor\"});\n    return null;\n}\n\n// Định nghĩa ngưỡng an toàn\nconst THRESHOLDS = {\n    PM2_5: 35,      // μg/m³ - WHO guideline\n    PM10: 50,       // μg/m³ - WHO guideline  \n    Temperature: 35, // °C - Nhiệt độ cao\n    Humidity: 80    // % - Độ ẩm cao\n};\n\n// Kiểm tra để tránh spam email - chỉ gửi cảnh báo mỗi 30 phút\nconst ALERT_COOLDOWN = 30 * 60 * 1000; // 30 phút\nlet lastAlertTime = flow.get(\"lastAlertTime\") || 0;\nlet currentTime = Date.now();\n\n// Kiểm tra xem có thông số nào vượt ngưỡng không\nlet alerts = [];\nlet hasAlert = false;\n\nif (pm25 > THRESHOLDS.PM2_5) {\n    alerts.push({\n        type: \"PM2.5\",\n        value: pm25,\n        threshold: THRESHOLDS.PM2_5,\n        severity: pm25 > 75 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM2.5 vượt ngưỡng an toàn: ${pm25} μg/m³ (An toàn: < ${THRESHOLDS.PM2_5} μg/m³)`\n    });\n    hasAlert = true;\n}\n\nif (pm10 > THRESHOLDS.PM10) {\n    alerts.push({\n        type: \"PM10\", \n        value: pm10,\n        threshold: THRESHOLDS.PM10,\n        severity: pm10 > 100 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM10 vượt ngưỡng an toàn: ${pm10} μg/m³ (An toàn: < ${THRESHOLDS.PM10} μg/m³)`\n    });\n    hasAlert = true;\n}\n\nif (temp > THRESHOLDS.Temperature) {\n    alerts.push({\n        type: \"Nhiệt độ\",\n        value: temp,\n        threshold: THRESHOLDS.Temperature,\n        severity: temp > 40 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🌡️\",\n        message: `Nhiệt độ quá cao: ${temp}°C (An toàn: < ${THRESHOLDS.Temperature}°C)`\n    });\n    hasAlert = true;\n}\n\nif (humidity > THRESHOLDS.Humidity) {\n    alerts.push({\n        type: \"Độ ẩm\",\n        value: humidity,\n        threshold: THRESHOLDS.Humidity,\n        severity: humidity > 90 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"💧\",\n        message: `Độ ẩm quá cao: ${humidity}% (An toàn: < ${THRESHOLDS.Humidity}%)`\n    });\n    hasAlert = true;\n}\n\n// Chỉ gửi cảnh báo nếu có alert và đã qua thời gian cooldown\nif (hasAlert && (currentTime - lastAlertTime > ALERT_COOLDOWN)) {\n    flow.set(\"lastAlertTime\", currentTime);\n    \n    node.status({fill:\"red\", shape:\"dot\", text:`${alerts.length} cảnh báo phát hiện`});\n    \n    return {\n        payload: {\n            alerts: alerts,\n            timestamp: new Date().toISOString(),\n            location: \"Phòng giám sát IoT\", \n            allValues: {\n                pm25: pm25,\n                pm10: pm10,\n                temperature: temp,\n                humidity: humidity\n            }\n        }\n    };\n} \n// else if (hasAlert) {\n//     // Log thông tin khi trong thời gian cooldown\n//     let remainingMinutes = Math.round((ALERT_COOLDOWN - (currentTime - lastAlertTime)) / 60000);\n//     node.status({fill:\"yellow\", shape:\"ring\", text:`Cooldown: ${remainingMinutes} phút`});\n//     node.warn(`Cảnh báo đang trong thời gian chờ. Còn ${remainingMinutes} phút.`);\n//     return null;\n// }\n else {\n    // Không có cảnh báo\n    node.status({fill:\"green\", shape:\"dot\", text:\"Tất cả thông số bình thường\"});\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1380,
+        "wires": [
+            [
+                "44e871fb0f0153fb"
+            ]
+        ]
+    },
+    {
+        "id": "44e871fb0f0153fb",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "fbRequest",
+        "func": "let alertData = msg.payload;\n\n// Firebase Realtime Database URL\nlet firebaseUrl = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/emails.json\";\n\n// Chuẩn bị HTTP request\nmsg.url = firebaseUrl;\nmsg.method = \"GET\";\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\n// Lưu alert data để sử dụng ở node tiếp theo\nmsg.alertData = alertData;\n\nnode.status({fill:\"blue\", shape:\"dot\", text:\"Đang lấy danh sách email...\"});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1380,
+        "wires": [
+            [
+                "5b7d02252bf56dbc"
+            ]
+        ]
+    },
+    {
+        "id": "5b7d02252bf56dbc",
+        "type": "http request",
+        "z": "44f9ec8549dd6cd0",
+        "name": "getEmail",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 1380,
+        "wires": [
+            [
+                "a52b4ea03c27930e"
+            ]
+        ]
+    },
+    {
+        "id": "a52b4ea03c27930e",
+        "type": "function",
+        "z": "44f9ec8549dd6cd0",
+        "name": "createMail",
+        "func": "let alertData = msg.alertData;\nlet emailResponse = msg.payload;\n\n// Xử lý response từ Firebase\nlet emailList = [];\ntry {\n    if (emailResponse && typeof emailResponse === 'object') {\n        // Duyệt qua các key trong Firebase response\n        Object.keys(emailResponse).forEach(key => {\n            let emailValue = emailResponse[key];\n            if (typeof emailValue === 'string' && emailValue.includes('@')) {\n                emailList.push(emailValue);\n            }\n        });\n    }\n} catch (error) {\n    node.error(\"Lỗi khi xử lý dữ liệu email từ Firebase: \" + error.message);\n    return null;\n}\n\nif (emailList.length === 0) {\n    node.error(\"Không tìm thấy email nào trong database!\");\n    node.status({fill:\"red\", shape:\"ring\", text:\"Không có email\"});\n    return null;\n}\n\n// Tạo nội dung email\nlet timestamp = new Date(alertData.timestamp);\nlet subject = `🚨 CẢNH BÁO Chất Lượng Không Khí - ${timestamp.toLocaleDateString('vi-VN')} ${timestamp.toLocaleTimeString('vi-VN')}`;\n\n// Tạo danh sách cảnh báo cho email text\nlet alertTexts = alertData.alerts.map(alert => \n    `${alert.icon} ${alert.severity}: ${alert.message}`\n);\n\n// HTML email content\nlet htmlContent = `\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <style>\n        body { \n            font-family: Arial, sans-serif; \n            margin: 0; \n            padding: 20px; \n            background-color: #f5f5f5;\n        }\n        .container {\n            max-width: 600px;\n            margin: 0 auto;\n            background: white;\n            border-radius: 10px;\n            overflow: hidden;\n            box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n        }\n        .header { \n            background: linear-gradient(135deg, #ff6b6b, #ff5252);\n            color: white; \n            padding: 20px; \n            text-align: center;\n        }\n        .header h1 {\n            margin: 0;\n            font-size: 24px;\n        }\n        .alert-section {\n            padding: 20px;\n        }\n        .alert-item { \n            background: #fff3cd; \n            border-left: 4px solid #ffc107; \n            padding: 15px; \n            margin: 10px 0; \n            border-radius: 5px;\n        }\n        .alert-critical { \n            border-left-color: #dc3545; \n            background: #f8d7da; \n        }\n        .values-table {\n            width: 100%;\n            border-collapse: collapse;\n            margin: 20px 0;\n        }\n        .values-table th, .values-table td {\n            border: 1px solid #ddd;\n            padding: 12px;\n            text-align: left;\n        }\n        .values-table th {\n            background: #f8f9fa;\n        }\n        .status-normal { color: #28a745; }\n        .status-warning { color: #ffc107; }\n        .status-critical { color: #dc3545; }\n        .footer { \n            background: #f8f9fa;\n            color: #666; \n            font-size: 12px; \n            padding: 15px;\n            text-align: center;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h1>🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ</h1>\n            <p>📍 ${alertData.location} | 🕐 ${timestamp.toLocaleString('vi-VN')}</p>\n        </div>\n        \n        <div class=\"alert-section\">\n            <h2>⚠️ Chi tiết cảnh báo:</h2>\n            ${alertData.alerts.map(alert => `\n                <div class=\"alert-item ${alert.severity === 'NGHIÊM TRỌNG' ? 'alert-critical' : ''}\">\n                    <strong>${alert.icon} ${alert.type} - ${alert.severity}</strong><br>\n                    ${alert.message}\n                </div>\n            `).join('')}\n            \n            <h3>📊 Tất cả thông số hiện tại:</h3>\n            <table class=\"values-table\">\n                <tr>\n                    <th>Thông số</th>\n                    <th>Giá trị</th>\n                    <th>Ngưỡng an toàn</th>\n                    <th>Trạng thái</th>\n                </tr>\n                <tr>\n                    <td>PM2.5</td>\n                    <td>${alertData.allValues.pm25} μg/m³</td>\n                    <td>< 35 μg/m³</td>\n                    <td class=\"${alertData.allValues.pm25 > 35 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.pm25 > 35 ? '❌ Vượt ngưỡng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>PM10</td>\n                    <td>${alertData.allValues.pm10} μg/m³</td>\n                    <td>< 50 μg/m³</td>\n                    <td class=\"${alertData.allValues.pm10 > 50 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.pm10 > 50 ? '❌ Vượt ngưỡng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>Nhiệt độ</td>\n                    <td>${alertData.allValues.temperature}°C</td>\n                    <td>< 35°C</td>\n                    <td class=\"${alertData.allValues.temperature > 35 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.temperature > 35 ? '❌ Quá nóng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>Độ ẩm</td>\n                    <td>${alertData.allValues.humidity}%</td>\n                    <td>< 80%</td>\n                    <td class=\"${alertData.allValues.humidity > 80 ? 'status-warning' : 'status-normal'}\">\n                        ${alertData.allValues.humidity > 80 ? '⚠️ Quá ẩm' : '✅ Bình thường'}\n                    </td>\n                </tr>\n            </table>\n        </div>\n        \n        <div class=\"footer\">\n            <p><strong>Hệ thống giám sát IoT - Chất lượng không khí</strong></p>\n            <p>Email tự động được gửi khi phát hiện thông số vượt ngưỡng an toàn</p>\n            <p>Thời gian gửi: ${new Date().toLocaleString('vi-VN')}</p>\n        </div>\n    </div>\n</body>\n</html>`;\n\n// Text content cho email clients không hỗ trợ HTML\nlet textContent = `\n🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ\n\n📍 Vị trí: ${alertData.location}\n🕐 Thời gian: ${timestamp.toLocaleString('vi-VN')}\n\n⚠️ CÁC CẢNH BÁO:\n${alertTexts.join('\\n')}\n\n📊 TẤT CẢ THÔNG SỐ HIỆN TẠI:\n- PM2.5: ${alertData.allValues.pm25} μg/m³ (An toàn: < 35)\n- PM10: ${alertData.allValues.pm10} μg/m³ (An toàn: < 50) \n- Nhiệt độ: ${alertData.allValues.temperature}°C (An toàn: < 35)\n- Độ ẩm: ${alertData.allValues.humidity}% (An toàn: < 80)\n\n---\nHệ thống giám sát IoT - Email tự động\n`;\n\n// Chuẩn bị dữ liệu để gửi email\nmsg.payload = {\n    to: emailList.join(', '), // Gửi cho tất cả email cùng lúc\n    subject: subject,\n    html: htmlContent,\n    text: textContent\n};\n\n// Thông tin cho debug\nmsg.emailInfo = {\n    emailCount: emailList.length,\n    alertCount: alertData.alerts.length,\n    emailList: emailList\n};\n\nnode.status({fill:\"green\", shape:\"dot\", text:`Sẵn sàng gửi tới ${emailList.length} email`});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1380,
+        "wires": [
+            [
+                "be0cd33ac08df3b0"
+            ]
+        ]
+    },
+    {
+        "id": "be0cd33ac08df3b0",
+        "type": "e-mail",
+        "z": "44f9ec8549dd6cd0",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "msg.payload.to",
+        "dname": "Send Alert Email",
+        "x": 900,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "bed167935bba6a70",
+        "type": "debug",
+        "z": "44f9ec8549dd6cd0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 880,
         "wires": []
     }
 ]
