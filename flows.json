@@ -1,6 +1,6 @@
 [
     {
-        "id": "44f9ec8549dd6cd0",
+        "id": "8dda81f9590d2155",
         "type": "tab",
         "label": "Flow 2",
         "disabled": false,
@@ -8,150 +8,9 @@
         "env": []
     },
     {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "da41e42544591d8d",
-        "type": "ui_tab",
-        "name": "Authen",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": true,
-        "hidden": true
-    },
-    {
-        "id": "b35559caedba2363",
-        "type": "ui_group",
-        "name": "Login",
-        "tab": "da41e42544591d8d",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "bdd3a7d6b972bdc9",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9c2cb8f05270a756",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "8aa3b70408336bc9",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "79c715c8056560ee",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4d932853b3b391b7",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "ead562f7e78cfd4a",
+        "id": "de8837020ce39d8d",
         "type": "ui_gauge",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "group": "176a6dcb963246d5",
         "order": 1,
@@ -177,12 +36,12 @@
         "wires": []
     },
     {
-        "id": "128b233e760ecc24",
+        "id": "79d3217229c8fd0e",
         "type": "ui_gauge",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 2,
+        "order": 3,
         "width": 8,
         "height": 5,
         "gtype": "gage",
@@ -205,9 +64,9 @@
         "wires": []
     },
     {
-        "id": "3c9ac084f74ed2e0",
+        "id": "183498a90d8989db",
         "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "humid",
         "topic": "/23127354-23127388-23127435/humid",
         "qos": "2",
@@ -221,14 +80,14 @@
         "y": 100,
         "wires": [
             [
-                "6ef572be12b90f31"
+                "e153e58c21cd6e2d"
             ]
         ]
     },
     {
-        "id": "cdce23d8cfd92eef",
+        "id": "7f763e6fbee537b4",
         "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "temp",
         "topic": "/23127354-23127388-23127435/temp",
         "qos": "2",
@@ -242,14 +101,14 @@
         "y": 180,
         "wires": [
             [
-                "6ef572be12b90f31"
+                "e153e58c21cd6e2d"
             ]
         ]
     },
     {
-        "id": "4f62ebb09931dcf6",
+        "id": "642e27d79af60328",
         "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "pm25",
         "topic": "/23127354-23127388-23127435/pm25",
         "qos": "2",
@@ -263,14 +122,14 @@
         "y": 240,
         "wires": [
             [
-                "6ef572be12b90f31"
+                "e153e58c21cd6e2d"
             ]
         ]
     },
     {
-        "id": "6ef572be12b90f31",
+        "id": "e153e58c21cd6e2d",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Combine sensors",
         "func": "let type;\nlet value = parseFloat(msg.payload);\n\n// Xác định loại dữ liệu từ topic\nif (msg.topic.includes(\"humid\")) {\n    type = \"Humidity\";\n} else if (msg.topic.includes(\"temp\")) {\n    type = \"Temperature\";\n} else if (msg.topic.includes(\"pm25\")) {\n    type = \"PM2_5\";  // Sửa lại PM2.5\n} else if (msg.topic.includes(\"pm10\")) {\n    type = \"PM10\";\n} else {\n    type = \"Unknown\"; // Kiểm tra nếu topic không xác định\n}\n\n// Lưu giá trị vào flow context theo từng loại\nflow.set(type, value);\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi dữ liệu khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Định dạng dữ liệu cho chart\n    let pmData = [\n        { x: new Date().toISOString(), y: pm25 },\n        { x: new Date().toISOString(), y: pm10 }\n    ];\n\n    let chartData = {\n        series: [\"PM2.5\", \"PM10\"],\n        data: [pmData[0], pmData[1]],\n        labels: [new Date().toISOString()]\n    };\n\n    // Dữ liệu cho các gauge\n    let gaugesData = {\n        PM2_5: pm25,\n        PM10: pm10,\n        Temperature: temp,\n        Humidity: humidity\n    };\n\n    // Trả lại dữ liệu dưới định dạng cho từng output\n    return [\n        { payload: pm25 },  // Output 1: PM2.5 (chỉ gửi giá trị)\n        { payload: pm10 },  // Output 2: PM10 (chỉ gửi giá trị)\n        { payload: temp },  // Output 3: Temperature (chỉ gửi giá trị)\n        { payload: humidity },  // Output 4: Humidity (chỉ gửi giá trị)\n        { payload: chartData },  // Output 5: Dữ liệu cho chart (PM2.5, PM10)\n        { payload: gaugesData }  // Output 6: Gauges data\n    ];\n} else {\n    return null;  // Trả về null nếu thiếu một trong các giá trị cần thiết\n}\n",
         "outputs": 6,
@@ -283,34 +142,34 @@
         "y": 200,
         "wires": [
             [
-                "ead562f7e78cfd4a",
-                "161e259ed606b31d",
-                "2732a42cd4fb391f"
+                "de8837020ce39d8d",
+                "3add253b3797bbb0",
+                "d31537a49feaeecd"
             ],
             [
-                "128b233e760ecc24",
-                "20951328f4aaf99e",
-                "9ee948c4df90fa38"
+                "79d3217229c8fd0e",
+                "2b14b2965865c05d",
+                "f51de0e75ea173e4"
             ],
             [
-                "114fabc7adadf360"
+                "406176db8334e4bc"
             ],
             [
-                "cf61fc4ad1801a2f"
+                "c8ed9d69caac8110"
             ],
             [],
             [
-                "99fedf9f5f3bfe87"
+                "fbd860164a693d11"
             ]
         ]
     },
     {
-        "id": "83aab99b8e08506d",
+        "id": "e109d81e20d686fc",
         "type": "ui_chart",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 10,
+        "order": 20,
         "width": 17,
         "height": 8,
         "label": "PM chart",
@@ -349,9 +208,9 @@
         ]
     },
     {
-        "id": "735782d262f247c0",
+        "id": "2d482c818d7721c4",
         "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "topic": "/23127354-23127388-23127435/led-buzzer",
         "qos": "",
@@ -367,9 +226,9 @@
         "wires": []
     },
     {
-        "id": "25176735d677fbf6",
+        "id": "f2f6554b27cc1929",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Pull Data",
         "func": "// Function 1: Tạo API URL\nconst channelID = \"3030128\";\nconst readAPI = \"A2AAQJ1EF8O43YAP\";\nconst results = 20; // Số records muốn lấy (có thể thay đổi)\n\nmsg.url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=${results}`;\nmsg.method = \"GET\";\n\nreturn msg;\n\n// ===================================\n\n// Function 2: Format dữ liệu cho table\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    // Format thời gian theo múi giờ Việt Nam\n    const timeString = timestamp.toLocaleTimeString('vi-VN', {\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n    \n    // Kiểm tra và format từng field\n    const pm25 = feed.field1 ? parseFloat(feed.field1).toFixed(1) : \"-\";\n    const pm10 = feed.field2 ? parseFloat(feed.field2).toFixed(1) : \"-\";  \n    const humidity = feed.field3 ? parseFloat(feed.field3).toFixed(1) : \"-\";\n    const temperature = feed.field4 ? parseFloat(feed.field4).toFixed(1) : \"-\";\n    \n    tableData.push({\n        \"Time\": timeString,\n        \"PM2.5\": pm25,\n        \"PM10\": pm10,\n        \"Temperature\": temperature,\n        \"Humidity\": humidity\n    });\n});\n\n// Sắp xếp theo thời gian mới nhất trước (reverse)\ntableData.reverse();\n\nmsg.payload = tableData;\nreturn msg;\n\n// ===================================\n\n// Function 3: Auto refresh (cho inject node)\n// Trigger này để tự động lấy dữ liệu mỗi 5 phút\n// Chỉ cần set inject node với interval: 5 minutes\n// Hoặc dùng function này nếu muốn logic phức tạp hơn\n\nconst now = new Date();\nnode.warn(`Refreshing data at: ${now.toLocaleString('vi-VN')}`);\n\n// Gửi trigger để lấy dữ liệu mới\nreturn msg;",
         "outputs": 1,
@@ -382,14 +241,14 @@
         "y": 820,
         "wires": [
             [
-                "6a9e6d1ffcdaab47"
+                "494e3003a4c19a71"
             ]
         ]
     },
     {
-        "id": "d5ac11d27f9002cd",
+        "id": "446d09467bde2f6c",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Avg & Status",
         "func": "// Tính trung bình và đánh giá status\nif (!msg.payload || msg.payload.length === 0) {\n    msg.averages = {};\n    return msg;\n}\n\nconst data = msg.payload;\nlet pm25Sum = 0, pm10Sum = 0, tempSum = 0, humidSum = 0;\nlet count = data.length;\n\ndata.forEach(item => {\n    pm25Sum += parseFloat(item.PM25) || 0;\n    pm10Sum += parseFloat(item.PM10) || 0;\n    tempSum += parseFloat(item.Temperature) || 0;\n    humidSum += parseFloat(item.Humidity) || 0;\n});\n\nconst avgPM25 = (pm25Sum / count).toFixed(1);\nconst avgPM10 = (pm10Sum / count).toFixed(1);\nconst avgTemp = (tempSum / count).toFixed(1);\nconst avgHumid = (humidSum / count).toFixed(0);\n\n// Đánh giá status theo tiêu chuẩn WHO/EPA\nfunction getPM25Status(value) {\n    if (value <= 12) return \"Good\";\n    if (value <= 35.4) return \"Moderate\";\n    if (value <= 55.4) return \"Unhealthy for Sensitive\";\n    if (value <= 150.4) return \"Unhealthy\";\n    if (value <= 250.4) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getPM10Status(value) {\n    if (value <= 54) return \"Good\";\n    if (value <= 154) return \"Moderate\";\n    if (value <= 254) return \"Unhealthy for Sensitive\";\n    if (value <= 354) return \"Unhealthy\";\n    if (value <= 424) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getTempStatus(value) {\n    if (value >= 18 && value <= 27) return \"Comfortable\";\n    if ((value >= 15 && value < 18) || (value > 27 && value <= 32)) return \"Moderate\";\n    if ((value >= 10 && value < 15) || (value > 32 && value <= 38)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nfunction getHumidityStatus(value) {\n    if (value >= 40 && value <= 60) return \"Comfortable\";\n    if ((value >= 30 && value < 40) || (value > 60 && value <= 70)) return \"Moderate\";\n    if ((value >= 20 && value < 30) || (value > 70 && value <= 80)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nmsg.averages = {\n    pm25: { value: avgPM25, status: getPM25Status(parseFloat(avgPM25)) },\n    pm10: { value: avgPM10, status: getPM10Status(parseFloat(avgPM10)) },\n    temp: { value: avgTemp, status: getTempStatus(parseFloat(avgTemp)) },\n    humidity: { value: avgHumid, status: getHumidityStatus(parseInt(avgHumid)) }\n};\n\nreturn msg;",
         "outputs": 1,
@@ -402,14 +261,14 @@
         "y": 880,
         "wires": [
             [
-                "647bd5e4ef48427d"
+                "4caae068883ad8fe"
             ]
         ]
     },
     {
-        "id": "647bd5e4ef48427d",
+        "id": "4caae068883ad8fe",
         "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "9dff1546fd297e8c",
         "name": "Avg4Field",
         "order": 2,
@@ -428,12 +287,12 @@
         ]
     },
     {
-        "id": "900c33bd8785df2f",
+        "id": "c03ec16613694906",
         "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "Display",
-        "order": 11,
+        "order": 12,
         "width": 5,
         "height": 5,
         "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
@@ -446,17 +305,17 @@
         "y": 500,
         "wires": [
             [
-                "95c87862e5f44601"
+                "9facb2a151481e55"
             ]
         ]
     },
     {
-        "id": "1bd9979aecfb2758",
+        "id": "8b2075aa422f4c81",
         "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "Sound & Light",
-        "order": 12,
+        "order": 23,
         "width": 4,
         "height": 5,
         "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
@@ -469,14 +328,14 @@
         "y": 560,
         "wires": [
             [
-                "37e81acb91ec53b2"
+                "9fe7a047742e3562"
             ]
         ]
     },
     {
-        "id": "37e81acb91ec53b2",
+        "id": "9fe7a047742e3562",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "handleControlToggle",
         "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
         "outputs": 1,
@@ -489,14 +348,14 @@
         "y": 560,
         "wires": [
             [
-                "735782d262f247c0"
+                "2d482c818d7721c4"
             ]
         ]
     },
     {
-        "id": "1d8a4357c4e55e0f",
+        "id": "d17771dc5424384b",
         "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "topic": "/23127354-23127388-23127435/screen",
         "qos": "0",
@@ -512,9 +371,9 @@
         "wires": []
     },
     {
-        "id": "ecf1817639760998",
+        "id": "4b3ea0b73f99b7c6",
         "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "pm10",
         "topic": "/23127354-23127388-23127435/pm10",
         "qos": "2",
@@ -528,14 +387,14 @@
         "y": 300,
         "wires": [
             [
-                "6ef572be12b90f31"
+                "e153e58c21cd6e2d"
             ]
         ]
     },
     {
-        "id": "a7e8a6f754323184",
+        "id": "f207f98c36653348",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "alert_noti",
         "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nreturn msg;\n",
         "outputs": 1,
@@ -548,15 +407,15 @@
         "y": 80,
         "wires": [
             [
-                "463c2a4805e8558a",
-                "e019e163822b0e2f"
+                "99f3976e7751c756",
+                "7be078fba0f79d9f"
             ]
         ]
     },
     {
-        "id": "bc2ba3b6d9e04c4d",
+        "id": "8d6d3e44a0309b0e",
         "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "topic": "/23127354-23127388-23127435/alert",
         "qos": "",
@@ -572,9 +431,9 @@
         "wires": []
     },
     {
-        "id": "463c2a4805e8558a",
+        "id": "99f3976e7751c756",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 12",
         "active": true,
         "tosidebar": true,
@@ -589,9 +448,9 @@
         "wires": []
     },
     {
-        "id": "161e259ed606b31d",
+        "id": "3add253b3797bbb0",
         "type": "delay",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "pauseType": "rate",
         "timeout": "5",
@@ -609,14 +468,14 @@
         "y": 80,
         "wires": [
             [
-                "a4c63d27551f2d07"
+                "b7d162385c54da36"
             ]
         ]
     },
     {
-        "id": "20951328f4aaf99e",
+        "id": "2b14b2965865c05d",
         "type": "delay",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "pauseType": "rate",
         "timeout": "5",
@@ -634,14 +493,14 @@
         "y": 140,
         "wires": [
             [
-                "a7480709ef7daefa"
+                "300a8c9f00f308f2"
             ]
         ]
     },
     {
-        "id": "e019e163822b0e2f",
+        "id": "7be078fba0f79d9f",
         "type": "switch",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -659,15 +518,15 @@
         "y": 160,
         "wires": [
             [
-                "bc2ba3b6d9e04c4d",
-                "e256282f093959a6"
+                "8d6d3e44a0309b0e",
+                "192794ee93b1afa6"
             ]
         ]
     },
     {
-        "id": "a4c63d27551f2d07",
+        "id": "b7d162385c54da36",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -687,14 +546,14 @@
         "y": 40,
         "wires": [
             [
-                "a7e8a6f754323184"
+                "f207f98c36653348"
             ]
         ]
     },
     {
-        "id": "a7480709ef7daefa",
+        "id": "300a8c9f00f308f2",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -714,14 +573,14 @@
         "y": 180,
         "wires": [
             [
-                "a7e8a6f754323184"
+                "f207f98c36653348"
             ]
         ]
     },
     {
-        "id": "4417533a5fbc673b",
+        "id": "ecd2af85d099df14",
         "type": "http request",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "method": "POST",
         "ret": "obj",
@@ -738,14 +597,14 @@
         "y": 240,
         "wires": [
             [
-                "57d078ea5821554b"
+                "63590243af7e60b2"
             ]
         ]
     },
     {
-        "id": "e256282f093959a6",
+        "id": "192794ee93b1afa6",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "function 2",
         "func": "// Lấy giá trị PM2_5 và PM10 từ flow context\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n\n// Chuẩn bị payload chỉ chứa dữ liệu\nmsg.payload = `PM2.5: ${pm25 || 0} µgm, PM10: ${pm10 || 0} µgm`;\n\nreturn msg;",
         "outputs": 1,
@@ -758,14 +617,14 @@
         "y": 260,
         "wires": [
             [
-                "4417533a5fbc673b"
+                "ecd2af85d099df14"
             ]
         ]
     },
     {
-        "id": "57d078ea5821554b",
+        "id": "63590243af7e60b2",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 13",
         "active": true,
         "tosidebar": true,
@@ -779,9 +638,9 @@
         "wires": []
     },
     {
-        "id": "95c87862e5f44601",
+        "id": "9facb2a151481e55",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "handleDisplayClick",
         "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
         "outputs": 1,
@@ -794,14 +653,14 @@
         "y": 500,
         "wires": [
             [
-                "1d8a4357c4e55e0f"
+                "d17771dc5424384b"
             ]
         ]
     },
     {
-        "id": "53eae1a3e881dc0c",
+        "id": "0e726e310bc00a61",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 6",
         "active": true,
         "tosidebar": true,
@@ -815,9 +674,9 @@
         "wires": []
     },
     {
-        "id": "2732a42cd4fb391f",
+        "id": "d31537a49feaeecd",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -838,15 +697,15 @@
         "y": 300,
         "wires": [
             [
-                "775501084a4add1a",
-                "251f3bcbda2eb3d8"
+                "9da36023da0b0d40",
+                "8a68782c614242cf"
             ]
         ]
     },
     {
-        "id": "9ee948c4df90fa38",
+        "id": "f51de0e75ea173e4",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -867,14 +726,14 @@
         "y": 340,
         "wires": [
             [
-                "775501084a4add1a"
+                "9da36023da0b0d40"
             ]
         ]
     },
     {
-        "id": "114fabc7adadf360",
+        "id": "406176db8334e4bc",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -895,14 +754,14 @@
         "y": 380,
         "wires": [
             [
-                "775501084a4add1a"
+                "9da36023da0b0d40"
             ]
         ]
     },
     {
-        "id": "cf61fc4ad1801a2f",
+        "id": "c8ed9d69caac8110",
         "type": "change",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "rules": [
             {
@@ -923,14 +782,14 @@
         "y": 420,
         "wires": [
             [
-                "775501084a4add1a"
+                "9da36023da0b0d40"
             ]
         ]
     },
     {
-        "id": "775501084a4add1a",
+        "id": "9da36023da0b0d40",
         "type": "join",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "mode": "custom",
         "build": "merged",
@@ -952,15 +811,15 @@
         "y": 340,
         "wires": [
             [
-                "53eae1a3e881dc0c",
-                "83123354d96fad22"
+                "0e726e310bc00a61",
+                "ab340bc0bbd711bc"
             ]
         ]
     },
     {
-        "id": "83123354d96fad22",
+        "id": "ab340bc0bbd711bc",
         "type": "http request",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -980,9 +839,9 @@
         ]
     },
     {
-        "id": "3252bd16c9258e72",
+        "id": "a5c9dfc8813c99b3",
         "type": "inject",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "props": [
             {
@@ -1004,14 +863,14 @@
         "y": 400,
         "wires": [
             [
-                "0434c3f23a1d37b6"
+                "39cd28eec6c041a7"
             ]
         ]
     },
     {
-        "id": "0434c3f23a1d37b6",
+        "id": "39cd28eec6c041a7",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "function 1",
         "func": "\nreturn msg;",
         "outputs": 1,
@@ -1027,9 +886,9 @@
         ]
     },
     {
-        "id": "251f3bcbda2eb3d8",
+        "id": "8a68782c614242cf",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 5",
         "active": true,
         "tosidebar": true,
@@ -1043,9 +902,10 @@
         "wires": []
     },
     {
-        "id": "5540029422774b19",
+        "id": "8190278bdc282ddc",
         "type": "inject",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -1067,14 +927,14 @@
         "y": 640,
         "wires": [
             [
-                "9c4b3d65b377de05"
+                "4d247f250f7d202d"
             ]
         ]
     },
     {
-        "id": "a6d2e7f44cb2ec20",
+        "id": "405c971bd6f7eaab",
         "type": "json",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "property": "payload",
         "action": "",
@@ -1083,16 +943,17 @@
         "y": 640,
         "wires": [
             [
-                "0813cd42da4b673f",
-                "9b2f53fd8a4295d9",
-                "32ed8ffbd2c0c3e6"
+                "3d744b0ace9d285b",
+                "9ad09c685606dd12",
+                "6e50af3812f4b5c4"
             ]
         ]
     },
     {
-        "id": "9c4b3d65b377de05",
+        "id": "4d247f250f7d202d",
         "type": "http request",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
+        "d": true,
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -1109,14 +970,14 @@
         "y": 640,
         "wires": [
             [
-                "a6d2e7f44cb2ec20"
+                "405c971bd6f7eaab"
             ]
         ]
     },
     {
-        "id": "0813cd42da4b673f",
+        "id": "3d744b0ace9d285b",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 8",
         "active": false,
         "tosidebar": true,
@@ -1130,9 +991,9 @@
         "wires": []
     },
     {
-        "id": "9b2f53fd8a4295d9",
+        "id": "9ad09c685606dd12",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "line chart",
         "func": "const feeds = msg.payload.feeds;\n\nlet messages = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at).getTime();\n\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field1),\n            topic: \"PM2.5\",\n            timestamp: timestamp\n        });\n    }\n\n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field2),\n            topic: \"PM10\",\n            timestamp: timestamp\n        });\n    }\n});\n\nreturn [messages];",
         "outputs": 1,
@@ -1145,14 +1006,14 @@
         "y": 640,
         "wires": [
             [
-                "83aab99b8e08506d"
+                "e109d81e20d686fc"
             ]
         ]
     },
     {
-        "id": "32ed8ffbd2c0c3e6",
+        "id": "6e50af3812f4b5c4",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "avg",
         "func": "// Lấy dữ liệu feeds từ ThingSpeak\nconst feeds = msg.payload.feeds;\n\n// Kiểm tra dữ liệu đầu vào\nif (!feeds || !Array.isArray(feeds)) {\n    node.error(\"Không có dữ liệu feeds hợp lệ\");\n    return null;\n}\n\nlet pm25Values = [];\nlet pm10Values = [];\n\n// Thu thập tất cả giá trị hợp lệ\nfeeds.forEach(feed => {\n    // Thu thập PM2.5 values\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        const pm25 = parseFloat(feed.field1);\n        if (!isNaN(pm25)) {\n            pm25Values.push(pm25);\n        }\n    }\n    \n    // Thu thập PM10 values  \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        const pm10 = parseFloat(feed.field2);\n        if (!isNaN(pm10)) {\n            pm10Values.push(pm10);\n        }\n    }\n});\n\n// Tính trung bình\nlet pm25Avg = 0;\nlet pm10Avg = 0;\n\nif (pm25Values.length > 0) {\n    pm25Avg = pm25Values.reduce((sum, val) => sum + val, 0) / pm25Values.length;\n}\n\nif (pm10Values.length > 0) {\n    pm10Avg = pm10Values.reduce((sum, val) => sum + val, 0) / pm10Values.length;\n}\n\n// Làm tròn đến 1 chữ số thập phân\npm25Avg = Math.round(pm25Avg * 10) / 10;\npm10Avg = Math.round(pm10Avg * 10) / 10;\n\n// Log kết quả\nnode.warn(`PM2.5 Average: ${pm25Avg} μg/m³ (từ ${pm25Values.length} samples)`);\nnode.warn(`PM10 Average: ${pm10Avg} μg/m³ (từ ${pm10Values.length} samples)`);\n\n// Tạo payload cho Template node (chỉ 1 output)\nmsg.payload = {\n    pm25_avg: pm25Avg,\n    pm10_avg: pm10Avg,\n    pm25_count: pm25Values.length,\n    pm10_count: pm10Values.length\n};\n\nreturn msg;",
         "outputs": 1,
@@ -1165,17 +1026,17 @@
         "y": 720,
         "wires": [
             [
-                "626729eb8731508b"
+                "f7f761f4f58f2f28"
             ]
         ]
     },
     {
-        "id": "626729eb8731508b",
+        "id": "f7f761f4f58f2f28",
         "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "PM Avg",
-        "order": 9,
+        "order": 10,
         "width": 9,
         "height": 4,
         "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM2.5</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm25_avg}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM10</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm10_avg}}\n            </div>\n        </div>\n    </div>\n</div>",
@@ -1191,9 +1052,9 @@
         ]
     },
     {
-        "id": "99fedf9f5f3bfe87",
+        "id": "fbd860164a693d11",
         "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "temp/humid",
         "order": 4,
@@ -1212,9 +1073,9 @@
         ]
     },
     {
-        "id": "fae3a0c2344394f0",
+        "id": "1a7c677863c5e778",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Save Original Password",
         "func": "var username = msg.payload.username;\nmsg.original_password = msg.payload.password; // Lưu pass gốc để so sánh\nmsg.method = \"GET\";\nmsg.url = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/users/\" + username + \".json\";\nreturn msg;",
         "outputs": 1,
@@ -1227,15 +1088,15 @@
         "y": 1080,
         "wires": [
             [
-                "4909bf9a676b36a1",
-                "abef85674b4ffc62"
+                "b86b14571d6a6abf",
+                "be83a66ab43212ca"
             ]
         ]
     },
     {
-        "id": "4909bf9a676b36a1",
+        "id": "b86b14571d6a6abf",
         "type": "http request",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Get User Data",
         "method": "GET",
         "ret": "obj",
@@ -1252,15 +1113,15 @@
         "y": 1080,
         "wires": [
             [
-                "121bf687b59f8444",
-                "d72901a5bc88a040"
+                "77e1aa5b611eee0f",
+                "151d0c04402389d9"
             ]
         ]
     },
     {
-        "id": "121bf687b59f8444",
+        "id": "77e1aa5b611eee0f",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Check Password",
         "func": "if (!msg.payload) {\n    msg.payload = { status: \"Log:   ❌ User not found\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}\n\nif (msg.payload.password === msg.original_password) {\n    msg.payload = { status: \"✅ Login successful\", loggedIn: true };\n    context.set(\"loggedIn\", true);\n    return [msg, null];\n} else {\n    msg.payload = { status: \"Log:   ❌ Wrong password\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}",
         "outputs": 2,
@@ -1273,19 +1134,19 @@
         "y": 1080,
         "wires": [
             [
-                "d8385aac97153200",
-                "097f807467e75b4d"
+                "6c8c8c223f69e6d0",
+                "31a6ea8571518a8b"
             ],
             [
-                "bedc50b76d12e681",
-                "56d262416d18aaae"
+                "3130ab86a369d9df",
+                "2ac09e9982ad0801"
             ]
         ]
     },
     {
-        "id": "d8385aac97153200",
+        "id": "6c8c8c223f69e6d0",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Login OK",
         "active": true,
         "tosidebar": true,
@@ -1300,9 +1161,9 @@
         "wires": []
     },
     {
-        "id": "bedc50b76d12e681",
+        "id": "3130ab86a369d9df",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Login Fail",
         "active": true,
         "tosidebar": true,
@@ -1317,9 +1178,9 @@
         "wires": []
     },
     {
-        "id": "abef85674b4ffc62",
+        "id": "be83a66ab43212ca",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 15",
         "active": false,
         "tosidebar": true,
@@ -1333,9 +1194,9 @@
         "wires": []
     },
     {
-        "id": "d72901a5bc88a040",
+        "id": "151d0c04402389d9",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 16",
         "active": false,
         "tosidebar": true,
@@ -1349,12 +1210,12 @@
         "wires": []
     },
     {
-        "id": "4060ea9c5b87d1b9",
+        "id": "03027532204c9ca2",
         "type": "ui_form",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "Login Form",
         "label": "",
-        "group": "b35559caedba2363",
+        "group": "5544fff7dde48975",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -1389,15 +1250,15 @@
         "y": 1140,
         "wires": [
             [
-                "fae3a0c2344394f0",
-                "b8b4e8dba278ef38"
+                "1a7c677863c5e778",
+                "180f24c63e96e63b"
             ]
         ]
     },
     {
-        "id": "b8b4e8dba278ef38",
+        "id": "180f24c63e96e63b",
         "type": "debug",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "debug 19",
         "active": false,
         "tosidebar": true,
@@ -1411,9 +1272,9 @@
         "wires": []
     },
     {
-        "id": "097f807467e75b4d",
+        "id": "31a6ea8571518a8b",
         "type": "switch",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "property": "msg.payload.loggedIn",
         "propertyType": "msg",
@@ -1432,17 +1293,17 @@
         "y": 1220,
         "wires": [
             [
-                "c2e704a485b72fca"
+                "e54592942b44f35b"
             ],
             [
-                "4060ea9c5b87d1b9"
+                "03027532204c9ca2"
             ]
         ]
     },
     {
-        "id": "c99a8c838a1ab2c1",
+        "id": "f7135dfcb0c1f65c",
         "type": "ui_ui_control",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "",
         "events": "all",
         "x": 1280,
@@ -1452,9 +1313,9 @@
         ]
     },
     {
-        "id": "c2e704a485b72fca",
+        "id": "e54592942b44f35b",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "function 5",
         "func": "msg.payload = { tab: \"Home\", enabled: true }; // Thay \"Home\" bằng tab bạn muốn hiển thị\nreturn msg;",
         "outputs": 1,
@@ -1467,15 +1328,15 @@
         "y": 1160,
         "wires": [
             [
-                "c99a8c838a1ab2c1"
+                "f7135dfcb0c1f65c"
             ]
         ]
     },
     {
-        "id": "56d262416d18aaae",
+        "id": "2ac09e9982ad0801",
         "type": "ui_text",
-        "z": "44f9ec8549dd6cd0",
-        "group": "b35559caedba2363",
+        "z": "8dda81f9590d2155",
+        "group": "5544fff7dde48975",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -1493,9 +1354,9 @@
         "wires": []
     },
     {
-        "id": "98359d013a157c96",
+        "id": "edc007e33a9b3822",
         "type": "function",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "name": "formatTable",
         "func": "if (!msg.payload || !msg.payload.feeds) {\n    msg.payload = [];\n    return msg;\n}\n\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    const timeString = timestamp.toLocaleString('vi-VN', {\n        day: '2-digit',\n        month: '2-digit', \n        year: 'numeric',\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n\n    tableData.push({\n        \"Time\": timeString,\n        \"PM25\": feed.field1,  // Thay đổi key thành \"PM25\"\n        \"PM10\": feed.field2,\n        \"Temperature\": feed.field3,\n        \"Humidity\": feed.field4\n    });\n});\n\ntableData.reverse();\nmsg.payload = tableData;\nreturn msg;",
         "outputs": 1,
@@ -1508,15 +1369,16 @@
         "y": 820,
         "wires": [
             [
-                "b45547cb7567bc40",
-                "d5ac11d27f9002cd"
+                "4329c0cbc283729c",
+                "446d09467bde2f6c"
             ]
         ]
     },
     {
-        "id": "6481e8cc2b861030",
+        "id": "414ecfa476e4c415",
         "type": "inject",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -1538,14 +1400,15 @@
         "y": 820,
         "wires": [
             [
-                "25176735d677fbf6"
+                "f2f6554b27cc1929"
             ]
         ]
     },
     {
-        "id": "6a9e6d1ffcdaab47",
+        "id": "494e3003a4c19a71",
         "type": "http request",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
+        "d": true,
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -1562,14 +1425,14 @@
         "y": 820,
         "wires": [
             [
-                "98359d013a157c96"
+                "edc007e33a9b3822"
             ]
         ]
     },
     {
-        "id": "b45547cb7567bc40",
+        "id": "4329c0cbc283729c",
         "type": "ui_table",
-        "z": "44f9ec8549dd6cd0",
+        "z": "8dda81f9590d2155",
         "group": "9dff1546fd297e8c",
         "name": "",
         "order": 1,
@@ -1581,5 +1444,658 @@
         "x": 870,
         "y": 820,
         "wires": []
+    },
+    {
+        "id": "a8c76196ccb5a45e",
+        "type": "inject",
+        "z": "8dda81f9590d2155",
+        "name": "Auto Update Every 5 Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1320,
+        "wires": [
+            [
+                "ec47e4cab21a4d57"
+            ]
+        ]
+    },
+    {
+        "id": "ec47e4cab21a4d57",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Prepare API Request",
+        "func": "// CÁCH MỚI - Không dùng msg.url nữa\n// Chỉ chuẩn bị dữ liệu để xử lý\n\nmsg.payload = {\n    action: \"getData\",\n    timestamp: new Date().toISOString()\n};\n\n// Log để debug\nnode.log(\"Preparing to fetch ThingSpeak data\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1320,
+        "wires": [
+            [
+                "4d236477cfa97edb"
+            ]
+        ]
+    },
+    {
+        "id": "4d236477cfa97edb",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "Get ThingSpeak Data",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/3030128/feeds.json?api_key=A2AAQJ1EF8O43YAP&results=10",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 1320,
+        "wires": [
+            [
+                "51fdd9b4e6655bd8",
+                "1eea2d8e4e444b1d"
+            ]
+        ]
+    },
+    {
+        "id": "51fdd9b4e6655bd8",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Store Data in Context",
+        "func": "// Lấy dữ liệu từ ThingSpeak response\nvar data = msg.payload;\n\nif (data && data.feeds && data.feeds.length > 0) {\n    // Lấy dữ liệu mới nhất\n    var latestData = data.feeds[data.feeds.length - 1];\n    \n    // Tạo object dữ liệu\n    var sensorData = {\n        pm25: parseFloat(latestData.field1) || 0,\n        pm10: parseFloat(latestData.field2) || 0, \n        temp: parseFloat(latestData.field3) || 0,\n        hum: parseFloat(latestData.field4) || 0,\n        timestamp: latestData.created_at,\n        allFeeds: data.feeds,\n        lastUpdate: new Date().toISOString()\n    };\n    \n    // ✅ SỬA: Dùng GLOBAL context thay vì flow context\n    global.set(\"latestSensorData\", sensorData);\n    \n    // Log thông tin\n    node.log(\"✅ Updated GLOBAL sensor data: PM2.5=\" + sensorData.pm25 + \n             \", PM10=\" + sensorData.pm10 + \n             \", Temp=\" + sensorData.temp + \n             \", Hum=\" + sensorData.hum);\n    \n    msg.payload = sensorData;\n} else {\n    msg.payload = {error: \"No data received from ThingSpeak\"};\n    node.log(\"❌ No data from ThingSpeak API\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1320,
+        "wires": [
+            [
+                "f0b03dc9eb9675df"
+            ]
+        ]
+    },
+    {
+        "id": "f0b03dc9eb9675df",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "Data Update Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "260d532d7a206a88",
+        "type": "ui_text_input",
+        "z": "8dda81f9590d2155",
+        "name": "Question Input",
+        "label": "Hỏi về chất lượng không khí",
+        "tooltip": "",
+        "group": "176a6dcb963246d5",
+        "order": 31,
+        "width": 10,
+        "height": 2,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "user_question",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 120,
+        "y": 1420,
+        "wires": [
+            [
+                "9bbcc7c6eb44bd57"
+            ]
+        ]
+    },
+    {
+        "id": "9bbcc7c6eb44bd57",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Process User Question",
+        "func": "//context.set(\"currentQuestion\", msg.payload);\n// Lấy câu hỏi từ user\nvar userQuestion = msg.payload;\nmsg.original_question = userQuestion;\n\n// Đọc từ GLOBAL context\nvar sensorData = global.get(\"latestSensorData\");\n\n// Kiểm tra dữ liệu\nif (!sensorData) {\n    msg.payload = \"Chưa có dữ liệu cảm biến. Hệ thống đang cập nhật dữ liệu mỗi 5 phút. Vui lòng chờ ít phút và thử lại.\";\n    return msg;\n}\n\n// Kiểm tra độ fresh của data - SỬA CÁCH TÍNH\nvar currentTime = new Date();\nvar lastUpdateTime = new Date(sensorData.lastUpdate);\nvar dataAge = currentTime.getTime() - lastUpdateTime.getTime();\nvar ageMinutes = Math.floor(dataAge / (1000 * 60));\n\n// Kiểm tra data không quá cũ\nif (ageMinutes > 15) {\n    msg.payload = \"Dữ liệu đã cũ \" + ageMinutes + \" phút. Đang chờ cập nhật mới...\";\n    return msg;\n}\n\n// Tạo prompt cho AI\nvar prompt = \"Bạn là chuyên gia phân tích chất lượng không khí IoT.\\n\\n\";\nprompt += \"DỮLIỆU HIỆN TẠI (cập nhật \" + ageMinutes + \" phút trước):\\n\";\nprompt += \"• PM2.5: \" + sensorData.pm25 + \" µg/m³\\n\";\nprompt += \"• PM10: \" + sensorData.pm10 + \" µg/m³\\n\";\nprompt += \"• Nhiệt độ: \" + sensorData.temp + \"°C\\n\";\nprompt += \"• Độ ẩm: \" + sensorData.hum + \"%\\n\";\nprompt += \"• Thời gian: \" + sensorData.timestamp + \"\\n\\n\";\n\nprompt += \"TIÊU CHUẨN WHO:\\n\";\nprompt += \"PM2.5: <15 (tốt) | 15-25 (trung bình) | 25-37 (kém) | >37 (nguy hiểm)\\n\";\nprompt += \"PM10: <45 (tốt) | 45-75 (trung bình) | 75-150 (kém) | >150 (nguy hiểm)\\n\\n\";\n\nprompt += \"CÂU HỎI: \" + userQuestion + \"\\n\\n\";\nprompt += \"YÊU CÀU: Phân tích dữ liệu, đánh giá mức độ và đưa khuyến nghị cụ thể. Trả lời ngắn gọn bằng tiếng Việt.\";\n\n// Chuẩn bị cho Gemini\nmsg.payload = {\n    contents: [{\n        parts: [{\n            text: prompt\n        }]\n    }],\n    generationConfig: {\n        temperature: 0.2,\n        maxOutputTokens: 400\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1420,
+        "wires": [
+            [
+                "c16156d868d08717"
+            ]
+        ]
+    },
+    {
+        "id": "c16156d868d08717",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "Call Gemini AI",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyC1LGnNDjeNh0EbdkJdN-XAWGd05Lj97vQ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 720,
+        "y": 1420,
+        "wires": [
+            [
+                "a7a0def74c55c1f1",
+                "b8cec350e3f7544d"
+            ]
+        ]
+    },
+    {
+        "id": "a7a0def74c55c1f1",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Format AI Response",
+        "func": "try {\n    var response = msg.payload;\n    \n    if (response && response.candidates && response.candidates[0]) {\n        var aiResponse = response.candidates[0].content.parts[0].text;\n        \n        // Format response với timestamp\n        var formattedResponse = `🤖 **Phân tích chất lượng không khí:**\\n\\n${aiResponse}\\n\\n⏰ *Cập nhật: ${new Date().toLocaleString('vi-VN')}*`;\n        \n        msg.payload = formattedResponse;\n    } else {\n        msg.payload = \"❌ Xin lỗi không thể phân tích dữ liệu lúc này. Vui lòng thử lại sau.\";\n    }\n} catch (error) {\n    msg.payload = \"❌ Có lỗi xảy ra: \" + error.message;\n    node.error(\"AI Response Error: \" + error.message);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1420,
+        "wires": [
+            [
+                "95568a0ed224cf5d"
+            ]
+        ]
+    },
+    {
+        "id": "95568a0ed224cf5d",
+        "type": "ui_text",
+        "z": "8dda81f9590d2155",
+        "group": "176a6dcb963246d5",
+        "order": 34,
+        "width": 10,
+        "height": 4,
+        "name": "",
+        "label": "Câu trả lời",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1230,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "b8cec350e3f7544d",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "Chatbot Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "1eea2d8e4e444b1d",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug global data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "855b53190d116748",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "43ef4d5547abc791",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 2,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "81f1398ab2aa2791",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "22fab8252fb99686",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0ad3f0216b28a800",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "74f994973420f89b",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fc571a377fc0a861",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 9,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "d663a4c3c3bfd308",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "f356045a135ccfba",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 13,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "7d3866f03ea62f23",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 14,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "7bd749fcac6ea90a",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 15,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "4fad585f1a53eaf4",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 16,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "67106d7ae612448e",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 17,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "0e9e0f843b8b77b6",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 18,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "96122e173ae85bb2",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 19,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c67122fdceacd7eb",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3fbf4e8f80338f5e",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 22,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "deb2cfa33e6435ae",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 24,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "4040af9510c196c2",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 25,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "b8d13873a8b43989",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 26,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "aa00d8d049ca5119",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 27,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "b1c58cd334225485",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 28,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "5e7788cf8fd01618",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 29,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "5168dc4da50bb3ae",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 30,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "30d186adca32a13e",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 32,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "0de6f5e21e7c61bf",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 33,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "113aa03404bd652a",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 35,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "d2dba6d6a18bb829",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 36,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "1476bf9b19b2e9a7",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 37,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "7e1dd4b265f66792",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 38,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5544fff7dde48975",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "6fabf63c778508b4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6fabf63c778508b4",
+        "type": "ui_tab",
+        "name": "Authen",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": true
     }
 ]
