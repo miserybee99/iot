@@ -1,13 +1,5 @@
 [
     {
-        "id": "44f9ec8549dd6cd0",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "8dda81f9590d2155",
         "type": "tab",
         "label": "Flow 2",
@@ -80,59 +72,9 @@
         "tab": "9f2637ddf31cbc5c",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": 26,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "bdd3a7d6b972bdc9",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9c2cb8f05270a756",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "8aa3b70408336bc9",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "79c715c8056560ee",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4d932853b3b391b7",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "855b53190d116748",
@@ -142,296 +84,6 @@
         "group": "",
         "order": 2,
         "width": 1,
-        "height": 1
-    },
-    {
-        "id": "43ef4d5547abc791",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 2,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "81f1398ab2aa2791",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "22fab8252fb99686",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0ad3f0216b28a800",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "74f994973420f89b",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "fc571a377fc0a861",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 9,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "d663a4c3c3bfd308",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "f356045a135ccfba",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 13,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "7d3866f03ea62f23",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 14,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "7bd749fcac6ea90a",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 15,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "4fad585f1a53eaf4",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 16,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "67106d7ae612448e",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 17,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "0e9e0f843b8b77b6",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 18,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "96122e173ae85bb2",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 19,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "c67122fdceacd7eb",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "3fbf4e8f80338f5e",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 22,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "deb2cfa33e6435ae",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 24,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "4040af9510c196c2",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 25,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "b8d13873a8b43989",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 26,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "aa00d8d049ca5119",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 27,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "b1c58cd334225485",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 28,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "5e7788cf8fd01618",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 29,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "5168dc4da50bb3ae",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 30,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "30d186adca32a13e",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 32,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "0de6f5e21e7c61bf",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 33,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "113aa03404bd652a",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 35,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "d2dba6d6a18bb829",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 36,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "1476bf9b19b2e9a7",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 37,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "7e1dd4b265f66792",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 38,
-        "width": 16,
         "height": 1
     },
     {
@@ -455,1581 +107,144 @@
         "className": ""
     },
     {
-        "id": "ead562f7e78cfd4a",
-        "type": "ui_gauge",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
+        "id": "84f6e65babf6af17",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "order": 1,
-        "width": 8,
-        "height": 5,
-        "gtype": "gage",
-        "title": "PM2.5",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "504",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 630,
-        "y": 80,
-        "wires": []
+        "order": 6,
+        "width": 1,
+        "height": 1
     },
     {
-        "id": "128b233e760ecc24",
-        "type": "ui_gauge",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
+        "id": "7e1cafa64399fa37",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "order": 2,
-        "width": 8,
-        "height": 5,
-        "gtype": "gage",
-        "title": "PM10",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "500.4",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 630,
-        "y": 140,
-        "wires": []
+        "order": 7,
+        "width": 1,
+        "height": 1
     },
     {
-        "id": "3c9ac084f74ed2e0",
-        "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
-        "name": "humid",
-        "topic": "/23127354-23127388-23127435/humid",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "e4f2654eb37bf1b3",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 100,
-        "wires": [
-            [
-                "6ef572be12b90f31"
-            ]
-        ]
-    },
-    {
-        "id": "cdce23d8cfd92eef",
-        "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
-        "name": "temp",
-        "topic": "/23127354-23127388-23127435/temp",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "e4f2654eb37bf1b3",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 180,
-        "wires": [
-            [
-                "6ef572be12b90f31"
-            ]
-        ]
-    },
-    {
-        "id": "4f62ebb09931dcf6",
-        "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
-        "name": "pm25",
-        "topic": "/23127354-23127388-23127435/pm25",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "e4f2654eb37bf1b3",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 240,
-        "wires": [
-            [
-                "6ef572be12b90f31"
-            ]
-        ]
-    },
-    {
-        "id": "6ef572be12b90f31",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Combine sensors",
-        "func": "let type;\nlet value = parseFloat(msg.payload);\n\n// Xác định loại dữ liệu từ topic\nif (msg.topic.includes(\"humid\")) {\n    type = \"Humidity\";\n} else if (msg.topic.includes(\"temp\")) {\n    type = \"Temperature\";\n} else if (msg.topic.includes(\"pm25\")) {\n    type = \"PM2_5\";  // Sửa lại PM2.5\n} else if (msg.topic.includes(\"pm10\")) {\n    type = \"PM10\";\n} else {\n    type = \"Unknown\"; // Kiểm tra nếu topic không xác định\n}\n\n// Lưu giá trị vào flow context theo từng loại\nflow.set(type, value);\n\n// Lấy giá trị hiện có từ flow context\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ gửi dữ liệu khi đủ cả 4 giá trị\nif (humidity !== undefined && temp !== undefined && pm25 !== undefined && pm10 !== undefined) {\n    // Định dạng dữ liệu cho chart\n    let pmData = [\n        { x: new Date().toISOString(), y: pm25 },\n        { x: new Date().toISOString(), y: pm10 }\n    ];\n\n    let chartData = {\n        series: [\"PM2.5\", \"PM10\"],\n        data: [pmData[0], pmData[1]],\n        labels: [new Date().toISOString()]\n    };\n\n    // Dữ liệu cho các gauge\n    let gaugesData = {\n        PM2_5: pm25,\n        PM10: pm10,\n        Temperature: temp,\n        Humidity: humidity\n    };\n\n    // Trả lại dữ liệu dưới định dạng cho từng output\n    return [\n        { payload: pm25 },  // Output 1: PM2.5 (chỉ gửi giá trị)\n        { payload: pm10 },  // Output 2: PM10 (chỉ gửi giá trị)\n        { payload: temp },  // Output 3: Temperature (chỉ gửi giá trị)\n        { payload: humidity },  // Output 4: Humidity (chỉ gửi giá trị)\n        { payload: chartData },  // Output 5: Dữ liệu cho chart (PM2.5, PM10)\n        { payload: gaugesData }  // Output 6: Gauges data\n    ];\n} else {\n    return null;  // Trả về null nếu thiếu một trong các giá trị cần thiết\n}\n",
-        "outputs": 6,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 200,
-        "wires": [
-            [
-                "ead562f7e78cfd4a",
-                "161e259ed606b31d",
-                "2732a42cd4fb391f"
-            ],
-            [
-                "128b233e760ecc24",
-                "20951328f4aaf99e",
-                "9ee948c4df90fa38"
-            ],
-            [
-                "114fabc7adadf360"
-            ],
-            [
-                "cf61fc4ad1801a2f"
-            ],
-            [],
-            [
-                "99fedf9f5f3bfe87"
-            ]
-        ]
-    },
-    {
-        "id": "83aab99b8e08506d",
-        "type": "ui_chart",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
+        "id": "0e572d0f1350a14e",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
         "order": 10,
-        "width": 17,
-        "height": 8,
-        "label": "PM chart",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "24",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#7f4606",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 760,
-        "y": 640,
-        "wires": [
-            []
-        ]
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "735782d262f247c0",
-        "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/led-buzzer",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 650,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "25176735d677fbf6",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Pull Data",
-        "func": "// Function 1: Tạo API URL\nconst channelID = \"3030128\";\nconst readAPI = \"A2AAQJ1EF8O43YAP\";\nconst results = 20; // Số records muốn lấy (có thể thay đổi)\n\nmsg.url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=${results}`;\nmsg.method = \"GET\";\n\nreturn msg;\n\n// ===================================\n\n// Function 2: Format dữ liệu cho table\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    // Format thời gian theo múi giờ Việt Nam\n    const timeString = timestamp.toLocaleTimeString('vi-VN', {\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n    \n    // Kiểm tra và format từng field\n    const pm25 = feed.field1 ? parseFloat(feed.field1).toFixed(1) : \"-\";\n    const pm10 = feed.field2 ? parseFloat(feed.field2).toFixed(1) : \"-\";  \n    const humidity = feed.field3 ? parseFloat(feed.field3).toFixed(1) : \"-\";\n    const temperature = feed.field4 ? parseFloat(feed.field4).toFixed(1) : \"-\";\n    \n    tableData.push({\n        \"Time\": timeString,\n        \"PM2.5\": pm25,\n        \"PM10\": pm10,\n        \"Temperature\": temperature,\n        \"Humidity\": humidity\n    });\n});\n\n// Sắp xếp theo thời gian mới nhất trước (reverse)\ntableData.reverse();\n\nmsg.payload = tableData;\nreturn msg;\n\n// ===================================\n\n// Function 3: Auto refresh (cho inject node)\n// Trigger này để tự động lấy dữ liệu mỗi 5 phút\n// Chỉ cần set inject node với interval: 5 minutes\n// Hoặc dùng function này nếu muốn logic phức tạp hơn\n\nconst now = new Date();\nnode.warn(`Refreshing data at: ${now.toLocaleString('vi-VN')}`);\n\n// Gửi trigger để lấy dữ liệu mới\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 820,
-        "wires": [
-            [
-                "6a9e6d1ffcdaab47",
-                "bed167935bba6a70"
-            ]
-        ]
-    },
-    {
-        "id": "d5ac11d27f9002cd",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Avg & Status",
-        "func": "// Tính trung bình và đánh giá status\nif (!msg.payload || msg.payload.length === 0) {\n    msg.averages = {};\n    return msg;\n}\n\nconst data = msg.payload;\nlet pm25Sum = 0, pm10Sum = 0, tempSum = 0, humidSum = 0;\nlet count = data.length;\n\ndata.forEach(item => {\n    pm25Sum += parseFloat(item.PM25) || 0;\n    pm10Sum += parseFloat(item.PM10) || 0;\n    tempSum += parseFloat(item.Temperature) || 0;\n    humidSum += parseFloat(item.Humidity) || 0;\n});\n\nconst avgPM25 = (pm25Sum / count).toFixed(1);\nconst avgPM10 = (pm10Sum / count).toFixed(1);\nconst avgTemp = (tempSum / count).toFixed(1);\nconst avgHumid = (humidSum / count).toFixed(0);\n\n// Đánh giá status theo tiêu chuẩn WHO/EPA\nfunction getPM25Status(value) {\n    if (value <= 12) return \"Good\";\n    if (value <= 35.4) return \"Moderate\";\n    if (value <= 55.4) return \"Unhealthy for Sensitive\";\n    if (value <= 150.4) return \"Unhealthy\";\n    if (value <= 250.4) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getPM10Status(value) {\n    if (value <= 54) return \"Good\";\n    if (value <= 154) return \"Moderate\";\n    if (value <= 254) return \"Unhealthy for Sensitive\";\n    if (value <= 354) return \"Unhealthy\";\n    if (value <= 424) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getTempStatus(value) {\n    if (value >= 18 && value <= 27) return \"Comfortable\";\n    if ((value >= 15 && value < 18) || (value > 27 && value <= 32)) return \"Moderate\";\n    if ((value >= 10 && value < 15) || (value > 32 && value <= 38)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nfunction getHumidityStatus(value) {\n    if (value >= 40 && value <= 60) return \"Comfortable\";\n    if ((value >= 30 && value < 40) || (value > 60 && value <= 70)) return \"Moderate\";\n    if ((value >= 20 && value < 30) || (value > 70 && value <= 80)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nmsg.averages = {\n    pm25: { value: avgPM25, status: getPM25Status(parseFloat(avgPM25)) },\n    pm10: { value: avgPM10, status: getPM10Status(parseFloat(avgPM10)) },\n    temp: { value: avgTemp, status: getTempStatus(parseFloat(avgTemp)) },\n    humidity: { value: avgHumid, status: getHumidityStatus(parseInt(avgHumid)) }\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 870,
-        "y": 880,
-        "wires": [
-            [
-                "647bd5e4ef48427d"
-            ]
-        ]
-    },
-    {
-        "id": "647bd5e4ef48427d",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
-        "group": "9dff1546fd297e8c",
-        "name": "Avg4Field",
-        "order": 2,
-        "width": 11,
-        "height": 11,
-        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #e3f6ff;\n            border-radius: 15px;\n            color: #000;\n            max-width: 700px;\n            margin: 0 auto;\n        }\n\n        .title-row {\n            display: grid;\n            grid-template-columns: 150px 1fr 1fr;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .title-item:first-child {\n            grid-column: 2;\n            text-align: center;\n        }\n\n        .title-item:last-child {\n            grid-column: 3;\n            text-align: center;\n        }\n\n        .title-item {\n            font-size: 20px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            color: #000;\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: #000;\n            min-width: 150px;\n        }\n\n        .metric-value {\n            background: #7bdde4;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 80px;\n            text-align: center;\n            margin-right: 30px;\n        }\n\n        .metric-status {\n            background: #fbfae2;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 120px;\n            text-align: center;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title-row\">\n            <div class=\"title-item\">Average</div>\n            <div class=\"title-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">17.5</div>\n            <div class=\"metric-status\" id=\"pm25-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">76.6</div>\n            <div class=\"metric-status\" id=\"pm10-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status\" id=\"temp-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status\" id=\"humid-status\">Moderate</div>\n        </div>\n    </div>\n\n    <script>\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value;\n                document.getElementById('humid-value').textContent = avg.humidity.value;\n                \n                // Update statuses\n                document.getElementById('pm25-status').textContent = avg.pm25.status;\n                document.getElementById('pm10-status').textContent = avg.pm10.status;\n                document.getElementById('temp-status').textContent = avg.temp.status;\n                document.getElementById('humid-status').textContent = avg.humidity.status;\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"17.5\", status: \"Moderate\" },\n                pm10: { value: \"76.6\", status: \"Moderate\" },\n                temp: { value: \"26.8\", status: \"Moderate\" },\n                humidity: { value: \"82\", status: \"Moderate\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1040,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "900c33bd8785df2f",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "id": "ac384f34716e944a",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "name": "Display",
         "order": 11,
-        "width": 5,
-        "height": 5,
-        "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 100,
-        "y": 500,
-        "wires": [
-            [
-                "95c87862e5f44601"
-            ]
-        ]
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "1bd9979aecfb2758",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "id": "22a9070d9bee35ce",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "name": "Sound & Light",
         "order": 12,
-        "width": 4,
-        "height": 5,
-        "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 120,
-        "y": 560,
-        "wires": [
-            [
-                "37e81acb91ec53b2"
-            ]
-        ]
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "37e81acb91ec53b2",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "handleControlToggle",
-        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 560,
-        "wires": [
-            [
-                "735782d262f247c0"
-            ]
-        ]
-    },
-    {
-        "id": "1d8a4357c4e55e0f",
-        "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/screen",
-        "qos": "0",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 640,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "ecf1817639760998",
-        "type": "mqtt in",
-        "z": "44f9ec8549dd6cd0",
-        "name": "pm10",
-        "topic": "/23127354-23127388-23127435/pm10",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "e4f2654eb37bf1b3",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 300,
-        "wires": [
-            [
-                "6ef572be12b90f31"
-            ]
-        ]
-    },
-    {
-        "id": "a7e8a6f754323184",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "alert_noti",
-        "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1100,
-        "y": 80,
-        "wires": [
-            [
-                "463c2a4805e8558a",
-                "e019e163822b0e2f"
-            ]
-        ]
-    },
-    {
-        "id": "bc2ba3b6d9e04c4d",
-        "type": "mqtt out",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/alert",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 1410,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "463c2a4805e8558a",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "161e259ed606b31d",
-        "type": "delay",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": true,
-        "outputs": 1,
-        "x": 820,
-        "y": 80,
-        "wires": [
-            [
-                "a4c63d27551f2d07"
-            ]
-        ]
-    },
-    {
-        "id": "20951328f4aaf99e",
-        "type": "delay",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": true,
-        "outputs": 1,
-        "x": 820,
-        "y": 140,
-        "wires": [
-            [
-                "a7480709ef7daefa"
-            ]
-        ]
-    },
-    {
-        "id": "e019e163822b0e2f",
-        "type": "switch",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "ALERT",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1150,
-        "y": 160,
-        "wires": [
-            [
-                "bc2ba3b6d9e04c4d",
-                "e256282f093959a6"
-            ]
-        ]
-    },
-    {
-        "id": "a4c63d27551f2d07",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "\"PM2_5\"",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 40,
-        "wires": [
-            [
-                "a7e8a6f754323184"
-            ]
-        ]
-    },
-    {
-        "id": "a7480709ef7daefa",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "\"PM10\"",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 970,
-        "y": 180,
-        "wires": [
-            [
-                "a7e8a6f754323184"
-            ]
-        ]
-    },
-    {
-        "id": "4417533a5fbc673b",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://www.pushsafer.com/api?k=hIFTbiwdL2VJfWmVBa0C&m={{payload}}&t=CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ NGUY HIỂM&s=1&v=1&p=2",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1470,
-        "y": 240,
-        "wires": [
-            [
-                "57d078ea5821554b"
-            ]
-        ]
-    },
-    {
-        "id": "e256282f093959a6",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "function 2",
-        "func": "// Lấy giá trị PM2_5 và PM10 từ flow context\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n\n// Chuẩn bị payload chỉ chứa dữ liệu\nmsg.payload = `PM2.5: ${pm25 || 0} µgm, PM10: ${pm10 || 0} µgm`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1280,
-        "y": 260,
-        "wires": [
-            [
-                "4417533a5fbc673b"
-            ]
-        ]
-    },
-    {
-        "id": "57d078ea5821554b",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1620,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "95c87862e5f44601",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "handleDisplayClick",
-        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 500,
-        "wires": [
-            [
-                "1d8a4357c4e55e0f"
-            ]
-        ]
-    },
-    {
-        "id": "53eae1a3e881dc0c",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 6",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "2732a42cd4fb391f",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"field1\": payload}",
-                "tot": "jsonata",
-                "dc": true
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 300,
-        "wires": [
-            [
-                "775501084a4add1a",
-                "251f3bcbda2eb3d8"
-            ]
-        ]
-    },
-    {
-        "id": "9ee948c4df90fa38",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"field2\": payload}",
-                "tot": "jsonata",
-                "dc": true
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 340,
-        "wires": [
-            [
-                "775501084a4add1a"
-            ]
-        ]
-    },
-    {
-        "id": "114fabc7adadf360",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"field3\": payload}",
-                "tot": "jsonata",
-                "dc": true
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 380,
-        "wires": [
-            [
-                "775501084a4add1a"
-            ]
-        ]
-    },
-    {
-        "id": "cf61fc4ad1801a2f",
-        "type": "change",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"field4\": payload}",
-                "tot": "jsonata",
-                "dc": true
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 420,
-        "wires": [
-            [
-                "775501084a4add1a"
-            ]
-        ]
-    },
-    {
-        "id": "775501084a4add1a",
-        "type": "join",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "mode": "custom",
-        "build": "merged",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "useparts": false,
-        "accumulate": true,
-        "timeout": "5",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 830,
-        "y": 340,
-        "wires": [
-            [
-                "53eae1a3e881dc0c",
-                "83123354d96fad22"
-            ]
-        ]
-    },
-    {
-        "id": "83123354d96fad22",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://api.thingspeak.com/update?api_key=WXCJIZN3BFGAPQ1L&field1={{payload.field1}}&field2={{payload.field2}}&field3={{payload.field3}}&field4={{payload.field4}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1110,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3252bd16c9258e72",
-        "type": "inject",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 970,
-        "y": 400,
-        "wires": [
-            [
-                "0434c3f23a1d37b6"
-            ]
-        ]
-    },
-    {
-        "id": "0434c3f23a1d37b6",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "function 1",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1140,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "251f3bcbda2eb3d8",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "5540029422774b19",
-        "type": "inject",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 640,
-        "wires": [
-            [
-                "9c4b3d65b377de05"
-            ]
-        ]
-    },
-    {
-        "id": "a6d2e7f44cb2ec20",
-        "type": "json",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 430,
-        "y": 640,
-        "wires": [
-            [
-                "0813cd42da4b673f",
-                "9b2f53fd8a4295d9",
-                "32ed8ffbd2c0c3e6"
-            ]
-        ]
-    },
-    {
-        "id": "9c4b3d65b377de05",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://api.thingspeak.com/channels/3030128/feeds.json?api_key=A2AAQJ1EF8O43YAP&results=1000",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 290,
-        "y": 640,
-        "wires": [
-            [
-                "a6d2e7f44cb2ec20"
-            ]
-        ]
-    },
-    {
-        "id": "0813cd42da4b673f",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "9b2f53fd8a4295d9",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "line chart",
-        "func": "const feeds = msg.payload.feeds;\n\nlet messages = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at).getTime();\n\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field1),\n            topic: \"PM2.5\",\n            timestamp: timestamp\n        });\n    }\n\n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        messages.push({\n            payload: parseFloat(feed.field2),\n            topic: \"PM10\",\n            timestamp: timestamp\n        });\n    }\n});\n\nreturn [messages];",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 640,
-        "wires": [
-            [
-                "83aab99b8e08506d"
-            ]
-        ]
-    },
-    {
-        "id": "32ed8ffbd2c0c3e6",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "avg",
-        "func": "// Lấy dữ liệu feeds từ ThingSpeak\nconst feeds = msg.payload.feeds;\n\n// Kiểm tra dữ liệu đầu vào\nif (!feeds || !Array.isArray(feeds)) {\n    node.error(\"Không có dữ liệu feeds hợp lệ\");\n    return null;\n}\n\nlet pm25Values = [];\nlet pm10Values = [];\n\n// Thu thập tất cả giá trị hợp lệ\nfeeds.forEach(feed => {\n    // Thu thập PM2.5 values\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        const pm25 = parseFloat(feed.field1);\n        if (!isNaN(pm25)) {\n            pm25Values.push(pm25);\n        }\n    }\n    \n    // Thu thập PM10 values  \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        const pm10 = parseFloat(feed.field2);\n        if (!isNaN(pm10)) {\n            pm10Values.push(pm10);\n        }\n    }\n});\n\n// Tính trung bình\nlet pm25Avg = 0;\nlet pm10Avg = 0;\n\nif (pm25Values.length > 0) {\n    pm25Avg = pm25Values.reduce((sum, val) => sum + val, 0) / pm25Values.length;\n}\n\nif (pm10Values.length > 0) {\n    pm10Avg = pm10Values.reduce((sum, val) => sum + val, 0) / pm10Values.length;\n}\n\n// Làm tròn đến 1 chữ số thập phân\npm25Avg = Math.round(pm25Avg * 10) / 10;\npm10Avg = Math.round(pm10Avg * 10) / 10;\n\n// Log kết quả\nnode.warn(`PM2.5 Average: ${pm25Avg} μg/m³ (từ ${pm25Values.length} samples)`);\nnode.warn(`PM10 Average: ${pm10Avg} μg/m³ (từ ${pm10Values.length} samples)`);\n\n// Tạo payload cho Template node (chỉ 1 output)\nmsg.payload = {\n    pm25_avg: pm25Avg,\n    pm10_avg: pm10Avg,\n    pm25_count: pm25Values.length,\n    pm10_count: pm10Values.length\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 720,
-        "wires": [
-            [
-                "626729eb8731508b"
-            ]
-        ]
-    },
-    {
-        "id": "626729eb8731508b",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "id": "fc2f3cd0daed797b",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "name": "PM Avg",
-        "order": 9,
-        "width": 9,
-        "height": 4,
-        "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM2.5</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm25_avg}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM10</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm10_avg}}\n            </div>\n        </div>\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 760,
-        "y": 720,
-        "wires": [
-            []
-        ]
+        "order": 13,
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "99fedf9f5f3bfe87",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
+        "id": "7e54589c486688aa",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
         "group": "176a6dcb963246d5",
-        "name": "temp/humid",
-        "order": 4,
-        "width": 9,
-        "height": 4,
-        "format": "<!-- Template cho Node-RED Template node -->\n<style>\n    .sensor-container {\n        display: flex;\n        flex-direction: column;\n        gap: 15px;\n        font-family: Arial, sans-serif;\n        padding: 10px;\n    }\n\n    .sensor-card {\n        background-color: #e3f2fd;\n        border-radius: 12px;\n        padding: 20px;\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        min-width: 200px;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    }\n\n    .sensor-value {\n        font-size: 32px;\n        font-weight: bold;\n        color: #1a1a1a;\n    }\n\n    .sensor-icon {\n        font-size: 28px;\n        color: #333;\n    }\n\n    /* Icon styles sử dụng Unicode symbols */\n    .humidity-icon::before {\n        content: \"💧\";\n    }\n\n    .temperature-icon::before {\n        content: \"🌡️\";\n    }\n</style>\n\n<div class=\"sensor-container\">\n    <!-- Độ ẩm -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Humidity}}%</span>\n        <span class=\"sensor-icon humidity-icon\"></span>\n    </div>\n\n    <!-- Nhiệt độ -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Temperature}}°C</span>\n        <span class=\"sensor-icon temperature-icon\"></span>\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 610,
-        "y": 240,
-        "wires": [
-            []
-        ]
+        "order": 14,
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "fae3a0c2344394f0",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Save Original Password",
-        "func": "var username = msg.payload.username;\nmsg.original_password = msg.payload.password; // Lưu pass gốc để so sánh\nmsg.method = \"GET\";\nmsg.url = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/users/\" + username + \".json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 1080,
-        "wires": [
-            [
-                "4909bf9a676b36a1",
-                "abef85674b4ffc62"
-            ]
-        ]
+        "id": "df2d08ed9b4c88fd",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 15,
+        "width": 26,
+        "height": 1
     },
     {
-        "id": "4909bf9a676b36a1",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Get User Data",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 600,
-        "y": 1080,
-        "wires": [
-            [
-                "121bf687b59f8444",
-                "d72901a5bc88a040"
-            ]
-        ]
+        "id": "938f4e9f6f1d3f26",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 17,
+        "width": 16,
+        "height": 1
     },
     {
-        "id": "121bf687b59f8444",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Check Password",
-        "func": "if (!msg.payload) {\n    msg.payload = { status: \"Log:   ❌ User not found\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}\n\nif (msg.payload.password === msg.original_password) {\n    msg.payload = { status: \"✅ Login successful\", loggedIn: true };\n    context.set(\"loggedIn\", true);\n    return [msg, null];\n} else {\n    msg.payload = { status: \"Log:   ❌ Wrong password\", loggedIn: false };\n    context.set(\"loggedIn\", false);\n    return [null, msg];\n}",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 830,
-        "y": 1080,
-        "wires": [
-            [
-                "d8385aac97153200",
-                "097f807467e75b4d"
-            ],
-            [
-                "bedc50b76d12e681",
-                "56d262416d18aaae"
-            ]
-        ]
+        "id": "68cacc4b7a74c667",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 18,
+        "width": 16,
+        "height": 1
     },
     {
-        "id": "d8385aac97153200",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Login OK",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 1060,
-        "wires": []
+        "id": "f9796ef0514ba8fb",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 20,
+        "width": 16,
+        "height": 1
     },
     {
-        "id": "bedc50b76d12e681",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Login Fail",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 1100,
-        "wires": []
+        "id": "89c308fe612d337f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 21,
+        "width": 16,
+        "height": 1
     },
     {
-        "id": "abef85674b4ffc62",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 15",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
-        "y": 1160,
-        "wires": []
+        "id": "d13bbd91cccd1728",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 22,
+        "width": 16,
+        "height": 1
     },
     {
-        "id": "d72901a5bc88a040",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 16",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "4060ea9c5b87d1b9",
-        "type": "ui_form",
-        "z": "44f9ec8549dd6cd0",
-        "name": "Login Form",
-        "label": "",
-        "group": "b35559caedba2363",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Username",
-                "value": "username",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Password",
-                "value": "password",
-                "type": "password",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "username": "",
-            "password": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "str",
-        "splitLayout": false,
-        "className": "",
-        "x": 120,
-        "y": 1140,
-        "wires": [
-            [
-                "fae3a0c2344394f0",
-                "b8b4e8dba278ef38"
-            ]
-        ]
-    },
-    {
-        "id": "b8b4e8dba278ef38",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 19",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "097f807467e75b4d",
-        "type": "switch",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "property": "msg.payload.loggedIn",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 910,
-        "y": 1220,
-        "wires": [
-            [
-                "c2e704a485b72fca"
-            ],
-            [
-                "4060ea9c5b87d1b9"
-            ]
-        ]
-    },
-    {
-        "id": "c99a8c838a1ab2c1",
-        "type": "ui_ui_control",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "events": "all",
-        "x": 1280,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c2e704a485b72fca",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "function 5",
-        "func": "msg.payload = { tab: \"Home\", enabled: true }; // Thay \"Home\" bằng tab bạn muốn hiển thị\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1140,
-        "y": 1160,
-        "wires": [
-            [
-                "c99a8c838a1ab2c1"
-            ]
-        ]
-    },
-    {
-        "id": "56d262416d18aaae",
-        "type": "ui_text",
-        "z": "44f9ec8549dd6cd0",
-        "group": "b35559caedba2363",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload.status}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "98359d013a157c96",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "formatTable",
-        "func": "if (!msg.payload || !msg.payload.feeds) {\n    msg.payload = [];\n    return msg;\n}\n\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    const timeString = timestamp.toLocaleString('vi-VN', {\n        day: '2-digit',\n        month: '2-digit', \n        year: 'numeric',\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n\n    tableData.push({\n        \"Time\": timeString,\n        \"PM25\": feed.field1,  // Thay đổi key thành \"PM25\"\n        \"PM10\": feed.field2,\n        \"Temperature\": feed.field3,\n        \"Humidity\": feed.field4\n    });\n});\n\ntableData.reverse();\nmsg.payload = tableData;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 690,
-        "y": 820,
-        "wires": [
-            [
-                "b45547cb7567bc40",
-                "d5ac11d27f9002cd"
-            ]
-        ]
-    },
-    {
-        "id": "6481e8cc2b861030",
-        "type": "inject",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "300",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 820,
-        "wires": [
-            [
-                "25176735d677fbf6"
-            ]
-        ]
-    },
-    {
-        "id": "6a9e6d1ffcdaab47",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{url}}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 510,
-        "y": 820,
-        "wires": [
-            [
-                "98359d013a157c96"
-            ]
-        ]
-    },
-    {
-        "id": "b45547cb7567bc40",
-        "type": "ui_table",
-        "z": "44f9ec8549dd6cd0",
-        "group": "9dff1546fd297e8c",
-        "name": "",
-        "order": 1,
-        "width": 15,
-        "height": 11,
-        "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 870,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "90b44035f631fc3d",
-        "type": "inject",
-        "z": "44f9ec8549dd6cd0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "300",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 1380,
-        "wires": [
-            [
-                "8df20ea6b228a6f5"
-            ]
-        ]
-    },
-    {
-        "id": "8df20ea6b228a6f5",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "AlertChecker",
-        "func": "// Lấy dữ liệu từ flow context (được lưu bởi flow chính)\nlet humidity = flow.get(\"Humidity\");\nlet temp = flow.get(\"Temperature\");\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Kiểm tra xem có đủ dữ liệu không\nif (humidity === undefined || temp === undefined || pm25 === undefined || pm10 === undefined) {\n    node.status({fill:\"yellow\", shape:\"ring\", text:\"Chưa có đủ dữ liệu sensor\"});\n    return null;\n}\n\n// Định nghĩa ngưỡng an toàn\nconst THRESHOLDS = {\n    PM2_5: 35,      // μg/m³ - WHO guideline\n    PM10: 50,       // μg/m³ - WHO guideline  \n    Temperature: 35, // °C - Nhiệt độ cao\n    Humidity: 80    // % - Độ ẩm cao\n};\n\n// Kiểm tra để tránh spam email - chỉ gửi cảnh báo mỗi 30 phút\nconst ALERT_COOLDOWN = 30 * 60 * 1000; // 30 phút\nlet lastAlertTime = flow.get(\"lastAlertTime\") || 0;\nlet currentTime = Date.now();\n\n// Kiểm tra xem có thông số nào vượt ngưỡng không\nlet alerts = [];\nlet hasAlert = false;\n\nif (pm25 > THRESHOLDS.PM2_5) {\n    alerts.push({\n        type: \"PM2.5\",\n        value: pm25,\n        threshold: THRESHOLDS.PM2_5,\n        severity: pm25 > 75 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM2.5 vượt ngưỡng an toàn: ${pm25} μg/m³ (An toàn: < ${THRESHOLDS.PM2_5} μg/m³)`\n    });\n    hasAlert = true;\n}\n\nif (pm10 > THRESHOLDS.PM10) {\n    alerts.push({\n        type: \"PM10\", \n        value: pm10,\n        threshold: THRESHOLDS.PM10,\n        severity: pm10 > 100 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM10 vượt ngưỡng an toàn: ${pm10} μg/m³ (An toàn: < ${THRESHOLDS.PM10} μg/m³)`\n    });\n    hasAlert = true;\n}\n\nif (temp > THRESHOLDS.Temperature) {\n    alerts.push({\n        type: \"Nhiệt độ\",\n        value: temp,\n        threshold: THRESHOLDS.Temperature,\n        severity: temp > 40 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🌡️\",\n        message: `Nhiệt độ quá cao: ${temp}°C (An toàn: < ${THRESHOLDS.Temperature}°C)`\n    });\n    hasAlert = true;\n}\n\nif (humidity > THRESHOLDS.Humidity) {\n    alerts.push({\n        type: \"Độ ẩm\",\n        value: humidity,\n        threshold: THRESHOLDS.Humidity,\n        severity: humidity > 90 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"💧\",\n        message: `Độ ẩm quá cao: ${humidity}% (An toàn: < ${THRESHOLDS.Humidity}%)`\n    });\n    hasAlert = true;\n}\n\n// Chỉ gửi cảnh báo nếu có alert và đã qua thời gian cooldown\nif (hasAlert && (currentTime - lastAlertTime > ALERT_COOLDOWN)) {\n    flow.set(\"lastAlertTime\", currentTime);\n    \n    node.status({fill:\"red\", shape:\"dot\", text:`${alerts.length} cảnh báo phát hiện`});\n    \n    return {\n        payload: {\n            alerts: alerts,\n            timestamp: new Date().toISOString(),\n            location: \"Phòng giám sát IoT\", \n            allValues: {\n                pm25: pm25,\n                pm10: pm10,\n                temperature: temp,\n                humidity: humidity\n            }\n        }\n    };\n} \n// else if (hasAlert) {\n//     // Log thông tin khi trong thời gian cooldown\n//     let remainingMinutes = Math.round((ALERT_COOLDOWN - (currentTime - lastAlertTime)) / 60000);\n//     node.status({fill:\"yellow\", shape:\"ring\", text:`Cooldown: ${remainingMinutes} phút`});\n//     node.warn(`Cảnh báo đang trong thời gian chờ. Còn ${remainingMinutes} phút.`);\n//     return null;\n// }\n else {\n    // Không có cảnh báo\n    node.status({fill:\"green\", shape:\"dot\", text:\"Tất cả thông số bình thường\"});\n    return null;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 1380,
-        "wires": [
-            [
-                "44e871fb0f0153fb"
-            ]
-        ]
-    },
-    {
-        "id": "44e871fb0f0153fb",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "fbRequest",
-        "func": "let alertData = msg.payload;\n\n// Firebase Realtime Database URL\nlet firebaseUrl = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/emails.json\";\n\n// Chuẩn bị HTTP request\nmsg.url = firebaseUrl;\nmsg.method = \"GET\";\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\n// Lưu alert data để sử dụng ở node tiếp theo\nmsg.alertData = alertData;\n\nnode.status({fill:\"blue\", shape:\"dot\", text:\"Đang lấy danh sách email...\"});\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1380,
-        "wires": [
-            [
-                "5b7d02252bf56dbc"
-            ]
-        ]
-    },
-    {
-        "id": "5b7d02252bf56dbc",
-        "type": "http request",
-        "z": "44f9ec8549dd6cd0",
-        "name": "getEmail",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 580,
-        "y": 1380,
-        "wires": [
-            [
-                "a52b4ea03c27930e"
-            ]
-        ]
-    },
-    {
-        "id": "a52b4ea03c27930e",
-        "type": "function",
-        "z": "44f9ec8549dd6cd0",
-        "name": "createMail",
-        "func": "let alertData = msg.alertData;\nlet emailResponse = msg.payload;\n\n// Xử lý response từ Firebase\nlet emailList = [];\ntry {\n    if (emailResponse && typeof emailResponse === 'object') {\n        // Duyệt qua các key trong Firebase response\n        Object.keys(emailResponse).forEach(key => {\n            let emailValue = emailResponse[key];\n            if (typeof emailValue === 'string' && emailValue.includes('@')) {\n                emailList.push(emailValue);\n            }\n        });\n    }\n} catch (error) {\n    node.error(\"Lỗi khi xử lý dữ liệu email từ Firebase: \" + error.message);\n    return null;\n}\n\nif (emailList.length === 0) {\n    node.error(\"Không tìm thấy email nào trong database!\");\n    node.status({fill:\"red\", shape:\"ring\", text:\"Không có email\"});\n    return null;\n}\n\n// Tạo nội dung email\nlet timestamp = new Date(alertData.timestamp);\nlet subject = `🚨 CẢNH BÁO Chất Lượng Không Khí - ${timestamp.toLocaleDateString('vi-VN')} ${timestamp.toLocaleTimeString('vi-VN')}`;\n\n// Tạo danh sách cảnh báo cho email text\nlet alertTexts = alertData.alerts.map(alert => \n    `${alert.icon} ${alert.severity}: ${alert.message}`\n);\n\n// HTML email content\nlet htmlContent = `\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <style>\n        body { \n            font-family: Arial, sans-serif; \n            margin: 0; \n            padding: 20px; \n            background-color: #f5f5f5;\n        }\n        .container {\n            max-width: 600px;\n            margin: 0 auto;\n            background: white;\n            border-radius: 10px;\n            overflow: hidden;\n            box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n        }\n        .header { \n            background: linear-gradient(135deg, #ff6b6b, #ff5252);\n            color: white; \n            padding: 20px; \n            text-align: center;\n        }\n        .header h1 {\n            margin: 0;\n            font-size: 24px;\n        }\n        .alert-section {\n            padding: 20px;\n        }\n        .alert-item { \n            background: #fff3cd; \n            border-left: 4px solid #ffc107; \n            padding: 15px; \n            margin: 10px 0; \n            border-radius: 5px;\n        }\n        .alert-critical { \n            border-left-color: #dc3545; \n            background: #f8d7da; \n        }\n        .values-table {\n            width: 100%;\n            border-collapse: collapse;\n            margin: 20px 0;\n        }\n        .values-table th, .values-table td {\n            border: 1px solid #ddd;\n            padding: 12px;\n            text-align: left;\n        }\n        .values-table th {\n            background: #f8f9fa;\n        }\n        .status-normal { color: #28a745; }\n        .status-warning { color: #ffc107; }\n        .status-critical { color: #dc3545; }\n        .footer { \n            background: #f8f9fa;\n            color: #666; \n            font-size: 12px; \n            padding: 15px;\n            text-align: center;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h1>🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ</h1>\n            <p>📍 ${alertData.location} | 🕐 ${timestamp.toLocaleString('vi-VN')}</p>\n        </div>\n        \n        <div class=\"alert-section\">\n            <h2>⚠️ Chi tiết cảnh báo:</h2>\n            ${alertData.alerts.map(alert => `\n                <div class=\"alert-item ${alert.severity === 'NGHIÊM TRỌNG' ? 'alert-critical' : ''}\">\n                    <strong>${alert.icon} ${alert.type} - ${alert.severity}</strong><br>\n                    ${alert.message}\n                </div>\n            `).join('')}\n            \n            <h3>📊 Tất cả thông số hiện tại:</h3>\n            <table class=\"values-table\">\n                <tr>\n                    <th>Thông số</th>\n                    <th>Giá trị</th>\n                    <th>Ngưỡng an toàn</th>\n                    <th>Trạng thái</th>\n                </tr>\n                <tr>\n                    <td>PM2.5</td>\n                    <td>${alertData.allValues.pm25} μg/m³</td>\n                    <td>< 35 μg/m³</td>\n                    <td class=\"${alertData.allValues.pm25 > 35 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.pm25 > 35 ? '❌ Vượt ngưỡng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>PM10</td>\n                    <td>${alertData.allValues.pm10} μg/m³</td>\n                    <td>< 50 μg/m³</td>\n                    <td class=\"${alertData.allValues.pm10 > 50 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.pm10 > 50 ? '❌ Vượt ngưỡng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>Nhiệt độ</td>\n                    <td>${alertData.allValues.temperature}°C</td>\n                    <td>< 35°C</td>\n                    <td class=\"${alertData.allValues.temperature > 35 ? 'status-critical' : 'status-normal'}\">\n                        ${alertData.allValues.temperature > 35 ? '❌ Quá nóng' : '✅ Bình thường'}\n                    </td>\n                </tr>\n                <tr>\n                    <td>Độ ẩm</td>\n                    <td>${alertData.allValues.humidity}%</td>\n                    <td>< 80%</td>\n                    <td class=\"${alertData.allValues.humidity > 80 ? 'status-warning' : 'status-normal'}\">\n                        ${alertData.allValues.humidity > 80 ? '⚠️ Quá ẩm' : '✅ Bình thường'}\n                    </td>\n                </tr>\n            </table>\n        </div>\n        \n        <div class=\"footer\">\n            <p><strong>Hệ thống giám sát IoT - Chất lượng không khí</strong></p>\n            <p>Email tự động được gửi khi phát hiện thông số vượt ngưỡng an toàn</p>\n            <p>Thời gian gửi: ${new Date().toLocaleString('vi-VN')}</p>\n        </div>\n    </div>\n</body>\n</html>`;\n\n// Text content cho email clients không hỗ trợ HTML\nlet textContent = `\n🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ\n\n📍 Vị trí: ${alertData.location}\n🕐 Thời gian: ${timestamp.toLocaleString('vi-VN')}\n\n⚠️ CÁC CẢNH BÁO:\n${alertTexts.join('\\n')}\n\n📊 TẤT CẢ THÔNG SỐ HIỆN TẠI:\n- PM2.5: ${alertData.allValues.pm25} μg/m³ (An toàn: < 35)\n- PM10: ${alertData.allValues.pm10} μg/m³ (An toàn: < 50) \n- Nhiệt độ: ${alertData.allValues.temperature}°C (An toàn: < 35)\n- Độ ẩm: ${alertData.allValues.humidity}% (An toàn: < 80)\n\n---\nHệ thống giám sát IoT - Email tự động\n`;\n\n// Chuẩn bị dữ liệu để gửi email\nmsg.payload = {\n    to: emailList.join(', '), // Gửi cho tất cả email cùng lúc\n    subject: subject,\n    html: htmlContent,\n    text: textContent\n};\n\n// Thông tin cho debug\nmsg.emailInfo = {\n    emailCount: emailList.length,\n    alertCount: alertData.alerts.length,\n    emailList: emailList\n};\n\nnode.status({fill:\"green\", shape:\"dot\", text:`Sẵn sàng gửi tới ${emailList.length} email`});\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 1380,
-        "wires": [
-            [
-                "be0cd33ac08df3b0"
-            ]
-        ]
-    },
-    {
-        "id": "be0cd33ac08df3b0",
-        "type": "e-mail",
-        "z": "44f9ec8549dd6cd0",
-        "server": "smtp.gmail.com",
-        "port": "465",
-        "authtype": "BASIC",
-        "saslformat": true,
-        "token": "oauth2Response.access_token",
-        "secure": true,
-        "tls": true,
-        "name": "msg.payload.to",
-        "dname": "Send Alert Email",
-        "x": 900,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "bed167935bba6a70",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 880,
-        "wires": []
+        "id": "a44200a14f39e7da",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 23,
+        "width": 16,
+        "height": 1
     },
     {
         "id": "de8837020ce39d8d",
@@ -2038,8 +253,8 @@
         "name": "",
         "group": "176a6dcb963246d5",
         "order": 1,
-        "width": 8,
-        "height": 5,
+        "width": 9,
+        "height": 6,
         "gtype": "gage",
         "title": "PM2.5",
         "label": "units",
@@ -2065,9 +280,9 @@
         "z": "8dda81f9590d2155",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 3,
-        "width": 8,
-        "height": 5,
+        "order": 2,
+        "width": 9,
+        "height": 6,
         "gtype": "gage",
         "title": "PM10",
         "label": "units",
@@ -2193,7 +408,7 @@
         "z": "8dda81f9590d2155",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 20,
+        "order": 5,
         "width": 17,
         "height": 8,
         "label": "PM chart",
@@ -2296,7 +511,7 @@
         "group": "9dff1546fd297e8c",
         "name": "Avg4Field",
         "order": 2,
-        "width": 11,
+        "width": 10,
         "height": 11,
         "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #e3f6ff;\n            border-radius: 15px;\n            color: #000;\n            max-width: 700px;\n            margin: 0 auto;\n        }\n\n        .title-row {\n            display: grid;\n            grid-template-columns: 150px 1fr 1fr;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .title-item:first-child {\n            grid-column: 2;\n            text-align: center;\n        }\n\n        .title-item:last-child {\n            grid-column: 3;\n            text-align: center;\n        }\n\n        .title-item {\n            font-size: 20px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            color: #000;\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: #000;\n            min-width: 150px;\n        }\n\n        .metric-value {\n            background: #7bdde4;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 80px;\n            text-align: center;\n            margin-right: 30px;\n        }\n\n        .metric-status {\n            background: #fbfae2;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 120px;\n            text-align: center;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title-row\">\n            <div class=\"title-item\">Average</div>\n            <div class=\"title-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">17.5</div>\n            <div class=\"metric-status\" id=\"pm25-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">76.6</div>\n            <div class=\"metric-status\" id=\"pm10-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status\" id=\"temp-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status\" id=\"humid-status\">Moderate</div>\n        </div>\n    </div>\n\n    <script>\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value;\n                document.getElementById('humid-value').textContent = avg.humidity.value;\n                \n                // Update statuses\n                document.getElementById('pm25-status').textContent = avg.pm25.status;\n                document.getElementById('pm10-status').textContent = avg.pm10.status;\n                document.getElementById('temp-status').textContent = avg.temp.status;\n                document.getElementById('humid-status').textContent = avg.humidity.status;\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"17.5\", status: \"Moderate\" },\n                pm10: { value: \"76.6\", status: \"Moderate\" },\n                temp: { value: \"26.8\", status: \"Moderate\" },\n                humidity: { value: \"82\", status: \"Moderate\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
         "storeOutMessages": true,
@@ -2316,9 +531,9 @@
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "Display",
-        "order": 12,
+        "order": 8,
         "width": 5,
-        "height": 5,
+        "height": 6,
         "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -2339,9 +554,9 @@
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "Sound & Light",
-        "order": 23,
+        "order": 9,
         "width": 4,
-        "height": 5,
+        "height": 6,
         "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -3060,8 +1275,8 @@
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "PM Avg",
-        "order": 10,
-        "width": 9,
+        "order": 4,
+        "width": 8,
         "height": 4,
         "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM2.5</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm25_avg}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM10</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm10_avg}}\n            </div>\n        </div>\n    </div>\n</div>",
         "storeOutMessages": true,
@@ -3081,8 +1296,8 @@
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
         "name": "temp/humid",
-        "order": 4,
-        "width": 9,
+        "order": 3,
+        "width": 8,
         "height": 4,
         "format": "<!-- Template cho Node-RED Template node -->\n<style>\n    .sensor-container {\n        display: flex;\n        flex-direction: column;\n        gap: 15px;\n        font-family: Arial, sans-serif;\n        padding: 10px;\n    }\n\n    .sensor-card {\n        background-color: #e3f2fd;\n        border-radius: 12px;\n        padding: 20px;\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        min-width: 200px;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    }\n\n    .sensor-value {\n        font-size: 32px;\n        font-weight: bold;\n        color: #1a1a1a;\n    }\n\n    .sensor-icon {\n        font-size: 28px;\n        color: #333;\n    }\n\n    /* Icon styles sử dụng Unicode symbols */\n    .humidity-icon::before {\n        content: \"💧\";\n    }\n\n    .temperature-icon::before {\n        content: \"🌡️\";\n    }\n</style>\n\n<div class=\"sensor-container\">\n    <!-- Độ ẩm -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Humidity}}%</span>\n        <span class=\"sensor-icon humidity-icon\"></span>\n    </div>\n\n    <!-- Nhiệt độ -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Temperature}}°C</span>\n        <span class=\"sensor-icon temperature-icon\"></span>\n    </div>\n</div>",
         "storeOutMessages": true,
@@ -3460,7 +1675,7 @@
         "group": "9dff1546fd297e8c",
         "name": "",
         "order": 1,
-        "width": 15,
+        "width": 16,
         "height": 11,
         "columns": [],
         "outputs": 0,
@@ -3588,7 +1803,7 @@
         "label": "Hỏi về chất lượng không khí",
         "tooltip": "",
         "group": "176a6dcb963246d5",
-        "order": 31,
+        "order": 16,
         "width": 10,
         "height": 2,
         "passthru": true,
@@ -3683,7 +1898,7 @@
         "type": "ui_text",
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
-        "order": 34,
+        "order": 19,
         "width": 10,
         "height": 4,
         "name": "",
