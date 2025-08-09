@@ -45,7 +45,7 @@
         "icon": "dashboard",
         "order": 3,
         "disabled": false,
-        "hidden": true
+        "hidden": false
     },
     {
         "id": "9f2637ddf31cbc5c",
@@ -74,19 +74,9 @@
         "tab": "9f2637ddf31cbc5c",
         "order": 1,
         "disp": true,
-        "width": 13,
+        "width": 26,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "d881abfa18477ebf",
-        "type": "ui_spacer",
-        "z": "44f9ec8549dd6cd0",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 10,
-        "width": 16,
-        "height": 1
     },
     {
         "id": "da41e42544591d8d",
@@ -95,7 +85,7 @@
         "icon": "dashboard",
         "order": 1,
         "disabled": true,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "b35559caedba2363",
@@ -107,6 +97,56 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "bdd3a7d6b972bdc9",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9c2cb8f05270a756",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8aa3b70408336bc9",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "79c715c8056560ee",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4d932853b3b391b7",
+        "type": "ui_spacer",
+        "z": "44f9ec8549dd6cd0",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "ead562f7e78cfd4a",
@@ -270,8 +310,8 @@
         "z": "44f9ec8549dd6cd0",
         "name": "",
         "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 16,
+        "order": 10,
+        "width": 17,
         "height": 8,
         "label": "PM chart",
         "chartType": "line",
@@ -358,8 +398,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 1000,
+        "x": 870,
+        "y": 880,
         "wires": [
             [
                 "647bd5e4ef48427d"
@@ -373,16 +413,16 @@
         "group": "9dff1546fd297e8c",
         "name": "Avg4Field",
         "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            border-radius: 15px;\n            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);\n            color: white;\n            max-width: 400px;\n            margin: 0 auto;\n        }\n\n        .title {\n            text-align: center;\n            font-size: 24px;\n            font-weight: bold;\n            margin-bottom: 25px;\n            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(255, 255, 255, 0.2);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: white;\n            min-width: 80px;\n        }\n\n        .metric-value {\n            background: rgba(255, 255, 255, 0.9);\n            color: #2c3e50;\n            padding: 10px 15px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 60px;\n            text-align: center;\n            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-status {\n            padding: 8px 12px;\n            border-radius: 20px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 100px;\n            text-align: center;\n            text-shadow: none;\n        }\n\n        .status-good {\n            background: #2ecc71;\n            color: white;\n        }\n\n        .status-moderate {\n            background: #f39c12;\n            color: white;\n        }\n\n        .status-unhealthy {\n            background: #e74c3c;\n            color: white;\n        }\n\n        .status-comfortable {\n            background: #2ecc71;\n            color: white;\n        }\n\n        .status-uncomfortable {\n            background: #e67e22;\n            color: white;\n        }\n\n        .status-extreme {\n            background: #8e44ad;\n            color: white;\n        }\n\n        .header-row {\n            display: flex;\n            justify-content: space-between;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(255, 255, 255, 0.3);\n        }\n\n        .header-item {\n            font-size: 16px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title\">Environmental Status</div>\n\n        <div class=\"header-row\">\n            <div class=\"header-item\">Parameter</div>\n            <div class=\"header-item\">Average</div>\n            <div class=\"header-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">411.3</div>\n            <div class=\"metric-status status-unhealthy\" id=\"pm25-status\">Hazardous</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">244.3</div>\n            <div class=\"metric-status status-unhealthy\" id=\"pm10-status\">Unhealthy</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status status-comfortable\" id=\"temp-status\">Comfortable</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status status-uncomfortable\" id=\"humid-status\">Uncomfortable</div>\n        </div>\n    </div>\n\n    <script>\n        function getStatusClass(status) {\n            switch(status.toLowerCase()) {\n                case 'good': return 'status-good';\n                case 'moderate': return 'status-moderate';\n                case 'unhealthy for sensitive':\n                case 'unhealthy': \n                case 'very unhealthy':\n                case 'hazardous': return 'status-unhealthy';\n                case 'comfortable': return 'status-comfortable';\n                case 'uncomfortable': return 'status-uncomfortable';\n                case 'extreme': return 'status-extreme';\n                default: return 'status-moderate';\n            }\n        }\n\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value + '°C';\n                document.getElementById('humid-value').textContent = avg.humidity.value + '%';\n                \n                // Update statuses\n                const pm25Status = document.getElementById('pm25-status');\n                pm25Status.textContent = avg.pm25.status;\n                pm25Status.className = 'metric-status ' + getStatusClass(avg.pm25.status);\n                \n                const pm10Status = document.getElementById('pm10-status');\n                pm10Status.textContent = avg.pm10.status;\n                pm10Status.className = 'metric-status ' + getStatusClass(avg.pm10.status);\n                \n                const tempStatus = document.getElementById('temp-status');\n                tempStatus.textContent = avg.temp.status;\n                tempStatus.className = 'metric-status ' + getStatusClass(avg.temp.status);\n                \n                const humidStatus = document.getElementById('humid-status');\n                humidStatus.textContent = avg.humidity.status;\n                humidStatus.className = 'metric-status ' + getStatusClass(avg.humidity.status);\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"411.3\", status: \"Hazardous\" },\n                pm10: { value: \"244.3\", status: \"Unhealthy\" },\n                temp: { value: \"26.8\", status: \"Comfortable\" },\n                humidity: { value: \"82\", status: \"Uncomfortable\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
+        "width": 11,
+        "height": 11,
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #e3f6ff;\n            border-radius: 15px;\n            color: #000;\n            max-width: 700px;\n            margin: 0 auto;\n        }\n\n        .title-row {\n            display: grid;\n            grid-template-columns: 150px 1fr 1fr;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .title-item:first-child {\n            grid-column: 2;\n            text-align: center;\n        }\n\n        .title-item:last-child {\n            grid-column: 3;\n            text-align: center;\n        }\n\n        .title-item {\n            font-size: 20px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            color: #000;\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: #000;\n            min-width: 150px;\n        }\n\n        .metric-value {\n            background: #7bdde4;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 80px;\n            text-align: center;\n            margin-right: 30px;\n        }\n\n        .metric-status {\n            background: #fbfae2;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 120px;\n            text-align: center;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title-row\">\n            <div class=\"title-item\">Average</div>\n            <div class=\"title-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">17.5</div>\n            <div class=\"metric-status\" id=\"pm25-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">76.6</div>\n            <div class=\"metric-status\" id=\"pm10-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status\" id=\"temp-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status\" id=\"humid-status\">Moderate</div>\n        </div>\n    </div>\n\n    <script>\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value;\n                document.getElementById('humid-value').textContent = avg.humidity.value;\n                \n                // Update statuses\n                document.getElementById('pm25-status').textContent = avg.pm25.status;\n                document.getElementById('pm10-status').textContent = avg.pm10.status;\n                document.getElementById('temp-status').textContent = avg.temp.status;\n                document.getElementById('humid-status').textContent = avg.humidity.status;\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"17.5\", status: \"Moderate\" },\n                pm10: { value: \"76.6\", status: \"Moderate\" },\n                temp: { value: \"26.8\", status: \"Moderate\" },\n                humidity: { value: \"82\", status: \"Moderate\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 900,
-        "y": 1000,
+        "x": 1040,
+        "y": 880,
         "wires": [
             []
         ]
@@ -393,7 +433,7 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Display",
-        "order": 8,
+        "order": 11,
         "width": 5,
         "height": 5,
         "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
@@ -416,8 +456,8 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "Sound & Light",
-        "order": 9,
-        "width": 5,
+        "order": 12,
+        "width": 4,
         "height": 5,
         "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
         "storeOutMessages": true,
@@ -1135,8 +1175,8 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "PM Avg",
-        "order": 7,
-        "width": 10,
+        "order": 9,
+        "width": 9,
         "height": 4,
         "format": "<div\n    style=\"background-color: #e2e8f0; padding: 20px; border-radius: 12px; text-align: left; font-family: Arial, sans-serif; width: 100%; margin: 0; box-sizing: border-box;\">\n    <h2 style=\"margin: 0 0 25px 0; font-size: 22px; font-weight: bold; text-align: center; color: #1a202c;\">Average</h2>\n\n    <div style=\"margin-bottom: 20px;\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM2.5</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm25_avg}}\n            </div>\n        </div>\n    </div>\n\n    <div>\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n            <span style=\"font-size: 18px; font-weight: bold; color: #2d3748;\">PM10</span>\n            <div\n                style=\"background-color: #81e6d9; color: #1a202c; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: bold; min-width: 60px; text-align: center;\">\n                {{msg.payload.pm10_avg}}\n            </div>\n        </div>\n    </div>\n</div>",
         "storeOutMessages": true,
@@ -1156,8 +1196,8 @@
         "z": "44f9ec8549dd6cd0",
         "group": "176a6dcb963246d5",
         "name": "temp/humid",
-        "order": 5,
-        "width": 10,
+        "order": 4,
+        "width": 9,
         "height": 4,
         "format": "<!-- Template cho Node-RED Template node -->\n<style>\n    .sensor-container {\n        display: flex;\n        flex-direction: column;\n        gap: 15px;\n        font-family: Arial, sans-serif;\n        padding: 10px;\n    }\n\n    .sensor-card {\n        background-color: #e3f2fd;\n        border-radius: 12px;\n        padding: 20px;\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        min-width: 200px;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    }\n\n    .sensor-value {\n        font-size: 32px;\n        font-weight: bold;\n        color: #1a1a1a;\n    }\n\n    .sensor-icon {\n        font-size: 28px;\n        color: #333;\n    }\n\n    /* Icon styles sử dụng Unicode symbols */\n    .humidity-icon::before {\n        content: \"💧\";\n    }\n\n    .temperature-icon::before {\n        content: \"🌡️\";\n    }\n</style>\n\n<div class=\"sensor-container\">\n    <!-- Độ ẩm -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Humidity}}%</span>\n        <span class=\"sensor-icon humidity-icon\"></span>\n    </div>\n\n    <!-- Nhiệt độ -->\n    <div class=\"sensor-card\">\n        <span class=\"sensor-value\">{{msg.payload.Temperature}}°C</span>\n        <span class=\"sensor-icon temperature-icon\"></span>\n    </div>\n</div>",
         "storeOutMessages": true,
@@ -1469,7 +1509,6 @@
         "wires": [
             [
                 "b45547cb7567bc40",
-                "a65049a9c8577979",
                 "d5ac11d27f9002cd"
             ]
         ]
@@ -1504,22 +1543,6 @@
         ]
     },
     {
-        "id": "8a976667e154bea1",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 880,
-        "wires": []
-    },
-    {
         "id": "6a9e6d1ffcdaab47",
         "type": "http request",
         "z": "44f9ec8549dd6cd0",
@@ -1539,8 +1562,7 @@
         "y": 820,
         "wires": [
             [
-                "98359d013a157c96",
-                "8a976667e154bea1"
+                "98359d013a157c96"
             ]
         ]
     },
@@ -1551,50 +1573,13 @@
         "group": "9dff1546fd297e8c",
         "name": "",
         "order": 1,
-        "width": 13,
-        "height": 7,
+        "width": 15,
+        "height": 11,
         "columns": [],
         "outputs": 0,
         "cts": false,
-        "x": 850,
+        "x": 870,
         "y": 820,
         "wires": []
-    },
-    {
-        "id": "a65049a9c8577979",
-        "type": "debug",
-        "z": "44f9ec8549dd6cd0",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "10dab6a4929169d3",
-        "type": "ui_template",
-        "z": "44f9ec8549dd6cd0",
-        "group": "9dff1546fd297e8c",
-        "name": "tableData",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        .air-quality-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);\n            min-height: 100vh;\n        }\n        \n        .table-title {\n            text-align: center;\n            color: #2c3e50;\n            font-size: 24px;\n            margin-bottom: 20px;\n            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);\n        }\n        \n        .data-table {\n            width: 100%;\n            border-collapse: collapse;\n            background: white;\n            border-radius: 12px;\n            overflow: hidden;\n            box-shadow: 0 10px 30px rgba(0,0,0,0.1);\n            margin: 0 auto;\n        }\n        \n        .data-table thead {\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            color: white;\n        }\n        \n        .data-table th {\n            padding: 15px 12px;\n            text-align: center;\n            font-weight: 600;\n            font-size: 14px;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n        \n        .data-table td {\n            padding: 12px;\n            text-align: center;\n            border-bottom: 1px solid #e9ecef;\n            font-size: 13px;\n            transition: background-color 0.2s ease;\n        }\n        \n        .data-table tr:nth-child(even) {\n            background-color: #f8f9fa;\n        }\n        \n        .data-table tr:hover {\n            background-color: #e3f2fd;\n            transform: scale(1.01);\n        }\n        \n        .pm25-value {\n            font-weight: bold;\n            color: #e74c3c;\n            padding: 6px 10px;\n            background: rgba(231, 76, 60, 0.1);\n            border-radius: 6px;\n        }\n        \n        .pm10-value {\n            font-weight: bold;\n            color: #e67e22;\n            padding: 6px 10px;\n            background: rgba(230, 126, 34, 0.1);\n            border-radius: 6px;\n        }\n        \n        .temp-value {\n            color: #3498db;\n            font-weight: 500;\n        }\n        \n        .humidity-value {\n            color: #27ae60;\n            font-weight: 500;\n        }\n        \n        .time-value {\n            color: #34495e;\n            font-weight: 500;\n            font-size: 12px;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"air-quality-container\">\n        <h2 class=\"table-title\">Air Quality Monitoring Data</h2>\n        <table class=\"data-table\">\n            <thead>\n                <tr>\n                    <th>Time</th>\n                    <th>PM2.5 (μg/m³)</th>\n                    <th>PM10 (μg/m³)</th>\n                    <th>Temperature (°C)</th>\n                    <th>Humidity (%)</th>\n                </tr>\n            </thead>\n            <tbody id=\"data-body\">\n                <!-- Data sẽ được thêm bằng JavaScript -->\n            </tbody>\n        </table>\n    </div>\n\n    <script>\n        // Sample data - trong Node-RED sẽ được thay thế bằng msg.payload\n        const sampleData = [\n            {\"Time\":\"21:01 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:55 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:55 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"54.6\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:54 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"54.6\",\"Humidity\":\"100\"},\n            {\"Time\":\"20:54 08/08/2025\",\"PM25\":\"411.3\",\"PM10\":\"244.3\",\"Temperature\":\"80\",\"Humidity\":\"100\"},\n            {\"Time\":\"19:35 08/08/2025\",\"PM25\":\"55.7\",\"PM10\":\"46.8\",\"Temperature\":\"23.6\",\"Humidity\":\"63\"},\n            {\"Time\":\"19:34 08/08/2025\",\"PM25\":\"55.7\",\"PM10\":\"46.8\",\"Temperature\":\"23.6\",\"Humidity\":\"63\"}\n        ];\n\n        function updateTable(data) {\n            const tbody = document.getElementById('data-body');\n            tbody.innerHTML = '';\n            \n            data.forEach(row => {\n                const tr = document.createElement('tr');\n                tr.innerHTML = `\n                    <td class=\"time-value\">${row.Time}</td>\n                    <td><span class=\"pm25-value\">${row.PM25}</span></td>\n                    <td><span class=\"pm10-value\">${row.PM10}</span></td>\n                    <td class=\"temp-value\">${row.Temperature}°C</td>\n                    <td class=\"humidity-value\">${row.Humidity}%</td>\n                `;\n                tbody.appendChild(tr);\n            });\n        }\n\n        // Load data\n        updateTable(sampleData);\n    </script>\n</body>\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 820,
-        "y": 940,
-        "wires": [
-            []
-        ]
     }
 ]
