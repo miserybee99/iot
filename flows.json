@@ -760,7 +760,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 12",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -951,7 +951,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 13",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1168,7 +1168,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1204,7 +1204,7 @@
         "type": "function",
         "z": "8dda81f9590d2155",
         "name": "avg",
-        "func": "// Lấy dữ liệu feeds từ ThingSpeak\nconst feeds = msg.payload.feeds;\n\n// Kiểm tra dữ liệu đầu vào\nif (!feeds || !Array.isArray(feeds)) {\n    node.error(\"Không có dữ liệu feeds hợp lệ\");\n    return null;\n}\n\nlet pm25Values = [];\nlet pm10Values = [];\n\n// Thu thập tất cả giá trị hợp lệ\nfeeds.forEach(feed => {\n    // Thu thập PM2.5 values\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        const pm25 = parseFloat(feed.field1);\n        if (!isNaN(pm25)) {\n            pm25Values.push(pm25);\n        }\n    }\n    \n    // Thu thập PM10 values  \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        const pm10 = parseFloat(feed.field2);\n        if (!isNaN(pm10)) {\n            pm10Values.push(pm10);\n        }\n    }\n});\n\n// Tính trung bình\nlet pm25Avg = 0;\nlet pm10Avg = 0;\n\nif (pm25Values.length > 0) {\n    pm25Avg = pm25Values.reduce((sum, val) => sum + val, 0) / pm25Values.length;\n}\n\nif (pm10Values.length > 0) {\n    pm10Avg = pm10Values.reduce((sum, val) => sum + val, 0) / pm10Values.length;\n}\n\n// Làm tròn đến 1 chữ số thập phân\npm25Avg = Math.round(pm25Avg * 10) / 10;\npm10Avg = Math.round(pm10Avg * 10) / 10;\n\n// Log kết quả\nnode.warn(`PM2.5 Average: ${pm25Avg} μg/m³ (từ ${pm25Values.length} samples)`);\nnode.warn(`PM10 Average: ${pm10Avg} μg/m³ (từ ${pm10Values.length} samples)`);\n\n// Tạo payload cho Template node (chỉ 1 output)\nmsg.payload = {\n    pm25_avg: pm25Avg,\n    pm10_avg: pm10Avg,\n    pm25_count: pm25Values.length,\n    pm10_count: pm10Values.length\n};\n\nreturn msg;",
+        "func": "// Lấy dữ liệu feeds từ ThingSpeak\nconst feeds = msg.payload.feeds;\n\n// Kiểm tra dữ liệu đầu vào\nif (!feeds || !Array.isArray(feeds)) {\n    node.error(\"Không có dữ liệu feeds hợp lệ\");\n    return null;\n}\n\nlet pm25Values = [];\nlet pm10Values = [];\n\n// Thu thập tất cả giá trị hợp lệ\nfeeds.forEach(feed => {\n    // Thu thập PM2.5 values\n    if (feed.field1 !== null && feed.field1 !== undefined && feed.field1 !== \"\") {\n        const pm25 = parseFloat(feed.field1);\n        if (!isNaN(pm25)) {\n            pm25Values.push(pm25);\n        }\n    }\n    \n    // Thu thập PM10 values  \n    if (feed.field2 !== null && feed.field2 !== undefined && feed.field2 !== \"\") {\n        const pm10 = parseFloat(feed.field2);\n        if (!isNaN(pm10)) {\n            pm10Values.push(pm10);\n        }\n    }\n});\n\n// Tính trung bình\nlet pm25Avg = 0;\nlet pm10Avg = 0;\n\nif (pm25Values.length > 0) {\n    pm25Avg = pm25Values.reduce((sum, val) => sum + val, 0) / pm25Values.length;\n}\n\nif (pm10Values.length > 0) {\n    pm10Avg = pm10Values.reduce((sum, val) => sum + val, 0) / pm10Values.length;\n}\n\n// Làm tròn đến 1 chữ số thập phân\npm25Avg = Math.round(pm25Avg * 10) / 10;\npm10Avg = Math.round(pm10Avg * 10) / 10;\n\n// Tạo payload cho Template node (chỉ 1 output)\nmsg.payload = {\n    pm25_avg: pm25Avg,\n    pm10_avg: pm10Avg,\n    pm25_count: pm25Values.length,\n    pm10_count: pm10Values.length\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1337,7 +1337,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "Login OK",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1354,7 +1354,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "Login Fail",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1662,7 +1662,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "Data Update Debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1798,7 +1798,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "Chatbot Debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1815,7 +1815,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug global data",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1832,7 +1832,7 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1881,7 +1881,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "30",
+        "repeat": "15",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -1935,7 +1935,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -1964,6 +1964,136 @@
         "statusType": "auto",
         "x": 740,
         "y": 800,
+        "wires": []
+    },
+    {
+        "id": "3e80c1dc21823216",
+        "type": "inject",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1200,
+        "wires": [
+            [
+                "3ddbfc985e6ff514"
+            ]
+        ]
+    },
+    {
+        "id": "3ddbfc985e6ff514",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Alert Checker",
+        "func": "// ==== LẤY & KIỂM TRA DỮ LIỆU ==== //\nconst toNum = v => (v === undefined ? undefined : Number(v));\n\nlet humidity = toNum(flow.get(\"Humidity\"));\nlet temp = toNum(flow.get(\"Temperature\"));\nlet pm25 = toNum(flow.get(\"PM2_5\"));\nlet pm10 = toNum(flow.get(\"PM10\"));\n\nif ([humidity, temp, pm25, pm10].some(v => v === undefined || Number.isNaN(v))) {\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Chưa đủ/không hợp lệ dữ liệu\" });\n    return null;\n}\n\n// ==== NGƯỠNG CẢNH BÁO ==== //\nconst THRESHOLDS = {\n    PM2_5: 35,       // μg/m³\n    PM10: 50,        // μg/m³\n    Temperature: 35, // °C\n    Humidity: 80     // %\n};\n\n// ==== KIỂM TRA VƯỢT NGƯỠNG (KHÔNG CÓ COOLDOWN) ==== //\nlet alerts = [];\n\n// PM2.5\nif (pm25 > THRESHOLDS.PM2_5) {\n    alerts.push({\n        type: \"PM2.5\",\n        value: pm25,\n        threshold: THRESHOLDS.PM2_5,\n        severity: pm25 > 75 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM2.5 vượt ngưỡng an toàn: ${pm25} μg/m³ (An toàn: < ${THRESHOLDS.PM2_5} μg/m³)`\n    });\n}\n\n// PM10\nif (pm10 > THRESHOLDS.PM10) {\n    alerts.push({\n        type: \"PM10\",\n        value: pm10,\n        threshold: THRESHOLDS.PM10,\n        severity: pm10 > 100 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🔴\",\n        message: `PM10 vượt ngưỡng an toàn: ${pm10} μg/m³ (An toàn: < ${THRESHOLDS.PM10} μg/m³)`\n    });\n}\n\n// Nhiệt độ\nif (temp > THRESHOLDS.Temperature) {\n    alerts.push({\n        type: \"Nhiệt độ\",\n        value: temp,\n        threshold: THRESHOLDS.Temperature,\n        severity: temp > 40 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"🌡️\",\n        message: `Nhiệt độ quá cao: ${temp}°C (An toàn: < ${THRESHOLDS.Temperature}°C)`\n    });\n}\n\n// Độ ẩm\nif (humidity > THRESHOLDS.Humidity) {\n    alerts.push({\n        type: \"Độ ẩm\",\n        value: humidity,\n        threshold: THRESHOLDS.Humidity,\n        severity: humidity > 90 ? \"NGHIÊM TRỌNG\" : \"CẢNH BÁO\",\n        icon: \"💧\",\n        message: `Độ ẩm quá cao: ${humidity}% (An toàn: < ${THRESHOLDS.Humidity}%)`\n    });\n}\n\n// ==== KHÔNG VƯỢT NGƯỠNG -> KHÔNG GỬI ==== //\nif (alerts.length === 0) {\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Tất cả thông số bình thường\" });\n    return null;\n}\n\n// ==== BUILD TEXT/EMAIL ==== //\nconst textLines = alerts.map(a => `${a.icon} [${a.severity}] ${a.type}: ${a.message}`);\nconst text = [\n    \"CẢNH BÁO MÔI TRƯỜNG\",\n    `Thời điểm: ${new Date().toLocaleString()}`,\n    `Vị trí: Phòng giám sát IoT`,\n    \"\",\n    ...textLines,\n    \"\",\n    \"Giá trị hiện tại:\",\n    `• PM2.5: ${pm25} μg/m³`,\n    `• PM10 : ${pm10} μg/m³`,\n    `• Nhiệt độ: ${temp} °C`,\n    `• Độ ẩm : ${humidity} %`\n].join(\"\\n\");\n\nnode.status({ fill: \"red\", shape: \"dot\", text: `${alerts.length} cảnh báo` });\n\n// Nếu email node của bạn dùng msg.payload là text:\nmsg.topic = \"[IoT] Cảnh báo môi trường\";\nmsg.payload = text;\n\n// Nếu phía sau bạn cần thêm JSON cho node khác:\nmsg.details = {\n    alerts,\n    timestamp: new Date().toISOString(),\n    location: \"Phòng giám sát IoT\",\n    allValues: { pm25, pm10, temperature: temp, humidity }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 1200,
+        "wires": [
+            [
+                "8dd665926ed9468d"
+            ]
+        ]
+    },
+    {
+        "id": "8dd665926ed9468d",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Firebase Request",
+        "func": "let alertData = msg.payload;\n\n// Firebase Realtime Database URL\nlet firebaseUrl = \"https://iot-user-4e30c-default-rtdb.asia-southeast1.firebasedatabase.app/emails.json\";\n\n// Chuẩn bị HTTP request\nmsg.url = firebaseUrl;\nmsg.method = \"GET\";\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\n// Lưu alert data để sử dụng ở node tiếp theo\nmsg.alertData = alertData;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "146b86f1b0fb3bde"
+            ]
+        ]
+    },
+    {
+        "id": "146b86f1b0fb3bde",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "Get Emails",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 1200,
+        "wires": [
+            [
+                "873a200cadefafda"
+            ]
+        ]
+    },
+    {
+        "id": "873a200cadefafda",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Build Email",
+        "func": "// ===== 1) Gom email như bạn đang làm =====\nconst data = msg.payload;\nconst reEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/i;\n\nconst found = new Set();\n(function collect(v){\n  if (!v) return;\n  if (typeof v === \"string\") { const s=v.trim(); if (reEmail.test(s)) found.add(s); return; }\n  if (Array.isArray(v)) { v.forEach(collect); return; }\n  if (typeof v === \"object\") {\n    if (typeof v.email === \"string\" && reEmail.test(v.email.trim())) found.add(v.email.trim());\n    Object.values(v).forEach(collect);\n  }\n})(data);\n\nconst emails = [...found];\nif (!emails.length) { node.status({fill:\"yellow\",shape:\"ring\",text:\"Không tìm thấy email\"}); return null; }\n\n// ===== 2) Build nội dung từ msg.alertData (string hoặc object) =====\nconst ad = msg.alertData || {};\nlet textContent = \"\";\nlet htmlContent = undefined;\n\nif (typeof ad === \"string\") {\n  textContent = ad; // đã là text sẵn\n} else {\n  const alerts = Array.isArray(ad.alerts) ? ad.alerts : [];\n  const ts  = new Date(ad.timestamp || Date.now());\n  const loc = ad.location || \"N/A\";\n  const vals = ad.allValues || {};\n  const pm25 = vals.pm25 ?? \"—\";\n  const pm10 = vals.pm10 ?? \"—\";\n  const temp = vals.temperature ?? \"—\";\n  const hum  = vals.humidity ?? \"—\";\n\n  const lines = alerts.length\n    ? alerts.map(a => `${a.icon || \"\"} [${a.severity || \"\"}] ${a.message || \"\"}`).join(\"\\n\")\n    : \"(không có chi tiết)\";\n\n  textContent =\n`🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ\n📍 Vị trí: ${loc}\n🕐 Thời gian: ${ts.toLocaleString('vi-VN')}\n\n${lines}\n\n📊 TẤT CẢ THÔNG SỐ HIỆN TẠI:\n• PM2.5: ${pm25} μg/m³\n• PM10 : ${pm10} μg/m³\n• Nhiệt độ: ${temp} °C\n• Độ ẩm : ${hum} %`;\n\n  htmlContent = `<!DOCTYPE html><html lang=\"vi\"><head>\n<meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Cảnh báo môi trường</title>\n<style>\n body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;margin:0;padding:20px;color:#222}\n .card{max-width:680px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08)}\n .hdr{background:linear-gradient(135deg,#ff6b6b,#ff5252);color:#fff;padding:20px}\n .hdr h1{margin:0 0 4px 0;font-size:22px}\n .meta{opacity:.95;font-size:14px}\n .sec{padding:20px}\n .sec h2{margin:0 0 10px 0;font-size:18px}\n .alert{border-left:4px solid #ffc107;background:#fff3cd;padding:12px 14px;border-radius:8px;margin:10px 0}\n .alert.crit{border-left-color:#dc3545;background:#f8d7da}\n table{width:100%;border-collapse:collapse;margin-top:14px}\n th,td{border:1px solid #e9ecef;padding:10px;text-align:left;font-size:14px}\n th{background:#f8f9fa}\n .ok{color:#28a745;font-weight:600}.warn{color:#ffc107;font-weight:600}.crit{color:#dc3545;font-weight:600}\n .footer{background:#f8f9fa;color:#666;font-size:12px;padding:12px 16px;text-align:center}\n</style></head><body>\n<div class=\"card\">\n  <div class=\"hdr\">\n    <h1>🚨 CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ</h1>\n    <div class=\"meta\">📍 ${loc} • 🕐 ${ts.toLocaleString('vi-VN')}</div>\n  </div>\n  <div class=\"sec\">\n    <h2>⚠️ Chi tiết cảnh báo</h2>\n    ${alerts.map(a => `\n      <div class=\"alert ${a.severity === 'NGHIÊM TRỌNG' ? 'crit' : ''}\">\n        <strong>${a.icon || \"\"} ${a.type || \"\"} — ${a.severity || \"\"}</strong><br/>\n        ${a.message || \"\"}\n      </div>`).join('') || '<div class=\"alert\">Không có chi tiết</div>'}\n  </div>\n  <div class=\"sec\">\n    <h2>📊 Thông số hiện tại</h2>\n    <table role=\"presentation\">\n      <tr><th>Thông số</th><th>Giá trị</th><th>Ngưỡng</th><th>Trạng thái</th></tr>\n      <tr><td>PM2.5</td><td>${pm25} μg/m³</td><td>&lt; 35</td><td class=\"${Number(pm25)>35?'crit':'ok'}\">${Number(pm25)>35?'❌ Vượt ngưỡng':'✅ Bình thường'}</td></tr>\n      <tr><td>PM10</td><td>${pm10} μg/m³</td><td>&lt; 50</td><td class=\"${Number(pm10)>50?'crit':'ok'}\">${Number(pm10)>50?'❌ Vượt ngưỡng':'✅ Bình thường'}</td></tr>\n      <tr><td>Nhiệt độ</td><td>${temp} °C</td><td>&lt; 35</td><td class=\"${Number(temp)>35?'crit':'ok'}\">${Number(temp)>35?'❌ Quá nóng':'✅ Bình thường'}</td></tr>\n      <tr><td>Độ ẩm</td><td>${hum} %</td><td>&lt; 80%</td><td class=\"${Number(hum)>80?'warn':'ok'}\">${Number(hum)>80?'⚠️ Quá ẩm':'✅ Bình thường'}</td></tr>\n    </table>\n  </div>\n  <div class=\"footer\">Hệ thống giám sát IoT • Email tự động • Gửi lúc ${new Date().toLocaleString('vi-VN')}</div>\n</div>\n</body></html>`;\n}\n\n// ===== 3) DỌN RÁC TRƯỚC KHI GỬI QUA EMAIL NODE =====\n// Xoá các header/cờ có thể khiến nodemailer set sai Content-Type\ndelete msg.headers;        // <- QUAN TRỌNG: bạn đã set ở bước HTTP là application/json\ndelete msg.attachments;\ndelete msg.filename;\ndelete msg.contentType;\ndelete msg.encoding;\n\n// ===== 4) Gán trường cho Email node =====\nmsg.to     = emails.join(\", \");                 // để trống ô \"To\" trong Email node\nmsg.topic  = \"[IoT] Cảnh báo môi trường\";      // subject\nmsg.payload = String(textContent || \"\");        // PLAIN TEXT (bắt buộc là chuỗi)\nif (htmlContent) msg.html = htmlContent;       // HTML body (tuỳ chọn)\n\nnode.status({fill:\"green\", shape:\"dot\", text:`Sẽ gửi tới ${emails.length} email`});\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1200,
+        "wires": [
+            [
+                "89380bec815c46cc"
+            ]
+        ]
+    },
+    {
+        "id": "89380bec815c46cc",
+        "type": "e-mail",
+        "z": "8dda81f9590d2155",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 910,
+        "y": 1200,
         "wires": []
     }
 ]
