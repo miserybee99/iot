@@ -566,7 +566,7 @@
         "y": 820,
         "wires": [
             [
-                "494e3003a4c19a71"
+                "f16f8988b2e8b081"
             ]
         ]
     },
@@ -983,22 +983,6 @@
         ]
     },
     {
-        "id": "0e726e310bc00a61",
-        "type": "debug",
-        "z": "8dda81f9590d2155",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "d31537a49feaeecd",
         "type": "change",
         "z": "8dda81f9590d2155",
@@ -1022,8 +1006,7 @@
         "y": 300,
         "wires": [
             [
-                "9da36023da0b0d40",
-                "8a68782c614242cf"
+                "9da36023da0b0d40"
             ]
         ]
     },
@@ -1136,7 +1119,6 @@
         "y": 340,
         "wires": [
             [
-                "0e726e310bc00a61",
                 "ab340bc0bbd711bc"
             ]
         ]
@@ -1211,52 +1193,6 @@
         ]
     },
     {
-        "id": "8a68782c614242cf",
-        "type": "debug",
-        "z": "8dda81f9590d2155",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "8190278bdc282ddc",
-        "type": "inject",
-        "z": "8dda81f9590d2155",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 640,
-        "wires": [
-            [
-                "4d247f250f7d202d"
-            ]
-        ]
-    },
-    {
         "id": "405c971bd6f7eaab",
         "type": "json",
         "z": "8dda81f9590d2155",
@@ -1275,36 +1211,11 @@
         ]
     },
     {
-        "id": "4d247f250f7d202d",
-        "type": "http request",
-        "z": "8dda81f9590d2155",
-        "d": true,
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://api.thingspeak.com/channels/3030128/feeds.json?api_key=A2AAQJ1EF8O43YAP&results=1000",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 290,
-        "y": 640,
-        "wires": [
-            [
-                "405c971bd6f7eaab"
-            ]
-        ]
-    },
-    {
         "id": "3d744b0ace9d285b",
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 8",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1700,61 +1611,6 @@
         ]
     },
     {
-        "id": "414ecfa476e4c415",
-        "type": "inject",
-        "z": "8dda81f9590d2155",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "300",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 820,
-        "wires": [
-            [
-                "f2f6554b27cc1929"
-            ]
-        ]
-    },
-    {
-        "id": "494e3003a4c19a71",
-        "type": "http request",
-        "z": "8dda81f9590d2155",
-        "d": true,
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{url}}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 510,
-        "y": 820,
-        "wires": [
-            [
-                "edc007e33a9b3822"
-            ]
-        ]
-    },
-    {
         "id": "4329c0cbc283729c",
         "type": "ui_table",
         "z": "8dda81f9590d2155",
@@ -2033,5 +1889,128 @@
         "x": 790,
         "y": 1260,
         "wires": []
+    },
+    {
+        "id": "fbd95ce49fa0b82d",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "9bcad8a01870c450",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/3030128/feeds.json?api_key=A2AAQJ1EF8O43YAP&results=1000",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 640,
+        "wires": [
+            [
+                "405c971bd6f7eaab"
+            ]
+        ]
+    },
+    {
+        "id": "16452679de2af54f",
+        "type": "inject",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "9bcad8a01870c450"
+            ]
+        ]
+    },
+    {
+        "id": "f16f8988b2e8b081",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{url}}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 820,
+        "wires": [
+            [
+                "fbd95ce49fa0b82d",
+                "edc007e33a9b3822"
+            ]
+        ]
+    },
+    {
+        "id": "c1ebc95d8a87b93a",
+        "type": "inject",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "f2f6554b27cc1929"
+            ]
+        ]
     }
 ]
