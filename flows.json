@@ -8,331 +8,6 @@
         "env": []
     },
     {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "6fabf63c778508b4",
-        "type": "ui_tab",
-        "name": "Authen",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": true,
-        "hidden": true
-    },
-    {
-        "id": "5544fff7dde48975",
-        "type": "ui_group",
-        "name": "Login",
-        "tab": "6fabf63c778508b4",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "84f6e65babf6af17",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7e1cafa64399fa37",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0e572d0f1350a14e",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 10,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "ac384f34716e944a",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "22a9070d9bee35ce",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 12,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "fc2f3cd0daed797b",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 13,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "7e54589c486688aa",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 14,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "df2d08ed9b4c88fd",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 15,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "938f4e9f6f1d3f26",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 17,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "68cacc4b7a74c667",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 18,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "f9796ef0514ba8fb",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 20,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "89c308fe612d337f",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 21,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "d13bbd91cccd1728",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 22,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "a44200a14f39e7da",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 23,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "312344305120b29e",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "de8837020ce39d8d",
         "type": "ui_gauge",
         "z": "8dda81f9590d2155",
@@ -721,19 +396,20 @@
         "type": "function",
         "z": "8dda81f9590d2155",
         "name": "alert_noti",
-        "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nreturn msg;\n",
+        "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// đoạn code cho led\nlet statePM25 = pm25 > 35.4 ? 2 : (pm25 > 12 ? 1 : 0);\nlet statePM10 = pm10 > 154 ? 2 : (pm10 > 54 ? 1 : 0);\nlet ledState = (statePM25 === 2 || statePM10 === 2) ? 2\n    : (statePM25 === 1 || statePM10 === 1) ? 1\n        : 0;\n\nflow.set(\"led_state\", ledState);\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    flow.set(\"PM2_5\", undefined);\n    flow.set(\"PM10\", undefined);\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    flow.set(\"PM2_5\", undefined);\n    flow.set(\"PM10\", undefined);\n\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nflow.set(\"PM2_5\", undefined);\nflow.set(\"PM10\", undefined);\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 940,
         "y": 120,
         "wires": [
             [
                 "99f3976e7751c756",
-                "7be078fba0f79d9f"
+                "7be078fba0f79d9f",
+                "6a53661f844c8fd0"
             ]
         ]
     },
@@ -751,8 +427,8 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 1290,
-        "y": 120,
+        "x": 1330,
+        "y": 180,
         "wires": []
     },
     {
@@ -768,8 +444,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
-        "y": 80,
+        "x": 1080,
+        "y": 220,
         "wires": []
     },
     {
@@ -839,8 +515,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1050,
-        "y": 120,
+        "x": 1090,
+        "y": 180,
         "wires": [
             [
                 "8d6d3e44a0309b0e",
@@ -918,8 +594,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1350,
-        "y": 180,
+        "x": 1390,
+        "y": 240,
         "wires": [
             [
                 "63590243af7e60b2"
@@ -938,8 +614,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1200,
-        "y": 180,
+        "x": 1240,
+        "y": 240,
         "wires": [
             [
                 "ecd2af85d099df14"
@@ -958,8 +634,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1520,
-        "y": 180,
+        "x": 1560,
+        "y": 240,
         "wires": []
     },
     {
@@ -1965,5 +1641,423 @@
         "x": 740,
         "y": 800,
         "wires": []
+    },
+    {
+        "id": "c65341a3a088ec63",
+        "type": "mqtt in",
+        "z": "8dda81f9590d2155",
+        "name": "gas-alert",
+        "topic": "/23127354-23127388-23127435/gas-alert",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e4f2654eb37bf1b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 1180,
+        "wires": [
+            [
+                "9899a83ac5a96007",
+                "cddc751c7c7f8df2"
+            ]
+        ]
+    },
+    {
+        "id": "9899a83ac5a96007",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=hIFTbiwdL2VJfWmVBa0C&m=Dangerous%20Gas%20Levels!&t=NGƯỠNG%20GA%20NGUY%20HIỂM&s=1&v=1&p=2",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a53661f844c8fd0",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "LED",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 40,
+        "wires": [
+            [
+                "d7858ba8affd2ac6"
+            ]
+        ]
+    },
+    {
+        "id": "d7858ba8affd2ac6",
+        "type": "change",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "led_state",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 40,
+        "wires": [
+            [
+                "50a7a5be8d4510b2",
+                "3ce679e584ca3e06"
+            ]
+        ]
+    },
+    {
+        "id": "50a7a5be8d4510b2",
+        "type": "switch",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "2",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 40,
+        "wires": [
+            [
+                "4919cb95e162d1d1"
+            ]
+        ]
+    },
+    {
+        "id": "3ce679e584ca3e06",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4919cb95e162d1d1",
+        "type": "rbe",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1450,
+        "y": 40,
+        "wires": [
+            [
+                "848f8aed47629c60"
+            ]
+        ]
+    },
+    {
+        "id": "848f8aed47629c60",
+        "type": "mqtt out",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "topic": "/23127354-23127388-23127435/led",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e4f2654eb37bf1b3",
+        "x": 1710,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "cddc751c7c7f8df2",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "84f6e65babf6af17",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7e1cafa64399fa37",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0e572d0f1350a14e",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 10,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "ac384f34716e944a",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "22a9070d9bee35ce",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 12,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "fc2f3cd0daed797b",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 13,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "7e54589c486688aa",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 14,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "df2d08ed9b4c88fd",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 15,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "938f4e9f6f1d3f26",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 17,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "68cacc4b7a74c667",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 18,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "f9796ef0514ba8fb",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 20,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "89c308fe612d337f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 21,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "d13bbd91cccd1728",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 22,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "a44200a14f39e7da",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 23,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5544fff7dde48975",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "6fabf63c778508b4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6fabf63c778508b4",
+        "type": "ui_tab",
+        "name": "Authen",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": true
     }
 ]
