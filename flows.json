@@ -543,17 +543,17 @@
         "type": "ui_template",
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
-        "name": "Sound & Light",
+        "name": "Sound",
         "order": 9,
         "width": 4,
         "height": 6,
-        "format": "<!-- Sound & Light Template -->\n<style>\n    .sound-light-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .sound-light-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .sound-light-content {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 15px;\n        align-items: center;\n        flex: 1;\n        align-content: center;\n    }\n\n    .sound-light-content span {\n        font-weight: bold;\n        font-size: 16px;\n    }\n\n    .toggle-btn {\n        background-color: #6ED6E1;\n        border: none;\n        padding: 8px 15px;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 70px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .toggle-btn:hover {\n        transform: scale(1.05);\n    }\n\n    .toggle-btn.on {\n        background-color: #4CAF50 !important;\n        color: white;\n        box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);\n    }\n\n    .toggle-btn.off {\n        background-color: #f44336 !important;\n        color: white;\n    }\n\n    /* Animation cho toggle */\n    .toggle-btn::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 100%;\n        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);\n        transition: left 0.5s;\n    }\n\n    .toggle-btn.animate::before {\n        left: 100%;\n    }\n</style>\n\n<div class=\"sound-light-panel\">\n    <h3>Sounds & Light</h3>\n    <div class=\"sound-light-content\">\n        <span>LED</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleLED()\"\n            ng-class=\"{'on': msg.ledState == 'ON', 'off': msg.ledState != 'ON'}\">\n      {{msg.ledState || 'OFF'}}\n    </button>\n        <span>BUZZER</span>\n        <button class=\"toggle-btn\"\n            ng-click=\"toggleBuzzer()\"\n            ng-class=\"{'on': msg.buzzerState == 'ON', 'off': msg.buzzerState != 'ON'}\">\n      {{msg.buzzerState || 'OFF'}}\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Sound & Light\n  (function(scope) {\n    scope.ledState = 'OFF';\n    scope.buzzerState = 'OFF';\n    \n    scope.toggleLED = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.ledState = scope.ledState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'led_toggle',\n          ledState: scope.ledState\n        });\n      }, 300);\n    };\n    \n    scope.toggleBuzzer = function() {\n      const btn = event.target;\n      btn.classList.add('animate');\n      \n      setTimeout(() => {\n        scope.buzzerState = scope.buzzerState === 'ON' ? 'OFF' : 'ON';\n        scope.$apply(); // Cập nhật view\n        btn.classList.remove('animate');\n      }, 250);\n      \n      // Gửi payload đến Node-RED\n      setTimeout(() => {\n        scope.send({\n          payload: 'buzzer_toggle',\n          buzzerState: scope.buzzerState\n        });\n      }, 300);\n    };\n    \n    // Lắng nghe tin nhắn từ Node-RED để cập nhật trạng thái\n    scope.$watch('msg', function(newMsg) {\n      if (newMsg) {\n        if (newMsg.ledState !== undefined) {\n          scope.ledState = newMsg.ledState;\n        }\n        if (newMsg.buzzerState !== undefined) {\n          scope.buzzerState = newMsg.buzzerState;\n        }\n      }\n    });\n  })(scope);\n</script>",
+        "format": "<!-- Buzzer (click with ripple) -->\n<style>\n  .sound-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 200px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .sound-panel h3 {\n    text-align: center;\n    margin: 0 0 15px;\n    background: none;\n  }\n\n  .buzzer-wrap {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n  }\n\n  /* Button style giống Display */\n  .buzzer-btn {\n    color: #fff;\n    background: #1AA6B7;\n    padding: 14px 20px;\n    border: none;\n    border-radius: 8px;\n    font-weight: 700;\n    letter-spacing: .5px;\n    width: 220px;\n    max-width: 80%;\n    cursor: pointer;\n    transition: all .3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .buzzer-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 6px 12px rgba(0, 0, 0, .18)\n  }\n\n  .buzzer-btn:active {\n    transform: translateY(0)\n  }\n\n  .buzzer-btn.selected {\n    background: #4D94FF !important;\n    box-shadow: 0 0 10px rgba(77, 148, 255, .5)\n  }\n\n  /* Ripple effect */\n  .buzzer-btn::after {\n    content: '';\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 0;\n    height: 0;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, .3);\n    transform: translate(-50%, -50%);\n    transition: width .6s, height .6s;\n  }\n\n  .buzzer-btn.ripple::after {\n    width: 280px;\n    height: 280px\n  }\n</style>\n\n<div class=\"sound-panel\">\n  <h3>Sound</h3>\n  <div class=\"buzzer-wrap\">\n    <button class=\"buzzer-btn\" ng-click=\"clickBuzzer()\">BUZZER</button>\n  </div>\n</div>\n\n<script>\n  (function(scope){\n  scope.clickBuzzer = function () {\n    // hiệu ứng selected + ripple ngắn\n    setTimeout(() => {\n      const btn = document.querySelector('.buzzer-btn');\n      if(!btn) return;\n      btn.classList.add('selected','ripple');\n      setTimeout(()=> btn.classList.remove('ripple'), 600);\n      // giữ selected trong 300ms cho cảm giác click\n      setTimeout(()=> btn.classList.remove('selected'), 300);\n    }, 10);\n\n    // gửi sự kiện về Node-RED\n    scope.send({\n      payload: 'buzzer_click'   // bạn đổi chuỗi này nếu cần\n    });\n  };\n\n  // không cần theo dõi msg nữa, bỏ toàn bộ state cũ\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 100,
+        "x": 70,
         "y": 460,
         "wires": [
             [
@@ -1885,14 +1885,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 80,
+        "x": 90,
         "y": 1200,
         "wires": [
             [
@@ -1912,7 +1912,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 260,
         "y": 1200,
         "wires": [
             [
@@ -1932,7 +1932,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 450,
         "y": 1200,
         "wires": [
             [
@@ -1956,7 +1956,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 610,
+        "x": 630,
         "y": 1200,
         "wires": [
             [
@@ -1976,7 +1976,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
+        "x": 790,
         "y": 1200,
         "wires": [
             [
@@ -1997,7 +1997,7 @@
         "tls": true,
         "name": "",
         "dname": "",
-        "x": 910,
+        "x": 930,
         "y": 1200,
         "wires": []
     },
