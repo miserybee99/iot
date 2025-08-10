@@ -437,24 +437,6 @@
         ]
     },
     {
-        "id": "2d482c818d7721c4",
-        "type": "mqtt out",
-        "z": "8dda81f9590d2155",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/led-buzzer",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 630,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "f2f6554b27cc1929",
         "type": "function",
         "z": "8dda81f9590d2155",
@@ -514,90 +496,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "c03ec16613694906",
-        "type": "ui_template",
-        "z": "8dda81f9590d2155",
-        "group": "176a6dcb963246d5",
-        "name": "Display",
-        "order": 8,
-        "width": 5,
-        "height": 6,
-        "format": "<!-- Display Template -->\n<style>\n    .display-panel {\n        background-color: #E6F7FF;\n        padding: 15px;\n        border-radius: 8px;\n        width: 100%;\n        box-sizing: border-box;\n        overflow-x: hidden;\n        height: 300px;\n        display: flex;\n        flex-direction: column;\n    }\n\n    .display-panel h3 {\n        text-align: center;\n        margin-top: 0;\n        margin-bottom: 15px;\n        background: none;\n    }\n\n    .display-buttons {\n        display: flex;\n        flex-direction: column;\n        gap: 10px;\n        flex: 1;\n        justify-content: center;\n    }\n\n    .display-btn {\n        color: white;\n        padding: 12px;\n        border: none;\n        border-radius: 5px;\n        font-weight: bold;\n        width: 100%;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        position: relative;\n        overflow: hidden;\n    }\n\n    .display-btn.dust {\n        background-color: #1AA6B7;\n    }\n\n    .display-btn.temp,\n    .display-btn.humidity {\n        background-color: #63C7B2;\n    }\n\n    .display-btn:hover {\n        transform: translateY(-2px);\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    }\n\n    .display-btn:active {\n        transform: translateY(0);\n    }\n\n    .display-btn.selected {\n        background-color: #4D94FF !important;\n        box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);\n    }\n\n    /* Ripple effect */\n    .display-btn::after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        width: 0;\n        height: 0;\n        border-radius: 50%;\n        background: rgba(255, 255, 255, 0.3);\n        transform: translate(-50%, -50%);\n        transition: width 0.6s, height 0.6s;\n    }\n\n    .display-btn.ripple::after {\n        width: 300px;\n        height: 300px;\n    }\n</style>\n\n<div class=\"display-panel\">\n    <h3>Display</h3>\n    <div class=\"display-buttons\">\n        <button class=\"display-btn dust\"\n            ng-click=\"selectDisplay('dust')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'dust'}\">\n      Dust\n    </button>\n        <button class=\"display-btn temp\"\n            ng-click=\"selectDisplay('temp')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'temp'}\">\n      Temp\n    </button>\n        <button class=\"display-btn humidity\"\n            ng-click=\"selectDisplay('humid')\"\n            ng-class=\"{'selected': msg.selectedDisplay == 'humid'}\">\n      Humidity\n    </button>\n    </div>\n</div>\n\n<script>\n    // AngularJS controller cho Display\n  (function(scope) {\n    scope.selectedDisplay = null;\n    \n    scope.selectDisplay = function(type) {\n      // Xóa class selected từ tất cả buttons\n      setTimeout(() => {\n        document.querySelectorAll('.display-btn').forEach(btn => {\n          btn.classList.remove('selected', 'ripple');\n        });\n        \n        // Thêm class selected và ripple effect cho button được click\n        const clickedBtn = event.target;\n        clickedBtn.classList.add('selected', 'ripple');\n        \n        // Xóa ripple effect sau animation\n        setTimeout(() => {\n          clickedBtn.classList.remove('ripple');\n        }, 600);\n      }, 10);\n      \n      scope.selectedDisplay = type;\n      \n      // Gửi payload đến Node-RED\n      scope.send({\n        payload: type,\n        selectedDisplay: type\n      });\n    };\n  })(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 80,
-        "y": 400,
-        "wires": [
-            [
-                "9facb2a151481e55"
-            ]
-        ]
-    },
-    {
-        "id": "8b2075aa422f4c81",
-        "type": "ui_template",
-        "z": "8dda81f9590d2155",
-        "group": "176a6dcb963246d5",
-        "name": "Sound",
-        "order": 9,
-        "width": 4,
-        "height": 6,
-        "format": "<!-- Buzzer (click with ripple) -->\n<style>\n  .sound-panel {\n    background-color: #E6F7FF;\n    padding: 15px;\n    border-radius: 8px;\n    width: 100%;\n    box-sizing: border-box;\n    overflow-x: hidden;\n    height: 200px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .sound-panel h3 {\n    text-align: center;\n    margin: 0 0 15px;\n    background: none;\n  }\n\n  .buzzer-wrap {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n  }\n\n  /* Button style giống Display */\n  .buzzer-btn {\n    color: #fff;\n    background: #1AA6B7;\n    padding: 14px 20px;\n    border: none;\n    border-radius: 8px;\n    font-weight: 700;\n    letter-spacing: .5px;\n    width: 220px;\n    max-width: 80%;\n    cursor: pointer;\n    transition: all .3s ease;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .buzzer-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 6px 12px rgba(0, 0, 0, .18)\n  }\n\n  .buzzer-btn:active {\n    transform: translateY(0)\n  }\n\n  .buzzer-btn.selected {\n    background: #4D94FF !important;\n    box-shadow: 0 0 10px rgba(77, 148, 255, .5)\n  }\n\n  /* Ripple effect */\n  .buzzer-btn::after {\n    content: '';\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: 0;\n    height: 0;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, .3);\n    transform: translate(-50%, -50%);\n    transition: width .6s, height .6s;\n  }\n\n  .buzzer-btn.ripple::after {\n    width: 280px;\n    height: 280px\n  }\n</style>\n\n<div class=\"sound-panel\">\n  <h3>Sound</h3>\n  <div class=\"buzzer-wrap\">\n    <button class=\"buzzer-btn\" ng-click=\"clickBuzzer()\">BUZZER</button>\n  </div>\n</div>\n\n<script>\n  (function(scope){\n  scope.clickBuzzer = function () {\n    // hiệu ứng selected + ripple ngắn\n    setTimeout(() => {\n      const btn = document.querySelector('.buzzer-btn');\n      if(!btn) return;\n      btn.classList.add('selected','ripple');\n      setTimeout(()=> btn.classList.remove('ripple'), 600);\n      // giữ selected trong 300ms cho cảm giác click\n      setTimeout(()=> btn.classList.remove('selected'), 300);\n    }, 10);\n\n    // gửi sự kiện về Node-RED\n    scope.send({\n      payload: 'buzzer_click'   // bạn đổi chuỗi này nếu cần\n    });\n  };\n\n  // không cần theo dõi msg nữa, bỏ toàn bộ state cũ\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 70,
-        "y": 460,
-        "wires": [
-            [
-                "9fe7a047742e3562"
-            ]
-        ]
-    },
-    {
-        "id": "9fe7a047742e3562",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "handleControlToggle",
-        "func": "if (msg.payload === 'led_toggle') {\n    let state = flow.get(\"led_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"LED_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"LED_OFF\";\n    }\n    flow.set(\"led_state\", state);\n    msg.ledState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nelse if (msg.payload === 'buzzer_toggle') {\n    let state = flow.get(\"buzzer_state\") || \"OFF\";\n    if (state === \"OFF\") {\n        state = \"ON\";\n        msg.payload = \"BUZZER_ON\";\n    } else {\n        state = \"OFF\";\n        msg.payload = \"BUZZER_OFF\";\n    }\n    flow.set(\"buzzer_state\", state);\n    msg.buzzerState = state;\n    msg.topic = \"/23127354-23127388-23127435/led-buzzer\";\n}\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 460,
-        "wires": [
-            [
-                "2d482c818d7721c4"
-            ]
-        ]
-    },
-    {
-        "id": "d17771dc5424384b",
-        "type": "mqtt out",
-        "z": "8dda81f9590d2155",
-        "name": "",
-        "topic": "/23127354-23127388-23127435/screen",
-        "qos": "0",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "e4f2654eb37bf1b3",
-        "x": 640,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "4b3ea0b73f99b7c6",
@@ -866,26 +764,6 @@
         "x": 1560,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "9facb2a151481e55",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "handleDisplayClick",
-        "func": "// msg.payload sẽ là 'dust', 'temp' hoặc 'humid' từ template Display\nmsg.topic = \"/23127354-23127388-23127435/screen\";\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 400,
-        "wires": [
-            [
-                "d17771dc5424384b"
-            ]
-        ]
     },
     {
         "id": "d31537a49feaeecd",
