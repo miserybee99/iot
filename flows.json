@@ -8,373 +8,6 @@
         "env": []
     },
     {
-        "id": "e4f2654eb37bf1b3",
-        "type": "mqtt-broker",
-        "name": "http",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "3b9e5927881a6d45",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f2637ddf31cbc5c",
-        "type": "ui_tab",
-        "name": "Logs",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "2db852160dca7be8",
-        "type": "ui_tab",
-        "name": "Authen",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "e3e66505fcef58a8",
-        "type": "ui_tab",
-        "name": "Register",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": true
-    },
-    {
-        "id": "176a6dcb963246d5",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "3b9e5927881a6d45",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9dff1546fd297e8c",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "9f2637ddf31cbc5c",
-        "order": 1,
-        "disp": true,
-        "width": 26,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "ui_grp_register",
-        "type": "ui_group",
-        "name": "Login",
-        "tab": "2db852160dca7be8",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8c9655c44e9a8648",
-        "type": "ui_group",
-        "name": "Register",
-        "tab": "e3e66505fcef58a8",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "84f6e65babf6af17",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7e1cafa64399fa37",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0e572d0f1350a14e",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 10,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "ac384f34716e944a",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 11,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "22a9070d9bee35ce",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 12,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "fc2f3cd0daed797b",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 13,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "7e54589c486688aa",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 14,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "df2d08ed9b4c88fd",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 15,
-        "width": 26,
-        "height": 1
-    },
-    {
-        "id": "938f4e9f6f1d3f26",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 17,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "68cacc4b7a74c667",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 18,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "f9796ef0514ba8fb",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 20,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "89c308fe612d337f",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 21,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "d13bbd91cccd1728",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 22,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "a44200a14f39e7da",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "176a6dcb963246d5",
-        "order": 23,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "f6deaa281ad765e1",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "ui_grp_register",
-        "order": 3,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "4f6de789eea1fc73",
-        "type": "ui_spacer",
-        "z": "8dda81f9590d2155",
-        "name": "spacer",
-        "group": "ui_grp_register",
-        "order": 5,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "eeb8fa7ac0b032d7",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "de8837020ce39d8d",
         "type": "ui_gauge",
         "z": "8dda81f9590d2155",
@@ -511,7 +144,8 @@
             [
                 "de8837020ce39d8d",
                 "3add253b3797bbb0",
-                "d31537a49feaeecd"
+                "d31537a49feaeecd",
+                "8d9e723d3826c360"
             ],
             [
                 "79d3217229c8fd0e",
@@ -576,67 +210,6 @@
         ]
     },
     {
-        "id": "f2f6554b27cc1929",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "Pull Data",
-        "func": "// Function 1: Tạo API URL\nconst channelID = \"3030128\";\nconst readAPI = \"A2AAQJ1EF8O43YAP\";\nconst results = 20; // Số records muốn lấy (có thể thay đổi)\n\nmsg.url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=${results}`;\nmsg.method = \"GET\";\n\nreturn msg;\n\n// ===================================\n\n// Function 2: Format dữ liệu cho table\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    // Format thời gian theo múi giờ Việt Nam\n    const timeString = timestamp.toLocaleTimeString('vi-VN', {\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n    \n    // Kiểm tra và format từng field\n    const pm25 = feed.field1 ? parseFloat(feed.field1).toFixed(1) : \"-\";\n    const pm10 = feed.field2 ? parseFloat(feed.field2).toFixed(1) : \"-\";  \n    const humidity = feed.field3 ? parseFloat(feed.field3).toFixed(1) : \"-\";\n    const temperature = feed.field4 ? parseFloat(feed.field4).toFixed(1) : \"-\";\n    \n    tableData.push({\n        \"Time\": timeString,\n        \"PM2.5\": pm25,\n        \"PM10\": pm10,\n        \"Temperature\": temperature,\n        \"Humidity\": humidity\n    });\n});\n\n// Sắp xếp theo thời gian mới nhất trước (reverse)\ntableData.reverse();\n\nmsg.payload = tableData;\nreturn msg;\n\n// ===================================\n\n// Function 3: Auto refresh (cho inject node)\n// Trigger này để tự động lấy dữ liệu mỗi 5 phút\n// Chỉ cần set inject node với interval: 5 minutes\n// Hoặc dùng function này nếu muốn logic phức tạp hơn\n\nconst now = new Date();\nnode.warn(`Refreshing data at: ${now.toLocaleString('vi-VN')}`);\n\n// Gửi trigger để lấy dữ liệu mới\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 560,
-        "wires": [
-            [
-                "f16f8988b2e8b081"
-            ]
-        ]
-    },
-    {
-        "id": "446d09467bde2f6c",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "Avg & Status",
-        "func": "// Tính trung bình và đánh giá status\nif (!msg.payload || msg.payload.length === 0) {\n    msg.averages = {};\n    return msg;\n}\n\nconst data = msg.payload;\nlet pm25Sum = 0, pm10Sum = 0, tempSum = 0, humidSum = 0;\nlet count = data.length;\n\ndata.forEach(item => {\n    pm25Sum += parseFloat(item.PM25) || 0;\n    pm10Sum += parseFloat(item.PM10) || 0;\n    tempSum += parseFloat(item.Temperature) || 0;\n    humidSum += parseFloat(item.Humidity) || 0;\n});\n\nconst avgPM25 = (pm25Sum / count).toFixed(1);\nconst avgPM10 = (pm10Sum / count).toFixed(1);\nconst avgTemp = (tempSum / count).toFixed(1);\nconst avgHumid = (humidSum / count).toFixed(0);\n\n// Đánh giá status theo tiêu chuẩn WHO/EPA\nfunction getPM25Status(value) {\n    if (value <= 12) return \"Good\";\n    if (value <= 35.4) return \"Moderate\";\n    if (value <= 55.4) return \"Unhealthy for Sensitive\";\n    if (value <= 150.4) return \"Unhealthy\";\n    if (value <= 250.4) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getPM10Status(value) {\n    if (value <= 54) return \"Good\";\n    if (value <= 154) return \"Moderate\";\n    if (value <= 254) return \"Unhealthy for Sensitive\";\n    if (value <= 354) return \"Unhealthy\";\n    if (value <= 424) return \"Very Unhealthy\";\n    return \"Hazardous\";\n}\n\nfunction getTempStatus(value) {\n    if (value >= 18 && value <= 27) return \"Comfortable\";\n    if ((value >= 15 && value < 18) || (value > 27 && value <= 32)) return \"Moderate\";\n    if ((value >= 10 && value < 15) || (value > 32 && value <= 38)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nfunction getHumidityStatus(value) {\n    if (value >= 40 && value <= 60) return \"Comfortable\";\n    if ((value >= 30 && value < 40) || (value > 60 && value <= 70)) return \"Moderate\";\n    if ((value >= 20 && value < 30) || (value > 70 && value <= 80)) return \"Uncomfortable\";\n    return \"Extreme\";\n}\n\nmsg.averages = {\n    pm25: { value: avgPM25, status: getPM25Status(parseFloat(avgPM25)) },\n    pm10: { value: avgPM10, status: getPM10Status(parseFloat(avgPM10)) },\n    temp: { value: avgTemp, status: getTempStatus(parseFloat(avgTemp)) },\n    humidity: { value: avgHumid, status: getHumidityStatus(parseInt(avgHumid)) }\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 750,
-        "y": 620,
-        "wires": [
-            [
-                "4caae068883ad8fe"
-            ]
-        ]
-    },
-    {
-        "id": "4caae068883ad8fe",
-        "type": "ui_template",
-        "z": "8dda81f9590d2155",
-        "group": "9dff1546fd297e8c",
-        "name": "Avg4Field",
-        "order": 2,
-        "width": 10,
-        "height": 11,
-        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .average-container {\n            padding: 20px;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: #e3f6ff;\n            border-radius: 15px;\n            color: #000;\n            max-width: 700px;\n            margin: 0 auto;\n        }\n\n        .title-row {\n            display: grid;\n            grid-template-columns: 150px 1fr 1fr;\n            margin-bottom: 20px;\n            padding-bottom: 10px;\n            border-bottom: 2px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .title-item:first-child {\n            grid-column: 2;\n            text-align: center;\n        }\n\n        .title-item:last-child {\n            grid-column: 3;\n            text-align: center;\n        }\n\n        .title-item {\n            font-size: 20px;\n            font-weight: bold;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            color: #000;\n        }\n\n        .metric-row {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 20px;\n            padding: 15px 0;\n            border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        }\n\n        .metric-row:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n        }\n\n        .metric-label {\n            font-size: 18px;\n            font-weight: 600;\n            color: #000;\n            min-width: 150px;\n        }\n\n        .metric-value {\n            background: #7bdde4;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-weight: bold;\n            font-size: 16px;\n            min-width: 80px;\n            text-align: center;\n            margin-right: 30px;\n        }\n\n        .metric-status {\n            background: #fbfae2;\n            color: #000;\n            padding: 15px 25px;\n            border-radius: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            min-width: 120px;\n            text-align: center;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"average-container\">\n        <div class=\"title-row\">\n            <div class=\"title-item\">Average</div>\n            <div class=\"title-item\">Status</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM2.5</div>\n            <div class=\"metric-value\" id=\"pm25-value\">17.5</div>\n            <div class=\"metric-status\" id=\"pm25-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">PM10</div>\n            <div class=\"metric-value\" id=\"pm10-value\">76.6</div>\n            <div class=\"metric-status\" id=\"pm10-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Temp</div>\n            <div class=\"metric-value\" id=\"temp-value\">26.8</div>\n            <div class=\"metric-status\" id=\"temp-status\">Moderate</div>\n        </div>\n\n        <div class=\"metric-row\">\n            <div class=\"metric-label\">Humidity</div>\n            <div class=\"metric-value\" id=\"humid-value\">82</div>\n            <div class=\"metric-status\" id=\"humid-status\">Moderate</div>\n        </div>\n    </div>\n\n    <script>\n        // Sample data update function\n        function updateAverages(data) {\n            if (data && data.averages) {\n                const avg = data.averages;\n                \n                // Update values\n                document.getElementById('pm25-value').textContent = avg.pm25.value;\n                document.getElementById('pm10-value').textContent = avg.pm10.value;\n                document.getElementById('temp-value').textContent = avg.temp.value;\n                document.getElementById('humid-value').textContent = avg.humidity.value;\n                \n                // Update statuses\n                document.getElementById('pm25-status').textContent = avg.pm25.status;\n                document.getElementById('pm10-status').textContent = avg.pm10.status;\n                document.getElementById('temp-status').textContent = avg.temp.status;\n                document.getElementById('humid-status').textContent = avg.humidity.status;\n            }\n        }\n\n        // Demo with sample averages\n        const sampleAverages = {\n            averages: {\n                pm25: { value: \"17.5\", status: \"Moderate\" },\n                pm10: { value: \"76.6\", status: \"Moderate\" },\n                temp: { value: \"26.8\", status: \"Moderate\" },\n                humidity: { value: \"82\", status: \"Moderate\" }\n            }\n        };\n        \n        updateAverages(sampleAverages);\n    </script>\n</body>\n\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 900,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "4b3ea0b73f99b7c6",
         "type": "mqtt in",
         "z": "8dda81f9590d2155",
@@ -662,7 +235,7 @@
         "type": "function",
         "z": "8dda81f9590d2155",
         "name": "alert_noti",
-        "func": "// Đảm bảo có label và payload là số\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// đoạn code cho led\nlet statePM25 = pm25 > 35.4 ? 2 : (pm25 > 12 ? 1 : 0);\nlet statePM10 = pm10 > 154 ? 2 : (pm10 > 54 ? 1 : 0);\nlet ledState = (statePM25 === 2 || statePM10 === 2) ? 2\n    : (statePM25 === 1 || statePM10 === 1) ? 1\n        : 0;\n\nflow.set(\"led_state\", ledState);\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    flow.set(\"PM2_5\", undefined);\n    flow.set(\"PM10\", undefined);\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    flow.set(\"PM2_5\", undefined);\n    flow.set(\"PM10\", undefined);\n\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\nflow.set(\"PM2_5\", undefined);\nflow.set(\"PM10\", undefined);\n\nreturn msg;\n",
+        "func": "\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// đoạn code cho led\nlet statePM25 = pm25 > 35.4 ? 2 : (pm25 > 12 ? 1 : 0);\nlet statePM10 = pm10 > 154 ? 2 : (pm10 > 54 ? 1 : 0);\nlet ledState = (statePM25 === 2 || statePM10 === 2) ? 2\n    : (statePM25 === 1 || statePM10 === 1) ? 1\n        : 0;\n\nflow.set(\"led_state\", ledState);\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    flow.set(\"PM2_5\", undefined);\n    flow.set(\"PM10\", undefined);\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = {\n        alert: \"SAFE\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n\n\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = {\n    alert: \"no change state\",\n    PM2_5: pm25,\n    PM10: pm10,\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -675,7 +248,7 @@
             [
                 "99f3976e7751c756",
                 "7be078fba0f79d9f",
-                "6a53661f844c8fd0"
+                "b462a56296e629da"
             ]
         ]
     },
@@ -693,8 +266,8 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 1330,
-        "y": 180,
+        "x": 1450,
+        "y": 120,
         "wires": []
     },
     {
@@ -710,8 +283,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1080,
-        "y": 220,
+        "x": 1160,
+        "y": 180,
         "wires": []
     },
     {
@@ -776,17 +349,25 @@
                 "t": "eq",
                 "v": "ALERT",
                 "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "ALERT",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 1090,
-        "y": 180,
+        "outputs": 2,
+        "x": 1150,
+        "y": 120,
         "wires": [
             [
                 "8d6d3e44a0309b0e",
                 "192794ee93b1afa6"
+            ],
+            [
+                "f572b2e2f8227099"
             ]
         ]
     },
@@ -860,8 +441,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1390,
-        "y": 240,
+        "x": 1510,
+        "y": 180,
         "wires": [
             [
                 "63590243af7e60b2"
@@ -872,7 +453,7 @@
         "id": "192794ee93b1afa6",
         "type": "function",
         "z": "8dda81f9590d2155",
-        "name": "function 2",
+        "name": "Pushsafer",
         "func": "// Lấy giá trị PM2_5 và PM10 từ flow context\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n\n// Chuẩn bị payload chỉ chứa dữ liệu\nmsg.payload = `PM2.5: ${pm25 || 0} µgm, PM10: ${pm10 || 0} µgm`;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -880,11 +461,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 240,
+        "x": 1360,
+        "y": 180,
         "wires": [
             [
-                "ecd2af85d099df14"
+                "ecd2af85d099df14",
+                "b61f39be825b9ca8",
+                "f572b2e2f8227099"
             ]
         ]
     },
@@ -900,8 +483,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1560,
-        "y": 240,
+        "x": 1680,
+        "y": 180,
         "wires": []
     },
     {
@@ -1184,43 +767,6 @@
         ]
     },
     {
-        "id": "edc007e33a9b3822",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "formatTable",
-        "func": "if (!msg.payload || !msg.payload.feeds) {\n    msg.payload = [];\n    return msg;\n}\n\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    const timeString = timestamp.toLocaleString('vi-VN', {\n        day: '2-digit',\n        month: '2-digit', \n        year: 'numeric',\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n\n    tableData.push({\n        \"Time\": timeString,\n        \"PM25\": feed.field1,  // Thay đổi key thành \"PM25\"\n        \"PM10\": feed.field2,\n        \"Temperature\": feed.field3,\n        \"Humidity\": feed.field4\n    });\n});\n\ntableData.reverse();\nmsg.payload = tableData;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 560,
-        "wires": [
-            [
-                "4329c0cbc283729c",
-                "446d09467bde2f6c"
-            ]
-        ]
-    },
-    {
-        "id": "4329c0cbc283729c",
-        "type": "ui_table",
-        "z": "8dda81f9590d2155",
-        "group": "9dff1546fd297e8c",
-        "name": "",
-        "order": 1,
-        "width": 16,
-        "height": 11,
-        "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 730,
-        "y": 560,
-        "wires": []
-    },
-    {
         "id": "a8c76196ccb5a45e",
         "type": "inject",
         "z": "8dda81f9590d2155",
@@ -1339,7 +885,7 @@
         "label": "Hỏi về chất lượng không khí",
         "tooltip": "",
         "group": "176a6dcb963246d5",
-        "order": 16,
+        "order": 23,
         "width": 10,
         "height": 2,
         "passthru": true,
@@ -1434,7 +980,7 @@
         "type": "ui_text",
         "z": "8dda81f9590d2155",
         "group": "176a6dcb963246d5",
-        "order": 19,
+        "order": 24,
         "width": 10,
         "height": 4,
         "name": "",
@@ -1485,22 +1031,6 @@
         "wires": []
     },
     {
-        "id": "fbd95ce49fa0b82d",
-        "type": "debug",
-        "z": "8dda81f9590d2155",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "9bcad8a01870c450",
         "type": "http request",
         "z": "8dda81f9590d2155",
@@ -1521,31 +1051,6 @@
         "wires": [
             [
                 "405c971bd6f7eaab"
-            ]
-        ]
-    },
-    {
-        "id": "f16f8988b2e8b081",
-        "type": "http request",
-        "z": "8dda81f9590d2155",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{url}}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 390,
-        "y": 560,
-        "wires": [
-            [
-                "fbd95ce49fa0b82d",
-                "edc007e33a9b3822"
             ]
         ]
     },
@@ -1647,7 +1152,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 80,
-        "y": 1320,
+        "y": 1220,
         "wires": [
             [
                 "9899a83ac5a96007",
@@ -1671,30 +1176,10 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
-        "y": 1380,
+        "x": 310,
+        "y": 1220,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "6a53661f844c8fd0",
-        "type": "function",
-        "z": "8dda81f9590d2155",
-        "name": "LED",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 950,
-        "y": 40,
-        "wires": [
-            [
-                "d7858ba8affd2ac6"
-            ]
         ]
     },
     {
@@ -1716,7 +1201,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
+        "x": 1360,
         "y": 40,
         "wires": [
             [
@@ -1744,12 +1229,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1290,
+        "x": 1550,
         "y": 40,
         "wires": [
-            [
-                "4919cb95e162d1d1"
-            ]
+            []
         ]
     },
     {
@@ -1757,36 +1240,16 @@
         "type": "debug",
         "z": "8dda81f9590d2155",
         "name": "debug 2",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
+        "x": 1540,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "4919cb95e162d1d1",
-        "type": "rbe",
-        "z": "8dda81f9590d2155",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1450,
-        "y": 40,
-        "wires": [
-            [
-                "848f8aed47629c60"
-            ]
-        ]
     },
     {
         "id": "848f8aed47629c60",
@@ -1802,7 +1265,7 @@
         "correl": "",
         "expiry": "",
         "broker": "e4f2654eb37bf1b3",
-        "x": 1710,
+        "x": 1770,
         "y": 40,
         "wires": []
     },
@@ -1819,7 +1282,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 260,
-        "y": 1280,
+        "y": 1180,
         "wires": []
     },
     {
@@ -2108,7 +1571,7 @@
         "splitLayout": false,
         "className": "",
         "x": 140,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "8fe169900798833e"
@@ -2406,7 +1869,7 @@
         "id": "9e89bcf308c5169f",
         "type": "function",
         "z": "8dda81f9590d2155",
-        "name": "Go to Login",
+        "name": "Message",
         "func": "msg.payload.status = \"\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -2414,7 +1877,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
+        "x": 1000,
         "y": 880,
         "wires": [
             [
@@ -2452,6 +1915,256 @@
         ]
     },
     {
+        "id": "8d9e723d3826c360",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ed98630fe2410723",
+        "type": "ui_button",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "group": "176a6dcb963246d5",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "Log",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#87CEFA",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 70,
+        "y": 360,
+        "wires": [
+            [
+                "caeb29a52b4e4c99",
+                "87c71b012e3ae14b"
+            ]
+        ]
+    },
+    {
+        "id": "caeb29a52b4e4c99",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Go to Logs",
+        "func": "msg.payload = { tab: \"Logs\", enabled: true };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "132235b26e983e6c"
+            ]
+        ]
+    },
+    {
+        "id": "132235b26e983e6c",
+        "type": "ui_ui_control",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "events": "change",
+        "x": 380,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f7187bdadf85db5",
+        "type": "ui_button",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "group": "9dff1546fd297e8c",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#87CEFA",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 970,
+        "y": 500,
+        "wires": [
+            [
+                "a6c72e580d328273"
+            ]
+        ]
+    },
+    {
+        "id": "a6c72e580d328273",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Go to Home",
+        "func": "msg.payload = { tab: \"Home\", enabled: true };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "4a66f5a1bbac559c"
+            ]
+        ]
+    },
+    {
+        "id": "4a66f5a1bbac559c",
+        "type": "ui_ui_control",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "events": "all",
+        "x": 1280,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87c71b012e3ae14b",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f2f6554b27cc1929",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "Pull Data",
+        "func": "// Function 1: Tạo API URL\nconst channelID = \"3030128\";\nconst readAPI = \"A2AAQJ1EF8O43YAP\";\nconst results = 20; // Số records muốn lấy (có thể thay đổi)\n\nmsg.url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=${results}`;\nmsg.method = \"GET\";\n\nreturn msg;\n\n// ===================================\n\n// Function 2: Format dữ liệu cho table\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    // Format thời gian theo múi giờ Việt Nam\n    const timeString = timestamp.toLocaleTimeString('vi-VN', {\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n    \n    // Kiểm tra và format từng field\n    const pm25 = feed.field1 ? parseFloat(feed.field1).toFixed(1) : \"-\";\n    const pm10 = feed.field2 ? parseFloat(feed.field2).toFixed(1) : \"-\";  \n    const humidity = feed.field3 ? parseFloat(feed.field3).toFixed(1) : \"-\";\n    const temperature = feed.field4 ? parseFloat(feed.field4).toFixed(1) : \"-\";\n    \n    tableData.push({\n        \"Time\": timeString,\n        \"PM2.5\": pm25,\n        \"PM10\": pm10,\n        \"Temperature\": temperature,\n        \"Humidity\": humidity\n    });\n});\n\n// Sắp xếp theo thời gian mới nhất trước (reverse)\ntableData.reverse();\n\nmsg.payload = tableData;\nreturn msg;\n\n// ===================================\n\n// Function 3: Auto refresh (cho inject node)\n// Trigger này để tự động lấy dữ liệu mỗi 5 phút\n// Chỉ cần set inject node với interval: 5 minutes\n// Hoặc dùng function này nếu muốn logic phức tạp hơn\n\nconst now = new Date();\nnode.warn(`Refreshing data at: ${now.toLocaleString('vi-VN')}`);\n\n// Gửi trigger để lấy dữ liệu mới\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "f16f8988b2e8b081"
+            ]
+        ]
+    },
+    {
+        "id": "edc007e33a9b3822",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "formatTable",
+        "func": "if (!msg.payload || !msg.payload.feeds) {\n    msg.payload = [];\n    return msg;\n}\n\nconst feeds = msg.payload.feeds;\nlet tableData = [];\n\nfeeds.forEach(feed => {\n    const timestamp = new Date(feed.created_at);\n    const timeString = timestamp.toLocaleString('vi-VN', {\n        day: '2-digit',\n        month: '2-digit', \n        year: 'numeric',\n        hour: '2-digit',\n        minute: '2-digit',\n        timeZone: 'Asia/Ho_Chi_Minh'\n    });\n\n    tableData.push({\n        \"Time\": timeString,\n        \"PM25\": feed.field1,  // Thay đổi key thành \"PM25\"\n        \"PM10\": feed.field2,\n        \"Temperature\": feed.field3,\n        \"Humidity\": feed.field4\n    });\n});\n\ntableData.reverse();\nmsg.payload = tableData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "4329c0cbc283729c"
+            ]
+        ]
+    },
+    {
+        "id": "4329c0cbc283729c",
+        "type": "ui_table",
+        "z": "8dda81f9590d2155",
+        "group": "9dff1546fd297e8c",
+        "name": "",
+        "order": 1,
+        "width": 20,
+        "height": 11,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fbd95ce49fa0b82d",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f16f8988b2e8b081",
+        "type": "http request",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{url}}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "edc007e33a9b3822",
+                "fbd95ce49fa0b82d"
+            ]
+        ]
+    },
+    {
         "id": "c49feb4f16a8c4fb",
         "type": "inject",
         "z": "8dda81f9590d2155",
@@ -2479,5 +2192,553 @@
                 "f2f6554b27cc1929"
             ]
         ]
+    },
+    {
+        "id": "b462a56296e629da",
+        "type": "delay",
+        "z": "8dda81f9590d2155",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 1160,
+        "y": 40,
+        "wires": [
+            [
+                "d7858ba8affd2ac6"
+            ]
+        ]
+    },
+    {
+        "id": "b61f39be825b9ca8",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f572b2e2f8227099",
+        "type": "function",
+        "z": "8dda81f9590d2155",
+        "name": "set flow",
+        "func": "flow.set(\"PM2_5\", undefined);\nflow.set(\"PM10\", undefined);\nflow.set(\"Temperature\", undefined);\nflow.set(\"Humidity\", undefined);\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 260,
+        "wires": [
+            [
+                "dad03a336bc727d8"
+            ]
+        ]
+    },
+    {
+        "id": "dad03a336bc727d8",
+        "type": "debug",
+        "z": "8dda81f9590d2155",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f6deaa281ad765e1",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "ui_grp_register",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4f6de789eea1fc73",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "ui_grp_register",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b91ffa61bcae4446",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "72baf9e8082c8e67",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ab60b1416cc23f2f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 8,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "3e864a03f65efcde",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "70380fbbaadd1a99",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 11,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "90e3da20792e95c3",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 12,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "a7eeba7cb1a1d881",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 13,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "bb30524c09b26d42",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 14,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "7abeda1eb14476f1",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 15,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "5f6eebb18ed432f2",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 16,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "535a26cd7768b2e6",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 17,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "b0399e65570a86d7",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 18,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "76c7afb64838a3c4",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 19,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "d9136039d6471f6f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 20,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "1d86075ff03304b6",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 21,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "83424bc61e477599",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 22,
+        "width": 26,
+        "height": 1
+    },
+    {
+        "id": "94ce91879d6e749c",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 25,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "ea7af4e097c53acf",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 26,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "54dcb471a7317533",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 27,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "5fc2d4a91b5cca5f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 28,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "7c5713e82186a4a4",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 29,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "93c10bcaeae7cb4f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "176a6dcb963246d5",
+        "order": 30,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2db485c7d41745a4",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4a2b31387eddbbd5",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ccc4537885dd30a9",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2765db922d3b145b",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8cd8d86e6394a038",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a6a2d52a910be3bc",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "047a21fe11437a2f",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "3a17773b540b80f0",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 10,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "f20e11c9c52bd296",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 11,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "519d67bb5e40a2f1",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "1911ee01b9d7c909",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 13,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6949fcfe7a7a2880",
+        "type": "ui_spacer",
+        "z": "8dda81f9590d2155",
+        "name": "spacer",
+        "group": "9dff1546fd297e8c",
+        "order": 14,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "176a6dcb963246d5",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "3b9e5927881a6d45",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4f2654eb37bf1b3",
+        "type": "mqtt-broker",
+        "name": "http",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ui_grp_register",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "2db852160dca7be8",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c9655c44e9a8648",
+        "type": "ui_group",
+        "name": "Register",
+        "tab": "e3e66505fcef58a8",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9dff1546fd297e8c",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "9f2637ddf31cbc5c",
+        "order": 1,
+        "disp": true,
+        "width": 26,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3b9e5927881a6d45",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "2db852160dca7be8",
+        "type": "ui_tab",
+        "name": "Authen",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e3e66505fcef58a8",
+        "type": "ui_tab",
+        "name": "Register",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "9f2637ddf31cbc5c",
+        "type": "ui_tab",
+        "name": "Logs",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": true
     }
 ]
