@@ -802,7 +802,7 @@
         "type": "function",
         "z": "8dda81f9590d2155",
         "name": "alert_noti",
-        "func": "\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    msg.payload = {\n        alert: \"Chua du hai du lieu\",\n        PM2_5: pm25,\n        PM10: pm10,\n        timestamp: new Date().toISOString()\n    };\n    return msg;\n}\n\n// đoạn code cho led\nlet statePM25 = pm25 > 35.4 ? 2 : (pm25 > 12 ? 1 : 0);\nlet statePM10 = pm10 > 154 ? 2 : (pm10 > 54 ? 1 : 0);\nlet ledState = (statePM25 === 2 || statePM10 === 2) ? 2\n    : (statePM25 === 1 || statePM10 === 1) ? 1\n        : 0;\n\nflow.set(\"led_state\", ledState);\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = \"none\";\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = \"none\";\nreturn msg;\n",
+        "func": "\nlet label = msg.label;\nlet value = msg.payload;\n\nif (!label || typeof value !== \"number\") {\n    msg.payload = {\n        alert: \"sai label\",\n    };\n    return msg;  // Bỏ qua nếu không hợp lệ\n}\n\n// Lưu giá trị vào flow context\nflow.set(label, value);\n\n// Lấy lại giá trị từ bộ nhớ\nlet pm25 = flow.get(\"PM2_5\");\nlet pm10 = flow.get(\"PM10\");\n\n// Chỉ xử lý khi đã có đủ cả hai\nif (pm25 === undefined || pm10 === undefined) {\n    return null;\n}\n\n// đoạn code cho led\nlet statePM25 = pm25 > 35.4 ? 2 : (pm25 > 12 ? 1 : 0);\nlet statePM10 = pm10 > 154 ? 2 : (pm10 > 54 ? 1 : 0);\nlet ledState = (statePM25 === 2 || statePM10 === 2) ? 2\n    : (statePM25 === 1 || statePM10 === 1) ? 1\n        : 0;\n\nflow.set(\"led_state\", ledState);\n// Kiểm tra trạng thái cảnh báo\nlet isAlert = (pm25 > 35.4 || pm10 > 154);\nlet wasAlert = flow.get(\"alert_state\") || false;\n\nif (isAlert && !wasAlert) {\n    flow.set(\"alert_state\", true);\n    msg.payload = \"ALERT\";\n    return msg;\n} else if (!isAlert && wasAlert) {\n    flow.set(\"alert_state\", false);\n    msg.payload = \"none\";\n    return msg;\n}\n\n// Không thay đổi trạng thái → không gửi gì\nmsg.payload = \"none\";\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1000,7 +1000,7 @@
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://www.pushsafer.com/api?k=YjI2Bn8CPhain8tNyiql&m={{payload}}&t=CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ NGUY HIỂM&s=1&v=1&p=2",
+        "url": "https://www.pushsafer.com/api?k=5Av3PjobqEgIu9avyNpR&m={{payload}}&t=CẢNH BÁO CHẤT LƯỢNG KHÔNG KHÍ NGUY HIỂM&s=1&v=1&p=2",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1354,8 +1354,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 1000,
+        "x": 130,
+        "y": 1020,
         "wires": [
             [
                 "ec47e4cab21a4d57"
@@ -1735,7 +1735,7 @@
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://www.pushsafer.com/api?k=YjI2Bn8CPhain8tNyiql&m=Dangerous%20Gas%20Levels!&t=NGƯỠNG%20GA%20NGUY%20HIỂM&s=1&v=1&p=2",
+        "url": "https://www.pushsafer.com/api?k=5Av3PjobqEgIu9avyNpR&m=Dangerous%20Gas%20Levels!&t=NGƯỠNG%20GA%20NGUY%20HIỂM&s=1&v=1&p=2",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1799,7 +1799,9 @@
         "x": 1550,
         "y": 40,
         "wires": [
-            []
+            [
+                "848f8aed47629c60"
+            ]
         ]
     },
     {
@@ -2456,7 +2458,7 @@
         "id": "33187e46588c0b51",
         "type": "inject",
         "z": "8dda81f9590d2155",
-        "name": "15s",
+        "name": "5m",
         "props": [
             {
                 "p": "payload"
@@ -2466,7 +2468,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "15",
+        "repeat": "300",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
